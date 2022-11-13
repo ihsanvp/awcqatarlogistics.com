@@ -16,7 +16,9 @@ const config = {
 		}),
 		alias: {
 			"@components/*": "src/components",
-			"@assets/*": "src/assets"
+			"@assets/*": "src/assets",
+			"@content/*": "src/content",
+			"@animations/*": "src/animations"
 		}
 	}
 };

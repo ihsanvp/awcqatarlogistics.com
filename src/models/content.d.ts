@@ -1,0 +1,3 @@
+interface HomeContent {
+  slides: Slide[]
+}
