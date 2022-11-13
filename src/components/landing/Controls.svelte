@@ -29,7 +29,4 @@
 	.controlsactive {
 		@apply bg-orange-600 h-[160px];
 	}
-	.controls {
-		transition-property: background-color, padding;
-	}
 </style>
