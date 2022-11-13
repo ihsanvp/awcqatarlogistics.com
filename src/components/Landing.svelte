@@ -1,70 +1,36 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { crossfade, fade, fly } from 'svelte/transition';
-	import { quintOut, cubicInOut } from 'svelte/easing';
+	import { fade, fly } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
 	import homeContent from '@content/home';
-	import Show from './Show.svelte';
 
 	const slides = homeContent.slides;
 
-	let show = 0;
-
-	const [send, recieve] = crossfade({
-		duration: (d) => Math.sqrt(d * 200),
-		fallback: (node, params) => {
-			const style = getComputedStyle(node);
-			const transform = style.transform === 'none' ? '' : style.transform;
-
-			return {
-				duration: 600,
-				easing: quintOut,
-				css: (t) => `
-					transform: ${transform} scale(${t});
-					opacity: ${t}
-				`
-			};
-		}
-	});
+	let current = 0;
+	let initial = true;
 
 	function next() {
-		show = (show + 1) % slides.length;
+		current = (current + 1) % slides.length;
 	}
 
 	function previous() {
-		if (show <= 0) {
-			show = slides.length - 1;
+		if (current <= 0) {
+			current = slides.length - 1;
 		} else {
-			show--;
+			current--;
 		}
 	}
 
 	onMount(() => {
-		setInterval(next, 5000);
+		setInterval(next, 10000);
+		initial = false;
 	});
 </script>
 
 <section class="w-screen h-screen relative">
 	<div class="relative block w-full h-full z-[1]">
 		<div class="h-full container mx-auto flex items-center relative">
-			<!-- {#each slides as slide, i}
-				<Show when={show == i}>
-					<div class="absolute inset-0 flex items-center">
-						<div class="max-w-[800px] flex flex-col gap-10">
-							<div transition:fade class="text-8xl text-white font-bold">
-								{slide.title}
-							</div>
-							<div transition:fade class="text-white text-lg">
-								{slide.description}
-							</div>
-							<div class="flex gap-20">
-								<button transition:fade class="px-14 py-4 bg-white font-medium">Our Services</button
-								>
-							</div>
-						</div>
-					</div>
-				</Show>
-			{/each} -->
-			{#key show}
+			{#key current}
 				<div class="absolute inset-0 flex items-center">
 					<div class="max-w-[800px] flex flex-col gap-10">
 						<div
@@ -72,14 +38,14 @@
 							out:fade
 							class="text-8xl text-white font-bold"
 						>
-							{slides[show].title}
+							{slides[current].title}
 						</div>
 						<div
 							in:fly={{ x: -100, duration: 2000, delay: 700, easing: cubicInOut }}
 							out:fade
 							class="text-white text-lg"
 						>
-							{slides[show].description}
+							{slides[current].description}
 						</div>
 						<div class="flex gap-20">
 							<button
@@ -95,12 +61,15 @@
 	</div>
 	<div class="absolute inset-0 overflow-hidden">
 		{#each slides as slide, i}
-			<div class="absolute inset-0 overflow-hidden">
+			<div
+				class="absolute inset-0 overflow-hidden duration-[15s] transition-transform ease-linear"
+				class:slide={!initial && current == i}
+			>
 				<img
 					class="w-full h-full object-cover opacity-0 transition-opacity duration-[3s] z-0"
 					src={slide.image}
 					alt="landing"
-					class:active={show == i}
+					class:active={current == i}
 				/>
 			</div>
 		{/each}
@@ -110,5 +79,8 @@
 <style>
 	.active {
 		@apply opacity-100 z-[1] duration-[2s];
+	}
+	.slide {
+		@apply scale-[1.1];
 	}
 </style>
