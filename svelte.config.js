@@ -18,7 +18,8 @@ const config = {
 			"@components/*": "src/components",
 			"@assets/*": "src/assets",
 			"@content/*": "src/content",
-			"@animations/*": "src/animations"
+			"@animations/*": "src/animations",
+			"@helpers/*": "src/helpers"
 		}
 	}
 };
