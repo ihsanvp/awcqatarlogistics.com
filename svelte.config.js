@@ -10,7 +10,14 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			strict: true,
+			precompress: true
+		}),
+		alias: {
+			"@components/*": "src/components",
+			"@assets/*": "src/assets"
+		}
 	}
 };
 
