@@ -74,6 +74,16 @@
 			</div>
 		{/each}
 	</div>
+	<div class="absolute bottom-0 left-0 right-0">
+		<div class="container mx-auto flex">
+			{#each slides as slide}
+				<div class="flex-1 bg-black bg-opacity-50 px-20 pb-20 pt-20 flex flex-col">
+					<div>Icon</div>
+					<div class="text-white">{slide.category}</div>
+				</div>
+			{/each}
+		</div>
+	</div>
 </section>
 
 <style>

@@ -10,6 +10,7 @@ const homeContent: HomeContent = {
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img1,
+			category: 'Warehousing Services',
 			icon: ''
 		},
 		{
@@ -17,6 +18,7 @@ const homeContent: HomeContent = {
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img2,
+			category: 'Air Freight Services',
 			icon: ''
 		},
 		{
@@ -24,6 +26,7 @@ const homeContent: HomeContent = {
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img3,
+			category: 'Ocean Freight Services',
 			icon: ''
 		},
 		{
@@ -31,6 +34,7 @@ const homeContent: HomeContent = {
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img4,
+			category: 'Road Freight Services',
 			icon: ''
 		}
 	]
