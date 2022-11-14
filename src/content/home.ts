@@ -6,7 +6,7 @@ import img4 from '@assets/images/landing-4.jpg';
 const homeContent: HomeContent = {
 	slides: [
 		{
-			title: 'Safe & Reliable Cargo Solutions!',
+			title: 'Safe & Reliable \n Cargo Solutions!',
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img1,
@@ -14,7 +14,7 @@ const homeContent: HomeContent = {
 			icon: ''
 		},
 		{
-			title: 'Air Freight That Saves Your Time',
+			title: 'Air Freight That \n Saves Your Time',
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img2,
@@ -22,7 +22,7 @@ const homeContent: HomeContent = {
 			icon: ''
 		},
 		{
-			title: 'Innovative Sea Transportation',
+			title: 'Innovative Sea \n Transportation',
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img3,
@@ -30,7 +30,7 @@ const homeContent: HomeContent = {
 			icon: ''
 		},
 		{
-			title: 'Direction, That Matter!',
+			title: 'Direction, That \n Matter!',
 			description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, fuga alias! At dolore
       mollitia labore quibusdam, illo laboriosam quia voluptatibus.`,
 			image: img4,
