@@ -10,10 +10,10 @@
 	const slides = homeContent.slides;
 </script>
 
-<div class="relative block w-full h-full z-[1] px-5">
+<div class="relative block w-full h-full z-[1]">
 	<div class="h-full container mx-auto flex items-center relative">
 		{#key active}
-			<div class="absolute inset-0 flex items-center justify-center md:items-start flex-col">
+			<div class="absolute inset-0 flex items-center justify-center md:items-start flex-col px-5">
 				<div class="max-w-[800px] flex flex-col gap-5 lg:gap-[2vw]">
 					<div
 						in:fly={{ x: -100, duration: 2000, delay: 500, easing: cubicInOut }}
