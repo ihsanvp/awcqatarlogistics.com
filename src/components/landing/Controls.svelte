@@ -12,7 +12,7 @@
 	<div class="container mx-auto flex items-end gap-1 px-5">
 		{#each slides as slide, i}
 			<button
-				class="h-[20vh] max-h-[150px] relative flex-1 bg-black bg-opacity-50 px-12 xl:px-20 flex flex-col justify-center gap-3 hover:bg-orange-600 hover:h-[22vh] duration-300"
+				class="h-[20vh] max-h-[150px] 2xl:max-h-full relative flex-1 bg-black bg-opacity-50 px-12 xl:px-20 flex flex-col justify-center gap-3 hover:bg-orange-600 hover:h-[22vh] duration-300"
 				class:controlsactive={active == i}
 				on:click={() => onClick(i)}
 			>
