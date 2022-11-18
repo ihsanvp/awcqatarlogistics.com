@@ -21,6 +21,16 @@
 	function onClick() {
 		open = !open;
 	}
+
+	$: {
+		if (typeof document != 'undefined') {
+			if (open) {
+				document.body.style.overflowY = 'hidden';
+			} else {
+				document.body.style.overflowY = 'scroll';
+			}
+		}
+	}
 </script>
 
 <svelte:window on:scroll={onScroll} />
