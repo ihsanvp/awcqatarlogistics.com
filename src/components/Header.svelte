@@ -22,10 +22,10 @@
 
 <svelte:window on:scroll={onScroll} />
 <header
-	class="fixed top-0 left-0 right-0 h-[80px] z-[999] text-white transition-all duration-300 px-5"
+	class="fixed top-0 left-0 right-0 h-[80px] z-[999] text-white transition-all duration-300"
 	class:active={!open && active}
 >
-	<div class="container mx-auto flex items-center h-full justify-between">
+	<div class="container mx-auto flex items-center h-full justify-between px-5">
 		<div class="">Logo</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
 			<HeaderButton label="Home" />
@@ -48,6 +48,6 @@
 
 <style>
 	.active {
-		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-30 shadow-md h-[70px];
+		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 shadow-md h-[70px];
 	}
 </style>

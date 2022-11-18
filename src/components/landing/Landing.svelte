@@ -53,7 +53,7 @@
 </script>
 
 <svelte:window on:focus={() => start(8)} on:blur={stop} />
-<section class="w-screen h-screen relative">
+<section class="w-full h-screen relative">
 	<Content active={activeIndex} />
 	<Background active={activeIndex} />
 	<Controls active={activeIndex} onClick={onControlClick} />
