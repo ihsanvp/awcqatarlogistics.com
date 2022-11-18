@@ -1,11 +1,9 @@
 <script lang="ts">
-	import HeaderButton from './HeaderButton.svelte';
+	import Button from './Button.svelte';
 	import Icon from '@iconify/svelte';
 	import MenuIcon from '@iconify-icons/mdi/menu';
 	import CloseIcon from '@iconify-icons/mdi/close';
-	import { flip } from 'svelte/animate';
-	import { crossfade, scale } from 'svelte/transition';
-	import menu from '@animations/menu';
+	import Menu from './Menu.svelte';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
@@ -33,11 +31,11 @@
 	<div class="container mx-auto flex items-center h-full justify-between px-5">
 		<div class="">Logo</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
-			<HeaderButton label="Home" />
-			<HeaderButton label="Company" />
-			<HeaderButton label="Services" />
-			<HeaderButton label="Features" />
-			<HeaderButton label="Contact" />
+			<Button label="Home" />
+			<Button label="Company" />
+			<Button label="Services" />
+			<Button label="Features" />
+			<Button label="Contact" />
 		</div>
 		<div class="sm:hidden">
 			<button on:click={onClick}>
@@ -50,13 +48,7 @@
 		</div>
 	</div>
 </header>
-
-{#if open}
-	<div
-		class="fixed inset-0 z-[998] bg-orange-600"
-		transition:menu={{ x: 91, y: 4.5, duration: 500 }}
-	/>
-{/if}
+<Menu isOpen={open} />
 
 <style>
 	.active {

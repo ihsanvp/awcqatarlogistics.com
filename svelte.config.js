@@ -5,9 +5,11 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess({
-		postcss: true
-	}),
+	preprocess: [
+		preprocess({
+			postcss: true,
+		}),
+	],
 
 	kit: {
 		adapter: adapter({
@@ -20,8 +22,8 @@ const config = {
 			"@content/*": "src/content",
 			"@animations/*": "src/animations",
 			"@helpers/*": "src/helpers"
-		}
-	}
+		},
+	},
 };
 
 export default config;

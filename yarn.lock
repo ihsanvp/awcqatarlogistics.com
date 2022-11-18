@@ -56,6 +56,25 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
+"@iconify-icons/mdi@^1.2.32":
+  version "1.2.32"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/mdi/-/mdi-1.2.32.tgz#44176b921daddf7a9afd6007add88d0e61bdd3a4"
+  integrity sha512-LLXgR3qQVJdoXbv48d3iMWeQvMZOuSNRVdM/8tQeuepoGdmZXxgbPuLSPoe1s+DTP2N4aKRgsFKmz+Y9GyNAYg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/svelte@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/svelte/-/svelte-3.0.0.tgz#5b6e2b814374d1801f296733c4d5c77388630c7d"
+  integrity sha512-kmpIDyEqGBqV3uLTxEXVOPcsUg06GpwlLTTK1a8omaiBOBZCKnj+m4EETFjoy5cKsdCd5bWBYysna/uUuSTfoQ==
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
+"@iconify/types@*", "@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
 "@jridgewell/resolve-uri@3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"
