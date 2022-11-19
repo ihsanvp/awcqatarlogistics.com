@@ -10,16 +10,20 @@
 	let active = false;
 	let open = false;
 
+	function openMenu() {
+		open = true;
+	}
+
+	function closeMenu() {
+		open = false;
+	}
+
 	function onScroll(e: OnScrollEvent) {
 		if (e.currentTarget.scrollY > 100) {
 			active = true;
 		} else {
 			active = false;
 		}
-	}
-
-	function onClick() {
-		open = !open;
 	}
 
 	$: {
@@ -48,20 +52,16 @@
 			<Button label="Contact" />
 		</div>
 		<div class="sm:hidden">
-			<button on:click={onClick}>
-				{#if !open}
-					<Icon width={30} icon={MenuIcon} />
-				{:else}
-					<Icon width={30} icon={CloseIcon} />
-				{/if}
+			<button on:click={openMenu}>
+				<Icon width={30} icon={MenuIcon} />
 			</button>
 		</div>
 	</div>
 </header>
-<Menu isOpen={open} />
+<Menu isOpen={open} onClose={closeMenu} />
 
 <style>
 	.active {
-		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 shadow-md h-[70px];
+		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 shadow-md h-[60px] md:h-[70px];
 	}
 </style>
