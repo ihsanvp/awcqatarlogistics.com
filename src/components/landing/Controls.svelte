@@ -8,7 +8,7 @@
 	const slides = homeContent.slides;
 </script>
 
-<div class="absolute bottom-0 left-0 right-0 z-10">
+<div class="absolute bottom-0 left-0 right-0 z-10 hidden lg:block">
 	<div class="container mx-auto flex items-end gap-1">
 		{#each slides as slide, i}
 			<button
