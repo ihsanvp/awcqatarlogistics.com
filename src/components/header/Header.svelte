@@ -19,7 +19,7 @@
 	}
 
 	function onScroll(e: OnScrollEvent) {
-		if (e.currentTarget.scrollY > 100) {
+		if (e.currentTarget.scrollY > 10) {
 			active = true;
 		} else {
 			active = false;
@@ -62,6 +62,6 @@
 
 <style>
 	.active {
-		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 shadow-md h-[60px] md:h-[70px];
+		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-70 shadow-md h-[60px] md:h-[70px];
 	}
 </style>
