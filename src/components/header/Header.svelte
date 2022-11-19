@@ -40,7 +40,7 @@
 <svelte:window on:scroll={onScroll} />
 <header
 	class="fixed top-0 left-0 right-0 h-[80px] z-[999] text-white transition-all duration-300"
-	class:active={!open && active}
+	class:active
 >
 	<div class="container mx-auto flex items-center h-full justify-between px-5">
 		<div class="">Logo</div>

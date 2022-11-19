@@ -8,10 +8,7 @@
 </script>
 
 {#if isOpen}
-	<div
-		class="fixed inset-0 z-[9999] bg-orange-600"
-		transition:menu={{ x: 91, y: 4.5, duration: 1000 }}
-	>
+	<div class="fixed inset-0 z-[9999] bg-orange-600" transition:menu={{ duration: 1000 }}>
 		<div class="h-[70px] md:h-[80px] flex px-5 items-center justify-between">
 			<div />
 			<div>

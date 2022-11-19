@@ -6,13 +6,11 @@ import type { TransitionConfig } from 'svelte/transition';
 interface Params {
 	duration?: number;
 	easing?: typeof cubicInOut;
-	x: number;
-	y: number;
 }
 
 export default function menu(
 	node: any,
-	{ duration = 300, easing = cubicInOut, x, y }: Params
+	{ duration = 300, easing = cubicInOut }: Params
 ): TransitionConfig {
 	return {
 		duration,
@@ -20,7 +18,7 @@ export default function menu(
 			const eased = easing(t);
 
 			return `
-        clip-path: circle(${eased * 200}% at ${x}% ${y}%); 
+        clip-path: inset(0 0 ${100 - 100 * eased}% 0); 
       `;
 		}
 	};
