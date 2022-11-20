@@ -1,7 +1,13 @@
 <script>
 	import Landing from '@components/landing/Landing.svelte';
-	import bgImage from '@assets/images/landing-3.jpg';
 	import StatsCard from '@components/StatsCard.svelte';
+	import ServiceBgCard from '@components/ServiceBGCard.svelte';
+
+	import bgImage from '@assets/images/landing-3.jpg';
+	import s1 from '@assets/images/landing-1.jpg';
+	import s2 from '@assets/images/landing-2.jpg';
+	import s3 from '@assets/images/landing-3.jpg';
+	import s4 from '@assets/images/landing-4.jpg';
 </script>
 
 <Landing />
@@ -50,20 +56,29 @@
 
 <section class="section">
 	<div class="container mx-auto">
-		<div class="text-orange-600 font-medium">Services We Offer</div>
-		<div class="grid grid-cols-6 mt-5">
-			<div class="col-span-3">
-				<div class="text-4xl font-bold leading-[1.2] pr-20">
-					We Manage Lead Logistics For World's Multinational Companies.
+		<div>
+			<div class="text-orange-600 font-medium">Services We Offer</div>
+			<div class="grid grid-cols-6 mt-5">
+				<div class="col-span-3">
+					<div class="text-4xl font-bold leading-[1.2] pr-20">
+						We Manage Lead Logistics For World's Multinational Companies.
+					</div>
+				</div>
+				<div class="col-span-3">
+					<div class="text-gray-600 leading-[1.6]">
+						Our global logistics expertise, advanced supply chain technology & customized logistics
+						solutions will help you analyze, develop and implement successful supply chain
+						management strategies from end-to-end.
+					</div>
 				</div>
 			</div>
-			<div class="col-span-3">
-				<div class="text-gray-600 leading-[1.6]">
-					Our global logistics expertise, advanced supply chain technology & customized logistics
-					solutions will help you analyze, develop and implement successful supply chain management
-					strategies from end-to-end.
-				</div>
-			</div>
+		</div>
+
+		<div class="grid grid-cols-4 gap-5 mt-20">
+			<ServiceBgCard title="Air Freight" icon="Icon" bg={s1} />
+			<ServiceBgCard title="Ocean Freight" icon="Icon" bg={s2} />
+			<ServiceBgCard title="Road Freight" icon="Icon" bg={s3} />
+			<ServiceBgCard title="Consolidated Logistics" icon="Icon" bg={s4} />
 		</div>
 	</div>
 </section>
