@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply overflow-x-hidden overflow-y-scroll
+    @apply overflow-x-hidden overflow-y-scroll font-serif;
 }
