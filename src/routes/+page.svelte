@@ -27,9 +27,69 @@
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
 	import FeatureCard from '@components/FeatureCard.svelte';
+	import ServiceCard from '@components/ServiceCard.svelte';
 </script>
 
 <Landing />
+
+<section class="section">
+	<div class="container mx-auto">
+		<div class="text-center text-orange-600 font-medium text-sm">Services We Offer</div>
+		<div class="mt-5 text-2xl md:text-4xl font-bold text-center flex items-center justify-center">
+			<div class="max-w-[600px]">Transport Solutions That Saves Your Time!</div>
+		</div>
+		<div class="grid grid-cols-4 gap-4 mt-40">
+			<ServiceCard>
+				<svelte:fragment slot="icon">
+					<RoadServiceIcon class="w-full" />
+				</svelte:fragment>
+				<svelte:fragment slot="title">
+					We Provide <span>Road</span> <br /> Freight In City
+				</svelte:fragment>
+				<svelte:fragment>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
+					delectus voluptatibus architecto.
+				</svelte:fragment>
+			</ServiceCard>
+			<ServiceCard>
+				<svelte:fragment slot="icon">
+					<AirServiceIcon class="w-full" />
+				</svelte:fragment>
+				<svelte:fragment slot="title">
+					We Provide <span>Air</span> <br /> Freight In City
+				</svelte:fragment>
+				<svelte:fragment>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
+					delectus voluptatibus architecto.
+				</svelte:fragment>
+			</ServiceCard>
+			<ServiceCard>
+				<svelte:fragment slot="icon">
+					<OceanServiceIcon class="w-full" />
+				</svelte:fragment>
+				<svelte:fragment slot="title">
+					We Provide <span>Sea</span> <br /> Freight In City
+				</svelte:fragment>
+				<svelte:fragment>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
+					delectus voluptatibus architecto.
+				</svelte:fragment>
+			</ServiceCard>
+			<ServiceCard>
+				<svelte:fragment slot="icon">
+					<WarehouseServiceIcon class="w-full" />
+				</svelte:fragment>
+				<svelte:fragment slot="title">
+					We Provide <span>Storage</span> <br /> Services In City
+				</svelte:fragment>
+				<svelte:fragment>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
+					delectus voluptatibus architecto.
+				</svelte:fragment>
+			</ServiceCard>
+		</div>
+	</div>
+</section>
 
 <section class="section">
 	<div class="container mx-auto">
