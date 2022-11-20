@@ -5,7 +5,7 @@
 
 <div class="flex items-center gap-3">
 	<Icon icon={TickIcon} width={30} />
-	<div class="text-xl">
+	<div class="text-lg md:text-xl">
 		<slot />
 	</div>
 </div>

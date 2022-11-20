@@ -20,7 +20,7 @@
 
 {#if isOpen}
 	<div
-		class="fixed inset-0 z-[9999] bg-white bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-40 overflow-hidden"
+		class="fixed inset-0 z-[9999] bg-white bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-60 overflow-hidden"
 		transition:menu={{ duration: 700 }}
 	>
 		<div class="w-full h-full flex flex-col justify-between container mx-auto">

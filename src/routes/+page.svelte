@@ -37,7 +37,7 @@
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Services We Offer</div>
 		<div
-			class="mt-3 md:mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center"
+			class="mt-3 md:mt-5 text-4xl md:text-4xl font-bold text-center flex items-center justify-center"
 		>
 			<div class="max-w-[600px]">Transport Solutions That Saves Your Time!</div>
 		</div>
@@ -107,7 +107,7 @@
 		<div class="flex gap-40">
 			<div class="flex-1 hidden md:block" />
 			<div class="flex-1 text-white">
-				<div class="text-5xl font-bold">Explore Our Main Goals For Business</div>
+				<div class="text-4xl md:text-5xl font-bold">Explore Our Main Goals For Business</div>
 				<div class="flex flex-col gap-10 mt-20">
 					<GoalBlock>100% Customer Satisfaction</GoalBlock>
 					<GoalBlock>Time Maintenance</GoalBlock>
@@ -123,11 +123,9 @@
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
 		<div
-			class="mt-3 md:mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center"
+			class="mt-3 md:mt-5 text-4xl md:text-4xl font-bold text-center flex items-center justify-center"
 		>
-			<div class="max-w-[700px] capitalize">
-				We continue to pursue the vision to work every day to earn our customers
-			</div>
+			<div class="max-w-[700px] capitalize">The vision to work every day to earn our customers</div>
 		</div>
 		<div class="mt-20 md:mt-40 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-20 items-center">
 			<FeatureCard title="Transparent Pricing" icon={f1}>
@@ -175,7 +173,7 @@
 				<div class="font-medium text-sm md:text-xl text-center md:text-left">
 					Your Package, Your Rules
 				</div>
-				<div class="font-bold text-3xl md:text-5xl text-center md:text-left">
+				<div class="font-bold text-4xl md:text-5xl text-center md:text-left">
 					Digital Freight <br /> That Saves Your Time!
 				</div>
 			</div>
