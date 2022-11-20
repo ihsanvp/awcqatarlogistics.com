@@ -1,3 +1,5 @@
-interface HomeContent {
-  slides: Slide[]
+import { Slide } from './slide';
+
+export interface HomeContent {
+	slides: Slide[];
 }

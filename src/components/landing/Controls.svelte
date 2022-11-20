@@ -12,7 +12,7 @@
 	<div class="container mx-auto flex items-end gap-1">
 		{#each slides as slide, i}
 			<button
-				class="bg-orange-600 h-[10px] lg:h-[16vh] lg:max-h-[150px] 2xl:max-h-full relative flex-1 lg:bg-black lg:bg-opacity-50 lg:px-12 xl:px-20 flex flex-col justify-center gap-3 lg:hover:bg-orange-600 lg:hover:h-[18vh] duration-300"
+				class="bg-orange-600 h-[10px] lg:h-[16vh] lg:max-h-[150px] 2xl:max-h-full relative flex-1 lg:bg-black lg:bg-opacity-50 lg:px-12 xl:px-10 flex flex-col justify-center gap-2 lg:hover:bg-orange-600 lg:hover:h-[18vh] duration-300"
 				class:active={active == i}
 				on:click={() => onClick(i)}
 			>
@@ -23,8 +23,10 @@
 						0{i + 1}
 					</div>
 				{/if}
-				<div class="hidden lg:block">Icon</div>
-				<div class="text-white text-left text-lg font-bold hidden lg:block">
+				<div class="hidden lg:block">
+					<svelte:component this={slide.icon} size={40} color="white" />
+				</div>
+				<div class="text-white text-left font-medium hidden lg:block">
 					{@html renderContent(slide.category)}
 				</div>
 			</button>
