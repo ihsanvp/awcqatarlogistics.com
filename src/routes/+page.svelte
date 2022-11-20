@@ -27,9 +27,9 @@
 	import OceanServiceIcon from '@components/icons/OceanServiceIcon.svelte';
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
-	import FeatureCard from '@components/FeatureCard.svelte';
+	import FeatureCard from '@components/cards/FeatureCard.svelte';
 	import ServiceCard from '@components/ServiceCard.svelte';
-	import GoalBlock from '@components/GoalBlock.svelte';
+	import GoalCard from '@components/GoalCard.svelte';
 </script>
 
 <Landing />
@@ -110,10 +110,10 @@
 			<div class="flex-1 text-white">
 				<div class="text-4xl md:text-5xl font-bold">Explore Our Main Goals For Business</div>
 				<div class="flex flex-col gap-10 mt-20">
-					<GoalBlock>100% Customer Satisfaction</GoalBlock>
-					<GoalBlock>Time Maintenance</GoalBlock>
-					<GoalBlock>Security & Trust</GoalBlock>
-					<GoalBlock>Qaulity Control System</GoalBlock>
+					<GoalCard>100% Customer Satisfaction</GoalCard>
+					<GoalCard>Time Maintenance</GoalCard>
+					<GoalCard>Security & Trust</GoalCard>
+					<GoalCard>Qaulity Control System</GoalCard>
 				</div>
 			</div>
 		</div>

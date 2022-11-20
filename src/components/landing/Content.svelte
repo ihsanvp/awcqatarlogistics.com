@@ -2,7 +2,7 @@
 	import homeContent from '@content/home';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
-	import Button from '@components/Button.svelte';
+	import Button from '@components/common/Button.svelte';
 	import renderContent from '@helpers/renderContent';
 	import landing from '@animations/landing';
 
