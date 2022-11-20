@@ -38,7 +38,7 @@
 		<div class="mt-5 text-2xl md:text-4xl font-bold text-center flex items-center justify-center">
 			<div class="max-w-[600px]">Transport Solutions That Saves Your Time!</div>
 		</div>
-		<div class="grid grid-cols-4 gap-4 mt-40">
+		<div class="grid grid-cols-1 md:grid-cols-4 gap-32 md:gap-4 mt-20 md:mt-40">
 			<ServiceCard>
 				<svelte:fragment slot="icon">
 					<RoadServiceIcon class="w-full" />
@@ -96,8 +96,7 @@
 		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
 		<div class="mt-5 text-2xl md:text-3xl font-bold text-center flex items-center justify-center">
 			<div class="max-w-[700px]">
-				We continue to pursue that same vision in today's complex, uncertain world, working every
-				day to earn our customers
+				We continue to pursue the vision to work every day to earn our customers
 			</div>
 		</div>
 		<div class="mt-20 md:mt-20 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-20 items-center">
