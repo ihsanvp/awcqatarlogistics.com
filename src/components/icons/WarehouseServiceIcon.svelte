@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let size: number;
-	export let color = 'black';
+	let c: string = '';
+	export { c as class };
 </script>
 
 <svg
@@ -13,9 +13,8 @@
 	xml:space="preserve"
 	style={`
 		enable-background:new 0 0 368.402 368.402;
-		width: ${size}px;
-    fill: ${color};
 	`}
+	class={c}
 >
 	<g>
 		<path

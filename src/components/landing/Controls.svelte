@@ -24,7 +24,7 @@
 					</div>
 				{/if}
 				<div class="hidden lg:block">
-					<svelte:component this={slide.icon} size={40} color="white" />
+					<svelte:component this={slide.icon} class="w-[40px] fill-white" />
 				</div>
 				<div class="text-white text-left font-medium hidden lg:block">
 					{@html renderContent(slide.category)}

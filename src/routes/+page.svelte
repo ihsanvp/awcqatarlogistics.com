@@ -87,28 +87,28 @@
 			<div class="col-span-2 md:col-span-1">
 				<ServiceBgCard title="Air Freight" bg={s1}>
 					<svelte:fragment slot="icon">
-						<AirServiceIcon size={80} color="white" />
+						<AirServiceIcon class="w-full" />
 					</svelte:fragment>
 				</ServiceBgCard>
 			</div>
 			<div class="col-span-2 md:col-span-1">
 				<ServiceBgCard title="Ocean Freight" bg={s1}>
 					<svelte:fragment slot="icon">
-						<OceanServiceIcon size={80} color="white" />
+						<OceanServiceIcon class="w-full" />
 					</svelte:fragment>
 				</ServiceBgCard>
 			</div>
 			<div class="col-span-2 md:col-span-1">
 				<ServiceBgCard title="Road Freight" bg={s1}>
 					<svelte:fragment slot="icon">
-						<RoadServiceIcon size={80} color="white" />
+						<RoadServiceIcon class="w-full" />
 					</svelte:fragment>
 				</ServiceBgCard>
 			</div>
 			<div class="col-span-2 md:col-span-1">
 				<ServiceBgCard title="Consolidated Logistics" bg={s1}>
 					<svelte:fragment slot="icon">
-						<WarehouseServiceIcon size={80} color="white" />
+						<WarehouseServiceIcon class="w-full" />
 					</svelte:fragment>
 				</ServiceBgCard>
 			</div>
