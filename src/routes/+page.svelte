@@ -36,7 +36,9 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Services We Offer</div>
-		<div class="mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center">
+		<div
+			class="mt-3 md:mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center"
+		>
 			<div class="max-w-[600px]">Transport Solutions That Saves Your Time!</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-32 md:gap-4 mt-20 md:mt-40">
@@ -95,15 +97,15 @@
 <section class="section relative">
 	<div class="absolute inset-0 z-[-1]">
 		<div class="w-full h-full flex">
-			<div class="flex-1 w-full h-full">
+			<div class="flex-1 hidden md:block w-full h-full">
 				<img class="w-full h-full object-cover" src={s1} alt="bg" />
 			</div>
-			<div class="flex-1 w-full h-full bg-orange-600" />
+			<div class="flex-1 w-full h-full bg-gradient-to-r from-orange-600 to-orange-700" />
 		</div>
 	</div>
-	<div class="container mx-auto py-40">
+	<div class="container mx-auto py-32 md:py-40">
 		<div class="flex gap-40">
-			<div class="flex-1" />
+			<div class="flex-1 hidden md:block" />
 			<div class="flex-1 text-white">
 				<div class="text-5xl font-bold">Explore Our Main Goals For Business</div>
 				<div class="flex flex-col gap-10 mt-20">
@@ -120,7 +122,9 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
-		<div class="mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center">
+		<div
+			class="mt-3 md:mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center"
+		>
 			<div class="max-w-[700px] capitalize">
 				We continue to pursue the vision to work every day to earn our customers
 			</div>
@@ -168,7 +172,9 @@
 			class="flex flex-col md:flex-row items-center gap-16 md:gap-10 md:items-end justify-between"
 		>
 			<div class="flex-1 flex flex-col gap-3 md:gap-5">
-				<div class="font-medium md:text-xl text-center md:text-left">Your Package, Your Rules</div>
+				<div class="font-medium text-sm md:text-xl text-center md:text-left">
+					Your Package, Your Rules
+				</div>
 				<div class="font-bold text-3xl md:text-5xl text-center md:text-left">
 					Digital Freight <br /> That Saves Your Time!
 				</div>
