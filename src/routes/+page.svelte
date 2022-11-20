@@ -1,7 +1,7 @@
 <script>
 	import Landing from '@components/landing/Landing.svelte';
-	import StatsCard from '@components/StatsCard.svelte';
-	import ServiceBgCard from '@components/ServiceBGCard.svelte';
+	import StatsCard from '@components/cards/StatsCard.svelte';
+	import ServiceBgCard from '@components/cards/ServiceBGCard.svelte';
 
 	import bgImage from '@assets/images/landing-3.jpg';
 	import aboutImage from '@assets/images/about.jpg';
@@ -28,8 +28,8 @@
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
 	import FeatureCard from '@components/cards/FeatureCard.svelte';
-	import ServiceCard from '@components/ServiceCard.svelte';
-	import GoalCard from '@components/GoalCard.svelte';
+	import ServiceCard from '@components/cards/ServiceCard.svelte';
+	import GoalCard from '@components/cards/GoalCard.svelte';
 </script>
 
 <Landing />
