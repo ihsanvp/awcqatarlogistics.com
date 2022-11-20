@@ -38,7 +38,4 @@
 	.active {
 		@apply lg:bg-orange-600 lg:h-[18vh] h-[60px] bg-orange-600;
 	}
-	.active .inner {
-		@apply opacity-0 translate-y-2 invisible;
-	}
 </style>
