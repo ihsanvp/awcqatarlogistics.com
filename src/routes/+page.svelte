@@ -4,6 +4,7 @@
 	import ServiceBgCard from '@components/ServiceBGCard.svelte';
 
 	import bgImage from '@assets/images/landing-3.jpg';
+	import aboutImage from '@assets/images/about.jpg';
 
 	import st1 from '@assets/icons/stats-1.png';
 	import st2 from '@assets/icons/stats-2.png';
@@ -166,15 +167,18 @@
 
 <section class="section relative">
 	<div class="container mx-auto text-white py-32 md:py-60">
-		<div
-			class="flex flex-col md:flex-row items-center gap-16 md:gap-10 md:items-end justify-between"
-		>
+		<div class="flex flex-col md:flex-row items-center gap-16 md:gap-10 justify-between">
 			<div class="flex-1 flex flex-col gap-3 md:gap-5">
 				<div class="font-medium text-sm md:text-xl text-center md:text-left">
 					Your Package, Your Rules
 				</div>
 				<div class="font-bold text-4xl md:text-5xl text-center md:text-left">
 					Digital Freight <br /> That Saves Your Time!
+				</div>
+				<div class="max-w-[600px] text-center md:text-left">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, cupiditate nihil
+					quidem sapiente quaerat sequi ullam quo, aperiam accusantium dolorem laudantium itaque
+					alias fuga minus nesciunt nisi a quisquam et?
 				</div>
 			</div>
 			<div class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20">
@@ -237,21 +241,26 @@
 
 <section class="section">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-6">
-			<div class="flex flex-col gap-10 col-span-6 lg:col-span-4">
-				<div class="text-3xl md:text-5xl font-bold leading-[1.3]">
-					Safe, Reliable And Express Logistic & Transport Solutions That Saves Your Time!
+		<div class="grid grid-cols-6 place-items-center">
+			<div class="col-span-6 lg:col-span-4">
+				<div class="text-4xl md:text-5xl font-bold leading-[1.3] md:leading-[1.4]">
+					Safe, Reliable And Express Logistic
 				</div>
-				<div class="text-xl font-medium lg:pr-40 leading-[1.4]">
+				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-10">
 					Logisti Group is a representative logistics operator providing full range of service in
 					the sphere of customs clearance and transportation worldwide for any type of cargo.
 				</div>
-				<div class="text-gray-600 lg:pr-40 leading-[1.6]">
+				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-5">
 					We pride ourselves on providing the best transport and shipping services available allover
 					the world. Our skilled personnel, utilising the latest communications, tracking and
 					processing software, combined with decades of experience! Through integrated supply chain
 					solutions, Logisti drives sustainable competitive advantages to some of Australia's
 					largest companies.
+				</div>
+			</div>
+			<div class="w-full h-full col-span-2 md:p-5 hidden md:block">
+				<div class="w-full h-full flex items-center justify-center overflow-hidden">
+					<img class="w-auto h-full" src={aboutImage} alt="about" />
 				</div>
 			</div>
 		</div>
