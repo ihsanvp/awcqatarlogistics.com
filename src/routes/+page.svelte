@@ -13,39 +13,72 @@
 	import s2 from '@assets/images/landing-2.jpg';
 	import s3 from '@assets/images/landing-3.jpg';
 	import s4 from '@assets/images/landing-4.jpg';
+
+	import f1 from '@assets/icons/feature-1.png';
+	import f2 from '@assets/icons/feature-2.png';
+	import f3 from '@assets/icons/feature-3.png';
+	import f4 from '@assets/icons/feature-4.png';
+	import f5 from '@assets/icons/feature-5.png';
+	import f6 from '@assets/icons/feature-6.png';
+	import f7 from '@assets/icons/feature-7.png';
+
 	import AirServiceIcon from '@components/icons/AirServiceIcon.svelte';
 	import OceanServiceIcon from '@components/icons/OceanServiceIcon.svelte';
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
+	import FeatureCard from '@components/FeatureCard.svelte';
 </script>
 
 <Landing />
 
 <section class="section">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-6">
-			<div class="flex flex-col gap-10 col-span-6 lg:col-span-4">
-				<div class="text-3xl md:text-5xl font-bold leading-[1.3]">
-					Safe, Reliable And Express Logistic & Transport Solutions That Saves Your Time!
-				</div>
-				<div class="text-xl font-medium lg:pr-40 leading-[1.4]">
-					Logisti Group is a representative logistics operator providing full range of service in
-					the sphere of customs clearance and transportation worldwide for any type of cargo.
-				</div>
-				<div class="text-gray-600 lg:pr-40 leading-[1.6]">
-					We pride ourselves on providing the best transport and shipping services available allover
-					the world. Our skilled personnel, utilising the latest communications, tracking and
-					processing software, combined with decades of experience! Through integrated supply chain
-					solutions, Logisti drives sustainable competitive advantages to some of Australia's
-					largest companies.
-				</div>
+		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
+		<div class="mt-5 text-2xl md:text-3xl font-bold text-center flex items-center justify-center">
+			<div class="max-w-[700px]">
+				We continue to pursue that same vision in today's complex, uncertain world, working every
+				day to earn our customers
 			</div>
+		</div>
+		<div class="mt-20 md:mt-20 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-20 items-center">
+			<FeatureCard title="Transparent Pricing" icon={f1}>
+				The world of international supply chains involves a myriad of unknown risks and challenging
+				regulations.
+			</FeatureCard>
+			<FeatureCard title="Real-Time Tracking" icon={f2}>
+				We ensure our customer's supply chains are fully compliant by our comprehensive practices
+				and programs.
+			</FeatureCard>
+			<FeatureCard title="Warehouse Storage" icon={f3}>
+				Depending on your product, needs and requirements, we provide professional warehouse
+				activities.
+			</FeatureCard>
+			<FeatureCard title="Security For Cargo" icon={f4}>
+				Our facilities meet high security requirements and are certified to the highest local
+				standards.
+			</FeatureCard>
+			<FeatureCard title="Easy Payment Methods" icon={f5}>
+				You can make use the easy convenient payment options, listed below, that are available in
+				your country.
+			</FeatureCard>
+			<FeatureCard title="24/7 Hours Support" icon={f6}>
+				We enhance our logistics operations by relieving you of the worries associated with freight
+				forwarding.
+			</FeatureCard>
+			<FeatureCard title="Fast & Efficient Delivery" icon={f7}>
+				We enhance our logistics operations by relieving you of the worries associated with freight
+				forwarding.
+			</FeatureCard>
+			<FeatureCard title="Transparent Pricing" icon={f1}>
+				The world of international supply chains involves a myriad of unknown risks and challenging
+				regulations.
+			</FeatureCard>
 		</div>
 	</div>
 </section>
 
 <section class="section relative">
-	<div class="container mx-auto text-white py-20 md:py-60">
+	<div class="container mx-auto text-white py-32 md:py-60">
 		<div
 			class="flex flex-col md:flex-row items-center gap-16 md:gap-10 md:items-end justify-between"
 		>
@@ -70,12 +103,14 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div>
-			<div class="text-orange-600 font-medium text-sm">Services We Offer</div>
+			<div class="text-orange-600 font-medium text-sm text-center md:text-left">
+				Services We Offer
+			</div>
 			<div class="flex flex-col md:flex-row mt-5 gap-5">
-				<div class="text-2xl md:text-4xl font-bold leading-[1.2] md:pr-20">
+				<div class="text-3xl md:text-4xl font-bold leading-[1.2] md:pr-20 text-center md:text-left">
 					We Manage Lead Logistics For World's Multinational Companies.
 				</div>
-				<div class="text-gray-600 leading-[1.6]">
+				<div class="text-gray-600 leading-[1.6] text-center md:text-left">
 					Our global logistics expertise, advanced supply chain technology & customized logistics
 					solutions will help you analyze, develop and implement successful supply chain management
 					strategies from end-to-end.
@@ -83,34 +118,52 @@
 			</div>
 		</div>
 
-		<div class="grid grid-cols-4 gap-4 mt-10 md:mt-20">
-			<div class="col-span-2 md:col-span-1">
-				<ServiceBgCard title="Air Freight" bg={s1}>
-					<svelte:fragment slot="icon">
-						<AirServiceIcon class="w-full" />
-					</svelte:fragment>
-				</ServiceBgCard>
-			</div>
-			<div class="col-span-2 md:col-span-1">
-				<ServiceBgCard title="Ocean Freight" bg={s1}>
-					<svelte:fragment slot="icon">
-						<OceanServiceIcon class="w-full" />
-					</svelte:fragment>
-				</ServiceBgCard>
-			</div>
-			<div class="col-span-2 md:col-span-1">
-				<ServiceBgCard title="Road Freight" bg={s1}>
-					<svelte:fragment slot="icon">
-						<RoadServiceIcon class="w-full" />
-					</svelte:fragment>
-				</ServiceBgCard>
-			</div>
-			<div class="col-span-2 md:col-span-1">
-				<ServiceBgCard title="Consolidated Logistics" bg={s1}>
-					<svelte:fragment slot="icon">
-						<WarehouseServiceIcon class="w-full" />
-					</svelte:fragment>
-				</ServiceBgCard>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-20">
+			<ServiceBgCard title="Air Freight" bg={s1}>
+				<svelte:fragment slot="icon">
+					<AirServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+
+			<ServiceBgCard title="Ocean Freight" bg={s1}>
+				<svelte:fragment slot="icon">
+					<OceanServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+
+			<ServiceBgCard title="Road Freight" bg={s1}>
+				<svelte:fragment slot="icon">
+					<RoadServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+
+			<ServiceBgCard title="Consolidated Logistics" bg={s1}>
+				<svelte:fragment slot="icon">
+					<WarehouseServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+		</div>
+	</div>
+</section>
+
+<section class="section pt-20 md:pt-40">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-6">
+			<div class="flex flex-col gap-10 col-span-6 lg:col-span-4">
+				<div class="text-3xl md:text-5xl font-bold leading-[1.3]">
+					Safe, Reliable And Express Logistic & Transport Solutions That Saves Your Time!
+				</div>
+				<div class="text-xl font-medium lg:pr-40 leading-[1.4]">
+					Logisti Group is a representative logistics operator providing full range of service in
+					the sphere of customs clearance and transportation worldwide for any type of cargo.
+				</div>
+				<div class="text-gray-600 lg:pr-40 leading-[1.6]">
+					We pride ourselves on providing the best transport and shipping services available allover
+					the world. Our skilled personnel, utilising the latest communications, tracking and
+					processing software, combined with decades of experience! Through integrated supply chain
+					solutions, Logisti drives sustainable competitive advantages to some of Australia's
+					largest companies.
+				</div>
 			</div>
 		</div>
 	</div>
@@ -118,6 +171,6 @@
 
 <style>
 	.section {
-		@apply my-20 lg:my-60;
+		@apply my-32 lg:my-60;
 	}
 </style>
