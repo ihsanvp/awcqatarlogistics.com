@@ -1,8 +1,11 @@
 <script>
 	import Landing from '@components/landing/Landing.svelte';
+	import bgImage from '@assets/images/landing-3.jpg';
+	import StatsCard from '@components/StatsCard.svelte';
 </script>
 
 <Landing />
+
 <section class="my-20 lg:my-60">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6">
@@ -23,5 +26,24 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="my-20 lg:my-60 relative">
+	<div class="container mx-auto text-white py-60">
+		<div class="flex items-end justify-between">
+			<div class="flex-1 flex flex-col gap-5">
+				<div class="font-medium text-xl">Your Package, Your Rules</div>
+				<div class="font-bold text-5xl">Digital Freight <br /> That Saves Your Time!</div>
+			</div>
+			<div class="flex items-center justify-center gap-20">
+				<StatsCard icon="Icon" amount={3214} label="Clients Worldwide" />
+				<StatsCard icon="Icon" amount={5154} label="Delivered Goods" />
+				<StatsCard icon="Icon" amount={8845} label="Miles Driven" />
+			</div>
+		</div>
+	</div>
+	<div class="absolute inset-0 z-[-1]">
+		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
 	</div>
 </section>
