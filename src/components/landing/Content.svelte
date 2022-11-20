@@ -33,7 +33,7 @@
 								}
 							}}
 							out:fade
-							class="text-[12vw] md:text-[6vw] lg:text-[4vw] leading-[1.1] text-white font-bold text-center md:text-left"
+							class="text-[10vw] md:text-[6vw] lg:text-[4vw] leading-[1.1] text-white font-bold text-center md:text-left"
 						>
 							{@html renderContent(slides[active].title)}
 						</div>

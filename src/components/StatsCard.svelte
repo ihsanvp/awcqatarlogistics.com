@@ -14,8 +14,10 @@
 	}
 </script>
 
-<div class="flex flex-col items-center justify-center gap-5 text-white">
-	<div>{icon}</div>
-	<div class="font-bold text-3xl">{formated()}</div>
-	<div class="text-sm">{label}</div>
+<div class="flex flex-col items-center justify-center gap-2 md:gap-5 text-white">
+	<div>
+		<img src={icon} alt={label} />
+	</div>
+	<div class="font-bold text-xl md:text-3xl">{formated()}</div>
+	<div class="text-xs md:text-sm text-center">{label}</div>
 </div>
