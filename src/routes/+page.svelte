@@ -28,6 +28,7 @@
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
 	import FeatureCard from '@components/FeatureCard.svelte';
 	import ServiceCard from '@components/ServiceCard.svelte';
+	import GoalBlock from '@components/GoalBlock.svelte';
 </script>
 
 <Landing />
@@ -35,7 +36,7 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Services We Offer</div>
-		<div class="mt-5 text-2xl md:text-4xl font-bold text-center flex items-center justify-center">
+		<div class="mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center">
 			<div class="max-w-[600px]">Transport Solutions That Saves Your Time!</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-32 md:gap-4 mt-20 md:mt-40">
@@ -91,15 +92,40 @@
 	</div>
 </section>
 
+<section class="section relative">
+	<div class="absolute inset-0 z-[-1]">
+		<div class="w-full h-full flex">
+			<div class="flex-1 w-full h-full">
+				<img class="w-full h-full object-cover" src={s1} alt="bg" />
+			</div>
+			<div class="flex-1 w-full h-full bg-orange-600" />
+		</div>
+	</div>
+	<div class="container mx-auto py-40">
+		<div class="flex gap-40">
+			<div class="flex-1" />
+			<div class="flex-1 text-white">
+				<div class="text-5xl font-bold">Explore Our Main Goals For Business</div>
+				<div class="flex flex-col gap-10 mt-20">
+					<GoalBlock>100% Customer Satisfaction</GoalBlock>
+					<GoalBlock>Time Maintenance</GoalBlock>
+					<GoalBlock>Security & Trust</GoalBlock>
+					<GoalBlock>Qaulity Control System</GoalBlock>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="section">
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
-		<div class="mt-5 text-2xl md:text-3xl font-bold text-center flex items-center justify-center">
-			<div class="max-w-[700px]">
+		<div class="mt-5 text-3xl md:text-4xl font-bold text-center flex items-center justify-center">
+			<div class="max-w-[700px] capitalize">
 				We continue to pursue the vision to work every day to earn our customers
 			</div>
 		</div>
-		<div class="mt-20 md:mt-20 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-20 items-center">
+		<div class="mt-20 md:mt-40 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-20 items-center">
 			<FeatureCard title="Transparent Pricing" icon={f1}>
 				The world of international supply chains involves a myriad of unknown risks and challenging
 				regulations.
@@ -158,7 +184,7 @@
 		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
 	</div>
 </section>
-
+<!-- 
 <section class="section">
 	<div class="container mx-auto">
 		<div>
@@ -203,9 +229,9 @@
 			</ServiceBgCard>
 		</div>
 	</div>
-</section>
+</section> -->
 
-<section class="section pt-20 md:pt-40">
+<section class="section">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6">
 			<div class="flex flex-col gap-10 col-span-6 lg:col-span-4">
