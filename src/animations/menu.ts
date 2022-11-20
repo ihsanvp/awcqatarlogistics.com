@@ -18,7 +18,7 @@ export default function menu(
 			const eased = easing(t);
 
 			return `
-        clip-path: inset(0 0 ${100 - 100 * eased}% 0); 
+        opacity: ${eased}
       `;
 		}
 	};

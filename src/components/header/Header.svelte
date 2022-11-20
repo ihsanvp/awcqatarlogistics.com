@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from './Button.svelte';
+	import HeaderButton from './HeaderButton.svelte';
 	import Icon from '@iconify/svelte';
 	import MenuIcon from '@iconify-icons/mdi/menu';
 	import CloseIcon from '@iconify-icons/mdi/close';
@@ -45,11 +45,11 @@
 	<div class="container mx-auto flex items-center h-full justify-between">
 		<div class="">Logo</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
-			<Button label="Home" />
-			<Button label="Company" />
-			<Button label="Services" />
-			<Button label="Features" />
-			<Button label="Contact" />
+			<HeaderButton label="Home" />
+			<HeaderButton label="Company" />
+			<HeaderButton label="Services" />
+			<HeaderButton label="Features" />
+			<HeaderButton label="Contact" />
 		</div>
 		<div class="sm:hidden">
 			<button on:click={openMenu}>
@@ -58,7 +58,7 @@
 		</div>
 	</div>
 </header>
-<Menu isOpen={open} onClose={closeMenu} />
+<Menu isOpen={open} on:close:menu={closeMenu} />
 
 <style>
 	.active {
