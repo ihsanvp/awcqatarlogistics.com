@@ -9,7 +9,7 @@
 	>
 		<Icon icon={TickIcon} width={14} />
 	</div>
-	<div class="font-medium flex-1">
+	<div class="font-semibold flex-1">
 		<slot />
 	</div>
 </div>

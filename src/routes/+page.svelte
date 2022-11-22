@@ -46,20 +46,27 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6 place-items-center">
-			<div class="col-span-6 lg:col-span-4">
-				<div class="text-4xl md:text-5xl font-bold leading-[1.3] md:leading-[1.4]">
+			<div class="col-span-6 lg:col-span-3 xl:col-span-4 xl:pr-20">
+				<div class="text-3xl md:text-4xl font-bold leading-[1.3] md:leading-[1.4] 2xl:pr-20">
 					{@html renderContent(ABOUT.content.title)}
 				</div>
-				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-10">
-					{@html renderContent(ABOUT.content.detail)}
-				</div>
-				<div class="mt-10 flex flex-col gap-5">
-					{#each ABOUT.content.cards as card}
-						<AboutCard>{@html renderContent(card)}</AboutCard>
-					{/each}
+				<div class="flex flex-col items-center justify-center">
+					<div class="max-w-[500px]">
+						<div class="lg:pr-20 pl-8  mt-10 relative">
+							<div class="absolute top-0 bottom-0 left-0 w-1 bg-gray-200" />
+							<div class="leading-[1.6] text-gray-600">
+								{@html renderContent(ABOUT.content.detail)}
+							</div>
+						</div>
+						<div class="mt-10 flex flex-col gap-5">
+							{#each ABOUT.content.cards as card}
+								<AboutCard>{@html renderContent(card)}</AboutCard>
+							{/each}
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="w-full h-full col-span-2 md:p-5 hidden md:block">
+			<div class="w-full h-full col-span-2 lg:col-span-3 xl:col-span-2 md:p-5 hidden lg:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
 					<img class="w-auto h-full" src={ABOUT.image.url} alt={ABOUT.image.url} />
 				</div>
