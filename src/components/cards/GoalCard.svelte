@@ -1,11 +1,18 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
-	import TickIcon from '@iconify-icons/mdi/check-circle-outline';
+	import Icon, { type IconifyIcon } from '@iconify/svelte';
+
+	export let icon: IconifyIcon;
+	export let title: string;
 </script>
 
-<div class="flex items-center gap-3">
-	<Icon icon={TickIcon} width={30} />
-	<div class="text-lg md:text-xl">
-		<slot />
+<div class="flex mt-16 gap-5">
+	<div class="px-5">
+		<Icon {icon} width={30} />
+	</div>
+	<div class="flex-1">
+		<div class="text-2xl font-bold">{title}</div>
+		<p class="mt-5">
+			<slot />
+		</p>
 	</div>
 </div>

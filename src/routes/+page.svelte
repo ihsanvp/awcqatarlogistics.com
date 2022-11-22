@@ -34,6 +34,9 @@
 	import renderContent from '@helpers/renderContent';
 	import ABOUT from '@data/about';
 	import SERVICES from '@data/services';
+	import Icon from '@iconify/svelte';
+	import MissionIcon from '@iconify-icons/mdi/smart-card';
+	import VisionIcon from '@iconify-icons/mdi/drug-off';
 </script>
 
 <Landing />
@@ -95,12 +98,14 @@
 			<div class="flex-1 hidden md:block" />
 			<div class="flex-1 text-white">
 				<div class="text-4xl md:text-5xl font-bold">Explore Our Main Goals For Business</div>
-				<div class="flex flex-col gap-10 mt-20">
-					<GoalCard>100% Customer Satisfaction</GoalCard>
-					<GoalCard>Time Maintenance</GoalCard>
-					<GoalCard>Security & Trust</GoalCard>
-					<GoalCard>Qaulity Control System</GoalCard>
-				</div>
+				<GoalCard title="Mission" icon={MissionIcon}>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit, illum ab
+					debitis hic dolor alias accusamus sunt numquam totam.
+				</GoalCard>
+				<GoalCard title="Vision" icon={VisionIcon}>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, iure commodi. A, quia
+					hic laboriosam adipisci, harum, dolore maiores ad vero voluptatum commodi doloribus sed.
+				</GoalCard>
 			</div>
 		</div>
 	</div>
