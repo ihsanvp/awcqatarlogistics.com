@@ -77,7 +77,9 @@
 
 <section class="section">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-1 md:grid-cols-4 gap-32 md:gap-4 mt-20 md:mt-40">
+		<div
+			class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-32 sm:gap-10 md:gap-32 xl:gap-4 mt-20 md:mt-40"
+		>
 			{#each SERVICES.cards as card}
 				<ServiceCard>
 					<svelte:component this={card.icon} slot="icon" class="w-full" />

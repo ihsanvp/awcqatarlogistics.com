@@ -7,5 +7,5 @@ body {
 }
 
 .dev {
-    @apply bg-white sm:bg-yellow-200 md:bg-red-200 lg:bg-blue-200 xl:bg-green-200 2xl:bg-purple-400;
+    @apply bg-white sm:bg-yellow-200 md:bg-red-200 lg:bg-blue-200 xl:bg-green-200 2xl:bg-purple-300;
 }
