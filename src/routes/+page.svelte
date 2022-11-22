@@ -127,7 +127,7 @@
 			</div>
 			<div class="flex flex-col xl:flex-row mt-5 gap-5 items-center">
 				<div
-					class="text-3xl md:text-4xl font-bold leading-[1.2] 2xl:pr-20 text-center md:text-left"
+					class="text-3xl md:text-4xl font-bold leading-[1.2] lg:pr-40 xl:pr-0 2xl:pr-20 text-center md:text-left"
 				>
 					We Manage Lead Logistics For World's Multinational Companies.
 				</div>

@@ -75,7 +75,7 @@
 				>
 					<div
 						transition:fade={{ duration: 1000 }}
-						class="absolute inset-0 flex items-center justify-center overflow-hidden"
+						class="absolute inset-0 flex items-center justify-center"
 					>
 						<div class="relative max-w-[800px] ">
 							<div
