@@ -37,6 +37,7 @@
 	import Icon from '@iconify/svelte';
 	import MissionIcon from '@iconify-icons/mdi/smart-card';
 	import VisionIcon from '@iconify-icons/mdi/drug-off';
+	import GOAL from '@data/goal';
 </script>
 
 <Landing />
@@ -97,15 +98,12 @@
 		<div class="flex gap-40">
 			<div class="flex-1 hidden md:block" />
 			<div class="flex-1 text-white">
-				<div class="text-4xl md:text-5xl font-bold">Explore Our Main Goals For Business</div>
-				<GoalCard title="Mission" icon={MissionIcon}>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit, illum ab
-					debitis hic dolor alias accusamus sunt numquam totam.
-				</GoalCard>
-				<GoalCard title="Vision" icon={VisionIcon}>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, iure commodi. A, quia
-					hic laboriosam adipisci, harum, dolore maiores ad vero voluptatum commodi doloribus sed.
-				</GoalCard>
+				<div class="text-4xl md:text-5xl font-bold">{@html renderContent(GOAL.title)}</div>
+				{#each GOAL.cards as card}
+					<GoalCard title={card.title} icon={card.icon}>
+						{@html renderContent(card.description)}
+					</GoalCard>
+				{/each}
 			</div>
 		</div>
 	</div>

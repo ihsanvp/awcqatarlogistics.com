@@ -20,34 +20,22 @@ const SERVICES: ServicesData = {
 		{
 			icon: RoadServiceIcon,
 			title: `We Provide {?Road?} \n Freight In City`,
-			detail: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-        delectus voluptatibus architecto.
-      `
+			detail: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi delectus voluptatibus architecto.`
 		},
 		{
 			icon: AirServiceIcon,
 			title: `We Provide {?Air?} \n Freight In City`,
-			detail: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-        delectus voluptatibus architecto.
-      `
+			detail: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi delectus voluptatibus architecto.`
 		},
 		{
 			icon: OceanServiceIcon,
 			title: `We Provide {?Sea?} \n Freight In City`,
-			detail: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-        delectus voluptatibus architecto.
-      `
+			detail: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi delectus voluptatibus architecto.`
 		},
 		{
 			icon: WarehouseServiceIcon,
 			title: `We Provide {?Storage?} \n Services In City`,
-			detail: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-        delectus voluptatibus architecto.
-      `
+			detail: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi delectus voluptatibus architecto.`
 		}
 	]
 };
