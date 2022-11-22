@@ -6,6 +6,8 @@
 	import { createEventDispatcher } from 'svelte';
 	import HEADER from '@data/header';
 	import CONTACT from '@data/contact';
+	import MenuSocial from './MenuSocial.svelte';
+	import { fly } from 'svelte/transition';
 
 	export let isOpen: boolean;
 
@@ -37,17 +39,16 @@
 					<MenuButton on:close:menu label={link.label} delay={(i + 1) * 100} active={i == 0} />
 				{/each}
 			</div>
-			<div class="py-5">
-				<div class="text-xl font-medium">Connect With Us</div>
+			<div class="py-10">
+				<div
+					class="text-xl font-medium"
+					in:fly={{ y: -10, duration: 500, delay: links.length * 150 }}
+				>
+					Connect With Us
+				</div>
 				<div class="flex items-center justify-start gap-10 mt-4">
-					{#each socials as social}
-						{#if social.url}
-							<a href={social.url} target="_blank" rel="noreferrer">
-								<svelte:component this={Icon} icon={social.icon} width={30} />
-							</a>
-						{:else}
-							<svelte:component this={Icon} icon={social.icon} width={30} />
-						{/if}
+					{#each socials as social, i}
+						<MenuSocial icon={social.icon} url={social.url} delay={(i + links.length) * 150} />
 					{/each}
 				</div>
 			</div>
