@@ -78,7 +78,7 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div
-			class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-32 sm:gap-10 md:gap-32 xl:gap-4 mt-20 md:mt-40"
+			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 sm:gap-10 md:gap-32 lg:gap-4 mt-20 md:mt-40"
 		>
 			{#each SERVICES.cards as card}
 				<ServiceCard>
@@ -105,7 +105,7 @@
 		</div>
 	</div>
 	<div class="container mx-auto py-32 md:py-40">
-		<div class="flex gap-28 xl:gap-40">
+		<div class="flex gap-20 xl:gap-40">
 			<div class="flex-1 hidden lg:block" />
 			<div class="flex-1 text-white">
 				<div class="text-4xl md:text-5xl font-bold">{@html renderContent(GOAL.title)}</div>
@@ -140,7 +140,7 @@
 		</div>
 
 		<div
-			class="grid grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-10 lg:gap-20 xl:gap-4 mt-10 md:mt-20"
+			class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-10 lg:gap-4 xl:gap-4 mt-10 md:mt-20"
 		>
 			<ServiceBgCard title="Air Freight" bg={s1}>
 				<svelte:fragment slot="icon">
