@@ -8,9 +8,11 @@
 	import YoutubeIcon from '@iconify-icons/mdi/youtube';
 	import MenuButton from './MenuButton.svelte';
 	import { createEventDispatcher } from 'svelte';
+	import HEADER from '@content/header';
 
 	export let isOpen: boolean;
 
+	const links = HEADER.links;
 	const dispatch = createEventDispatcher();
 
 	function close() {
@@ -33,11 +35,9 @@
 				</div>
 			</div>
 			<div class="flex flex-col gap-5 items-start justify-center flex-1">
-				<MenuButton on:close:menu label="Home" delay={100} active />
-				<MenuButton on:close:menu label="Company" delay={200} />
-				<MenuButton on:close:menu label="Services" delay={300} />
-				<MenuButton on:close:menu label="Features" delay={400} />
-				<MenuButton on:close:menu label="Contact" delay={500} />
+				{#each links as link, i}
+					<MenuButton on:close:menu label={link.label} delay={(i + 1) * 100} active={i == 0} />
+				{/each}
 			</div>
 			<div class="py-5">
 				<div class="text-xl font-medium">Connect With Us</div>

@@ -2,13 +2,15 @@
 	import HeaderButton from './HeaderButton.svelte';
 	import Icon from '@iconify/svelte';
 	import MenuIcon from '@iconify-icons/mdi/menu';
-	import CloseIcon from '@iconify-icons/mdi/close';
 	import Menu from './Menu.svelte';
+	import HEADER from '@content/header';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
 	let active = false;
 	let open = false;
+
+	const links = HEADER.links;
 
 	function openMenu() {
 		open = true;
@@ -45,11 +47,9 @@
 	<div class="container mx-auto flex items-center h-full justify-between">
 		<div class="">Logo</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
-			<HeaderButton label="Home" />
-			<HeaderButton label="Company" />
-			<HeaderButton label="Services" />
-			<HeaderButton label="Features" />
-			<HeaderButton label="Contact" />
+			{#each links as link}
+				<HeaderButton label={link.label} />
+			{/each}
 		</div>
 		<div class="sm:hidden">
 			<button on:click={openMenu}>
