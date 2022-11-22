@@ -38,6 +38,7 @@
 	import MissionIcon from '@iconify-icons/mdi/smart-card';
 	import VisionIcon from '@iconify-icons/mdi/drug-off';
 	import GOAL from '@data/goal';
+	import Testimonials from '@components/testimonials/Testimonials.svelte';
 </script>
 
 <Landing />
@@ -228,7 +229,9 @@
 	</div>
 </section>
 
-<style>
+<Testimonials />
+
+<style global>
 	.section {
 		@apply my-32 lg:my-60;
 	}

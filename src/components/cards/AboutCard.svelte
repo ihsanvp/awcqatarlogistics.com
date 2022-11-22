@@ -4,12 +4,12 @@
 </script>
 
 <div class="flex items-center gap-3">
-	<span
+	<div
 		class="flex items-center justify-center text-white bg-orange-500 w-6 h-6 rounded-full overflow-hidden "
 	>
 		<Icon icon={TickIcon} width={14} />
-	</span>
-	<div class="font-medium">
+	</div>
+	<div class="font-medium flex-1">
 		<slot />
 	</div>
 </div>
