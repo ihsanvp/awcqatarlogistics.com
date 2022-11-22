@@ -63,7 +63,7 @@
 	});
 </script>
 
-<section class="section bg-gray-100 py-40 overflow-hidden">
+<section class="bg-gray-100 py-40 overflow-hidden">
 	<div class="container mx-auto">
 		<div class="text-center text-xl text-orange-600 font-medium">Client Testimonials</div>
 		<div class="relative w-full mt-10 h-[500px] md:h-[400px]">

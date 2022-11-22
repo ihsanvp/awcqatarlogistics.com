@@ -169,7 +169,7 @@
 	</div>
 </section>
 
-<section class="section relative">
+<section class="section relative mb-0">
 	<div class="container mx-auto text-white py-32 lg:py-60">
 		<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
 			<div class="flex-1 flex flex-col gap-3 lg:gap-5">
