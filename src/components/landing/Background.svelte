@@ -1,5 +1,5 @@
 <script lang="ts">
-	import homeContent from '@content/home';
+	import homeContent from '@data/home';
 
 	export let active: number;
 

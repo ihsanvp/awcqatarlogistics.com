@@ -2,17 +2,15 @@
 	import menu from '@animations/menu';
 	import Icon from '@iconify/svelte';
 	import CloseIcon from '@iconify-icons/mdi/close';
-	import FacebookIcon from '@iconify-icons/mdi/facebook';
-	import TwitterIcon from '@iconify-icons/mdi/twitter';
-	import InstagramIcon from '@iconify-icons/mdi/instagram';
-	import YoutubeIcon from '@iconify-icons/mdi/youtube';
 	import MenuButton from './MenuButton.svelte';
 	import { createEventDispatcher } from 'svelte';
-	import HEADER from '@content/header';
+	import HEADER from '@data/header';
+	import CONTACT from '@data/contact';
 
 	export let isOpen: boolean;
 
 	const links = HEADER.links;
+	const socials = CONTACT.socials;
 	const dispatch = createEventDispatcher();
 
 	function close() {
@@ -42,10 +40,15 @@
 			<div class="py-5">
 				<div class="text-xl font-medium">Connect With Us</div>
 				<div class="flex items-center justify-start gap-10 mt-4">
-					<Icon icon={FacebookIcon} width={30} />
-					<Icon icon={InstagramIcon} width={30} />
-					<Icon icon={TwitterIcon} width={30} />
-					<Icon icon={YoutubeIcon} width={30} />
+					{#each socials as social}
+						{#if social.url}
+							<a href={social.url} target="_blank" rel="noreferrer">
+								<svelte:component this={Icon} icon={social.icon} width={30} />
+							</a>
+						{:else}
+							<svelte:component this={Icon} icon={social.icon} width={30} />
+						{/if}
+					{/each}
 				</div>
 			</div>
 		</div>

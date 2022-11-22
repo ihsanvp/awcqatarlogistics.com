@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import homeContent from '@content/home';
+	import homeContent from '@data/home';
 	import Content from './Content.svelte';
 	import Background from './Background.svelte';
 	import Controls from './Controls.svelte';

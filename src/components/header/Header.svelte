@@ -3,7 +3,7 @@
 	import Icon from '@iconify/svelte';
 	import MenuIcon from '@iconify-icons/mdi/menu';
 	import Menu from './Menu.svelte';
-	import HEADER from '@content/header';
+	import HEADER from '@data/header';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 

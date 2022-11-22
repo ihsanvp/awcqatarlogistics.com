@@ -19,7 +19,7 @@ const config = {
 		alias: {
 			"@components/*": "src/components",
 			"@assets/*": "src/assets",
-			"@content/*": "src/content",
+			"@data/*": "src/data",
 			"@animations/*": "src/animations",
 			"@helpers/*": "src/helpers"
 		},

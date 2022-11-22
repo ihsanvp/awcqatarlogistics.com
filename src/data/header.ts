@@ -2,11 +2,11 @@ interface HeaderLink {
 	label: string;
 }
 
-interface HeaderContent {
+interface HeaderData {
 	links: HeaderLink[];
 }
 
-const HEADER: HeaderContent = {
+const HEADER: HeaderData = {
 	links: [
 		{ label: 'Home' },
 		{ label: 'About' },
