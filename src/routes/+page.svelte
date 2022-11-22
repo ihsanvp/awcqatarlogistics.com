@@ -30,18 +30,40 @@
 	import FeatureCard from '@components/cards/FeatureCard.svelte';
 	import ServiceCard from '@components/cards/ServiceCard.svelte';
 	import GoalCard from '@components/cards/GoalCard.svelte';
+	import AboutCard from '@components/cards/AboutCard.svelte';
 </script>
 
 <Landing />
 
 <section class="section">
 	<div class="container mx-auto">
-		<div class="text-center text-orange-600 font-medium text-sm">Services We Offer</div>
-		<div
-			class="mt-3 md:mt-5 text-4xl md:text-4xl font-bold text-center flex items-center justify-center"
-		>
-			<div class="max-w-[600px]">Transport Solutions That Saves Your Time!</div>
+		<div class="grid grid-cols-6 place-items-center">
+			<div class="col-span-6 lg:col-span-4">
+				<div class="text-4xl md:text-5xl font-bold leading-[1.3] md:leading-[1.4]">
+					Safe, Reliable And Express Logistic
+				</div>
+				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-10">
+					We pride ourselves on providing the best transport and shipping services available allover
+					the world. Our skilled personnel, utilising the latest communications, tracking and
+					processing software, combined with decades of experience!
+				</div>
+				<div class="mt-10 flex flex-col gap-5">
+					<AboutCard>Quality Control System,100% Satisfaction Guarantee</AboutCard>
+					<AboutCard>Quality Control System,100% Satisfaction Guarantee</AboutCard>
+					<AboutCard>Quality Control System,100% Satisfaction Guarantee</AboutCard>
+				</div>
+			</div>
+			<div class="w-full h-full col-span-2 md:p-5 hidden md:block">
+				<div class="w-full h-full flex items-center justify-center overflow-hidden">
+					<img class="w-auto h-full" src={aboutImage} alt="about" />
+				</div>
+			</div>
 		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container mx-auto">
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-32 md:gap-4 mt-20 md:mt-40">
 			<ServiceCard>
 				<svelte:fragment slot="icon">
@@ -192,6 +214,7 @@
 		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
 	</div>
 </section>
+
 <!-- 
 <section class="section">
 	<div class="container mx-auto">
@@ -238,35 +261,6 @@
 		</div>
 	</div>
 </section> -->
-
-<section class="section">
-	<div class="container mx-auto">
-		<div class="grid grid-cols-6 place-items-center">
-			<div class="col-span-6 lg:col-span-4">
-				<div class="text-4xl md:text-5xl font-bold leading-[1.3] md:leading-[1.4]">
-					Safe, Reliable And Express Logistic
-				</div>
-				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-10">
-					Logisti Group is a representative logistics operator providing full range of service in
-					the sphere of customs clearance and transportation worldwide for any type of cargo.
-				</div>
-				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-5">
-					We pride ourselves on providing the best transport and shipping services available allover
-					the world. Our skilled personnel, utilising the latest communications, tracking and
-					processing software, combined with decades of experience! Through integrated supply chain
-					solutions, Logisti drives sustainable competitive advantages to some of Australia's
-					largest companies.
-				</div>
-			</div>
-			<div class="w-full h-full col-span-2 md:p-5 hidden md:block">
-				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<img class="w-auto h-full" src={aboutImage} alt="about" />
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <style>
 	.section {
 		@apply my-32 lg:my-60;
