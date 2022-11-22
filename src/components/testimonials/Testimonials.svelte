@@ -63,10 +63,10 @@
 	});
 </script>
 
-<section class="section">
+<section class="section bg-gray-100 py-40 overflow-hidden">
 	<div class="container mx-auto">
 		<div class="text-center text-xl text-orange-600 font-medium">Client Testimonials</div>
-		<div class="relative w-full mt-10 h-[500px]">
+		<div class="relative w-full mt-10 h-[500px] md:h-[400px]">
 			{#key active}
 				<div
 					in:fly={{ duration: 1000, x: inX, easing: quintInOut }}
@@ -77,11 +77,15 @@
 						transition:fade={{ duration: 1000 }}
 						class="absolute inset-0 flex items-center justify-center overflow-hidden"
 					>
-						<div class="relative  max-w-[800px] ">
-							<div class="absolute top-[-150px] left-[-100px] text-gray-100 text-[300px] z-[-1]">
+						<div class="relative max-w-[800px] ">
+							<div
+								class="absolute top-[-75px] md:top-[-150px] md:left-[-100px] text-gray-200 text-[150px] md:text-[300px] z-[0]"
+							>
 								❝
 							</div>
-							<div class="text-center text-2xl text-gray-500 font-medium leading-[2]">
+							<div
+								class="z-[1] relative text-center px-5 md:px-0 text-lg leading-[2] md:text-2xl text-gray-500 font-medium md:leading-[1.7]"
+							>
 								{slides[active].description}
 							</div>
 						</div>
@@ -89,7 +93,7 @@
 				</div>
 			{/key}
 		</div>
-		<div class="flex items-center justify-center gap-20 mt-10">
+		<div class="flex items-center justify-between md:justify-center md:gap-20 mt-10">
 			{#each slides as slide, i}
 				<button
 					class="flex flex-col items-center justify-center gap-2 client"
@@ -99,8 +103,8 @@
 					<div class="w-16 h-16 overflow-hidden rounded-full">
 						<img class="w-full h-full object-cover" src={slide.image} alt={slide.name} />
 					</div>
-					<div class="text-xl font-bold">{slide.name}</div>
-					<div class="text-gray-500 text-sm">{slide.company}</div>
+					<div class="md:text-xl font-bold text-center">{slide.name}</div>
+					<div class="text-gray-500 text-sm text-center">{slide.company}</div>
 				</button>
 			{/each}
 		</div>
