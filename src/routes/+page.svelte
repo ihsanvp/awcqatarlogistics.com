@@ -31,6 +31,8 @@
 	import ServiceCard from '@components/cards/ServiceCard.svelte';
 	import GoalCard from '@components/cards/GoalCard.svelte';
 	import AboutCard from '@components/cards/AboutCard.svelte';
+	import HOME from '@data/home';
+	import renderContent from '@helpers/renderContent';
 </script>
 
 <Landing />
@@ -40,22 +42,20 @@
 		<div class="grid grid-cols-6 place-items-center">
 			<div class="col-span-6 lg:col-span-4">
 				<div class="text-4xl md:text-5xl font-bold leading-[1.3] md:leading-[1.4]">
-					Safe, Reliable And Express Logistic
+					{@html renderContent(HOME.about.content.title)}
 				</div>
 				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-10">
-					We pride ourselves on providing the best transport and shipping services available allover
-					the world. Our skilled personnel, utilising the latest communications, tracking and
-					processing software, combined with decades of experience!
+					{@html renderContent(HOME.about.content.detail)}
 				</div>
 				<div class="mt-10 flex flex-col gap-5">
-					<AboutCard>Quality Control System,100% Satisfaction Guarantee</AboutCard>
-					<AboutCard>Quality Control System,100% Satisfaction Guarantee</AboutCard>
-					<AboutCard>Quality Control System,100% Satisfaction Guarantee</AboutCard>
+					{#each HOME.about.content.cards as card}
+						<AboutCard>{@html renderContent(card)}</AboutCard>
+					{/each}
 				</div>
 			</div>
 			<div class="w-full h-full col-span-2 md:p-5 hidden md:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<img class="w-auto h-full" src={aboutImage} alt="about" />
+					<img class="w-auto h-full" src={HOME.about.image.url} alt={HOME.about.image.url} />
 				</div>
 			</div>
 		</div>

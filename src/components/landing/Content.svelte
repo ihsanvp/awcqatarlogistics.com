@@ -1,5 +1,5 @@
 <script lang="ts">
-	import homeContent from '@data/home';
+	import homeContent from '@data/slides';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import Button from '@components/common/Button.svelte';

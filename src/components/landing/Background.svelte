@@ -1,5 +1,5 @@
 <script lang="ts">
-	import homeContent from '@data/home';
+	import homeContent from '@data/slides';
 
 	export let active: number;
 
