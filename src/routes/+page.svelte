@@ -170,16 +170,16 @@
 </section>
 
 <section class="section relative">
-	<div class="container mx-auto text-white py-32 md:py-60">
-		<div class="flex flex-col md:flex-row items-center gap-16 md:gap-10 justify-between">
-			<div class="flex-1 flex flex-col gap-3 md:gap-5">
-				<div class="font-medium text-sm md:text-xl text-center md:text-left">
+	<div class="container mx-auto text-white py-32 lg:py-60">
+		<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
+			<div class="flex-1 flex flex-col gap-3 lg:gap-5">
+				<div class="font-medium text-sm lg:text-xl text-center lg:text-left">
 					Your Package, Your Rules
 				</div>
-				<div class="font-bold text-4xl md:text-5xl text-center md:text-left">
+				<div class="font-bold text-4xl lg:text-5xl text-center lg:text-left">
 					Digital Freight <br /> That Saves Your Time!
 				</div>
-				<div class="max-w-[600px] text-center md:text-left">
+				<div class="max-w-[600px] text-center lg:text-left">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, cupiditate nihil
 					quidem sapiente quaerat sequi ullam quo, aperiam accusantium dolorem laudantium itaque
 					alias fuga minus nesciunt nisi a quisquam et?
@@ -196,7 +196,7 @@
 		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
 	</div>
 </section>
-
+<!-- 
 <section class="section">
 	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
@@ -240,7 +240,7 @@
 			</FeatureCard>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <Testimonials />
 
