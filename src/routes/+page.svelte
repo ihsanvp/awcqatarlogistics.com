@@ -125,8 +125,10 @@
 			<div class="text-orange-600 font-medium text-sm text-center md:text-left">
 				Services We Offer
 			</div>
-			<div class="flex flex-col md:flex-row mt-5 gap-5">
-				<div class="text-3xl md:text-4xl font-bold leading-[1.2] md:pr-20 text-center md:text-left">
+			<div class="flex flex-col xl:flex-row mt-5 gap-5 items-center">
+				<div
+					class="text-3xl md:text-4xl font-bold leading-[1.2] 2xl:pr-20 text-center md:text-left"
+				>
 					We Manage Lead Logistics For World's Multinational Companies.
 				</div>
 				<div class="text-gray-600 leading-[1.6] text-center md:text-left">
@@ -137,7 +139,9 @@
 			</div>
 		</div>
 
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-20">
+		<div
+			class="grid grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-10 lg:gap-20 xl:gap-4 mt-10 md:mt-20"
+		>
 			<ServiceBgCard title="Air Freight" bg={s1}>
 				<svelte:fragment slot="icon">
 					<AirServiceIcon class="w-full" />

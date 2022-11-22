@@ -11,7 +11,7 @@
 	</div>
 	<div class="flex-1">
 		<div class="text-2xl font-bold">{title}</div>
-		<p class="mt-3 sm:mt-5 lg:mt-3 xl:mt-5">
+		<p class="mt-3 sm:mt-5 lg:mt-3 xl:mt-5 opacity-90">
 			<slot />
 		</p>
 	</div>
