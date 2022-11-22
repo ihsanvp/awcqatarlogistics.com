@@ -45,7 +45,7 @@
 
 <section class="section">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-6 place-items-center">
+		<div class="grid grid-cols-6 place-items-center gap-5">
 			<div class="col-span-6 lg:col-span-3 xl:col-span-4 xl:pr-20">
 				<div class="text-3xl md:text-4xl font-bold leading-[1.3] md:leading-[1.4] 2xl:pr-20">
 					{@html renderContent(ABOUT.content.title)}
@@ -98,15 +98,15 @@
 <section class="section relative">
 	<div class="absolute inset-0 z-[-1]">
 		<div class="w-full h-full flex">
-			<div class="flex-1 hidden md:block w-full h-full">
+			<div class="flex-1 hidden lg:block w-full h-full">
 				<img class="w-full h-full object-cover" src={s1} alt="bg" />
 			</div>
 			<div class="flex-1 w-full h-full bg-gradient-to-r from-orange-600 to-orange-700" />
 		</div>
 	</div>
 	<div class="container mx-auto py-32 md:py-40">
-		<div class="flex gap-40">
-			<div class="flex-1 hidden md:block" />
+		<div class="flex gap-28 xl:gap-40">
+			<div class="flex-1 hidden lg:block" />
 			<div class="flex-1 text-white">
 				<div class="text-4xl md:text-5xl font-bold">{@html renderContent(GOAL.title)}</div>
 				{#each GOAL.cards as card}
@@ -242,6 +242,6 @@
 
 <style global>
 	.section {
-		@apply my-32 lg:my-60;
+		@apply my-32 md:my-60;
 	}
 </style>
