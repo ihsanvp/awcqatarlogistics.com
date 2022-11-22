@@ -31,8 +31,9 @@
 	import ServiceCard from '@components/cards/ServiceCard.svelte';
 	import GoalCard from '@components/cards/GoalCard.svelte';
 	import AboutCard from '@components/cards/AboutCard.svelte';
-	import HOME from '@data/home';
 	import renderContent from '@helpers/renderContent';
+	import ABOUT from '@data/about';
+	import SERVICES from '@data/services';
 </script>
 
 <Landing />
@@ -42,20 +43,20 @@
 		<div class="grid grid-cols-6 place-items-center">
 			<div class="col-span-6 lg:col-span-4">
 				<div class="text-4xl md:text-5xl font-bold leading-[1.3] md:leading-[1.4]">
-					{@html renderContent(HOME.about.content.title)}
+					{@html renderContent(ABOUT.content.title)}
 				</div>
 				<div class="text-gray-600 lg:pr-40 leading-[1.6] mt-10">
-					{@html renderContent(HOME.about.content.detail)}
+					{@html renderContent(ABOUT.content.detail)}
 				</div>
 				<div class="mt-10 flex flex-col gap-5">
-					{#each HOME.about.content.cards as card}
+					{#each ABOUT.content.cards as card}
 						<AboutCard>{@html renderContent(card)}</AboutCard>
 					{/each}
 				</div>
 			</div>
 			<div class="w-full h-full col-span-2 md:p-5 hidden md:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<img class="w-auto h-full" src={HOME.about.image.url} alt={HOME.about.image.url} />
+					<img class="w-auto h-full" src={ABOUT.image.url} alt={ABOUT.image.url} />
 				</div>
 			</div>
 		</div>
@@ -65,54 +66,17 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-32 md:gap-4 mt-20 md:mt-40">
-			<ServiceCard>
-				<svelte:fragment slot="icon">
-					<RoadServiceIcon class="w-full" />
-				</svelte:fragment>
-				<svelte:fragment slot="title">
-					We Provide <span>Road</span> <br /> Freight In City
-				</svelte:fragment>
-				<svelte:fragment>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-					delectus voluptatibus architecto.
-				</svelte:fragment>
-			</ServiceCard>
-			<ServiceCard>
-				<svelte:fragment slot="icon">
-					<AirServiceIcon class="w-full" />
-				</svelte:fragment>
-				<svelte:fragment slot="title">
-					We Provide <span>Air</span> <br /> Freight In City
-				</svelte:fragment>
-				<svelte:fragment>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-					delectus voluptatibus architecto.
-				</svelte:fragment>
-			</ServiceCard>
-			<ServiceCard>
-				<svelte:fragment slot="icon">
-					<OceanServiceIcon class="w-full" />
-				</svelte:fragment>
-				<svelte:fragment slot="title">
-					We Provide <span>Sea</span> <br /> Freight In City
-				</svelte:fragment>
-				<svelte:fragment>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-					delectus voluptatibus architecto.
-				</svelte:fragment>
-			</ServiceCard>
-			<ServiceCard>
-				<svelte:fragment slot="icon">
-					<WarehouseServiceIcon class="w-full" />
-				</svelte:fragment>
-				<svelte:fragment slot="title">
-					We Provide <span>Storage</span> <br /> Services In City
-				</svelte:fragment>
-				<svelte:fragment>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quod quis facere quasi
-					delectus voluptatibus architecto.
-				</svelte:fragment>
-			</ServiceCard>
+			{#each SERVICES.cards as card}
+				<ServiceCard>
+					<svelte:component this={card.icon} slot="icon" class="w-full" />
+					<svelte:fragment slot="title">
+						{@html renderContent(card.title)}
+					</svelte:fragment>
+					<svelte:fragment>
+						{@html renderContent(card.detail)}
+					</svelte:fragment>
+				</ServiceCard>
+			{/each}
 		</div>
 	</div>
 </section>
