@@ -111,6 +111,80 @@
 
 <section class="section">
 	<div class="container mx-auto">
+		<div>
+			<div class="text-orange-600 font-medium text-sm text-center md:text-left">
+				Services We Offer
+			</div>
+			<div class="flex flex-col md:flex-row mt-5 gap-5">
+				<div class="text-3xl md:text-4xl font-bold leading-[1.2] md:pr-20 text-center md:text-left">
+					We Manage Lead Logistics For World's Multinational Companies.
+				</div>
+				<div class="text-gray-600 leading-[1.6] text-center md:text-left">
+					Our global logistics expertise, advanced supply chain technology & customized logistics
+					solutions will help you analyze, develop and implement successful supply chain management
+					strategies from end-to-end.
+				</div>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-20">
+			<ServiceBgCard title="Air Freight" bg={s1}>
+				<svelte:fragment slot="icon">
+					<AirServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+
+			<ServiceBgCard title="Ocean Freight" bg={s1}>
+				<svelte:fragment slot="icon">
+					<OceanServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+
+			<ServiceBgCard title="Road Freight" bg={s1}>
+				<svelte:fragment slot="icon">
+					<RoadServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+
+			<ServiceBgCard title="Consolidated Logistics" bg={s1}>
+				<svelte:fragment slot="icon">
+					<WarehouseServiceIcon class="w-full" />
+				</svelte:fragment>
+			</ServiceBgCard>
+		</div>
+	</div>
+</section>
+
+<section class="section relative">
+	<div class="container mx-auto text-white py-32 md:py-60">
+		<div class="flex flex-col md:flex-row items-center gap-16 md:gap-10 justify-between">
+			<div class="flex-1 flex flex-col gap-3 md:gap-5">
+				<div class="font-medium text-sm md:text-xl text-center md:text-left">
+					Your Package, Your Rules
+				</div>
+				<div class="font-bold text-4xl md:text-5xl text-center md:text-left">
+					Digital Freight <br /> That Saves Your Time!
+				</div>
+				<div class="max-w-[600px] text-center md:text-left">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, cupiditate nihil
+					quidem sapiente quaerat sequi ullam quo, aperiam accusantium dolorem laudantium itaque
+					alias fuga minus nesciunt nisi a quisquam et?
+				</div>
+			</div>
+			<div class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20">
+				<StatsCard icon={st1} amount={3214} label="Clients Worldwide" />
+				<StatsCard icon={st2} amount={5154} label="Delivered Goods" />
+				<StatsCard icon={st3} amount={8845} label="Miles Driven" />
+			</div>
+		</div>
+	</div>
+	<div class="absolute inset-0 z-[-1]">
+		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
+	</div>
+</section>
+
+<section class="section">
+	<div class="container mx-auto">
 		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
 		<div
 			class="mt-3 md:mt-5 text-4xl md:text-4xl font-bold text-center flex items-center justify-center"
@@ -154,80 +228,6 @@
 	</div>
 </section>
 
-<section class="section relative">
-	<div class="container mx-auto text-white py-32 md:py-60">
-		<div class="flex flex-col md:flex-row items-center gap-16 md:gap-10 justify-between">
-			<div class="flex-1 flex flex-col gap-3 md:gap-5">
-				<div class="font-medium text-sm md:text-xl text-center md:text-left">
-					Your Package, Your Rules
-				</div>
-				<div class="font-bold text-4xl md:text-5xl text-center md:text-left">
-					Digital Freight <br /> That Saves Your Time!
-				</div>
-				<div class="max-w-[600px] text-center md:text-left">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, cupiditate nihil
-					quidem sapiente quaerat sequi ullam quo, aperiam accusantium dolorem laudantium itaque
-					alias fuga minus nesciunt nisi a quisquam et?
-				</div>
-			</div>
-			<div class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20">
-				<StatsCard icon={st1} amount={3214} label="Clients Worldwide" />
-				<StatsCard icon={st2} amount={5154} label="Delivered Goods" />
-				<StatsCard icon={st3} amount={8845} label="Miles Driven" />
-			</div>
-		</div>
-	</div>
-	<div class="absolute inset-0 z-[-1]">
-		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
-	</div>
-</section>
-
-<!-- 
-<section class="section">
-	<div class="container mx-auto">
-		<div>
-			<div class="text-orange-600 font-medium text-sm text-center md:text-left">
-				Services We Offer
-			</div>
-			<div class="flex flex-col md:flex-row mt-5 gap-5">
-				<div class="text-3xl md:text-4xl font-bold leading-[1.2] md:pr-20 text-center md:text-left">
-					We Manage Lead Logistics For World's Multinational Companies.
-				</div>
-				<div class="text-gray-600 leading-[1.6] text-center md:text-left">
-					Our global logistics expertise, advanced supply chain technology & customized logistics
-					solutions will help you analyze, develop and implement successful supply chain management
-					strategies from end-to-end.
-				</div>
-			</div>
-		</div>
-
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-20">
-			<ServiceBgCard title="Air Freight" bg={s1}>
-				<svelte:fragment slot="icon">
-					<AirServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
-
-			<ServiceBgCard title="Ocean Freight" bg={s1}>
-				<svelte:fragment slot="icon">
-					<OceanServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
-
-			<ServiceBgCard title="Road Freight" bg={s1}>
-				<svelte:fragment slot="icon">
-					<RoadServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
-
-			<ServiceBgCard title="Consolidated Logistics" bg={s1}>
-				<svelte:fragment slot="icon">
-					<WarehouseServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
-		</div>
-	</div>
-</section> -->
 <style>
 	.section {
 		@apply my-32 lg:my-60;
