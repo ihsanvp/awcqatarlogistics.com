@@ -39,6 +39,12 @@
 	import VisionIcon from '@iconify-icons/mdi/drug-off';
 	import GOAL from '@data/goal';
 	import Testimonials from '@components/testimonials/Testimonials.svelte';
+
+	import testImage from '@assets/images/img-2.jpg?responsive';
+	//@ts-ignore
+	import testImage2 from '@assets/images/img-1.jpg?w=300;600;900;1200&srcset';
+	import getImageSource from '@helpers/getImageSource';
+	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 </script>
 
 <Landing />
@@ -68,7 +74,8 @@
 			</div>
 			<div class="w-full h-full col-span-2 lg:col-span-3 xl:col-span-2 md:p-5 hidden lg:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<img class="w-auto h-full" src={ABOUT.image.url} alt={ABOUT.image.url} />
+					<!-- <img class="w-auto h-full" src={ABOUT.image.url} alt={ABOUT.image.url} /> -->
+					<ResponsiveImage class="w-auto h-full" src={testImage} alt="about" />
 				</div>
 			</div>
 		</div>
