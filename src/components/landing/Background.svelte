@@ -1,24 +1,14 @@
 <script lang="ts">
-	import homeContent from '@data/slides';
+	import bg from '@assets/images/img-9.jpg?responsive';
+	import curve from '@assets/svgs/curve.svg';
+	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 
-	export let active: number;
-
-	const slides = homeContent.slides;
+	console.log(curve);
 </script>
 
 <div class="absolute inset-0 overflow-hidden">
-	{#each slides as slide, i}
-		<div
-			class="absolute inset-0 overflow-hidden duration-[15s] transition-transform ease-linear slide-zoom"
-		>
-			<img
-				class="w-full h-full object-cover opacity-0 transition-opacity duration-[3s] z-0"
-				src={slide.image}
-				alt="landing"
-				class:slideactive={active == i}
-			/>
-		</div>
-	{/each}
+	<ResponsiveImage class="w-full h-full object-cover" src={bg} alt="landing" />
+	<div class="absolute inset-0 bg-black opacity-50" />
 </div>
 
 <style>
