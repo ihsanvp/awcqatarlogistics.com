@@ -3,9 +3,6 @@
 	import StatsCard from '@components/cards/StatsCard.svelte';
 	import ServiceBgCard from '@components/cards/ServiceBGCard.svelte';
 
-	import bgImage from '@assets/images/landing-3.jpg';
-	import aboutImage from '@assets/images/about.jpg';
-
 	import st1 from '@assets/icons/stats-1.png';
 	import st2 from '@assets/icons/stats-2.png';
 	import st3 from '@assets/icons/stats-3.png';
@@ -15,28 +12,16 @@
 	import s3 from '@assets/images/img-5.jpg?responsive';
 	import s4 from '@assets/images/img-6.jpg?responsive';
 
-	import f1 from '@assets/icons/feature-1.png';
-	import f2 from '@assets/icons/feature-2.png';
-	import f3 from '@assets/icons/feature-3.png';
-	import f4 from '@assets/icons/feature-4.png';
-	import f5 from '@assets/icons/feature-5.png';
-	import f6 from '@assets/icons/feature-6.png';
-	import f7 from '@assets/icons/feature-7.png';
-
 	import AirServiceIcon from '@components/icons/AirServiceIcon.svelte';
 	import OceanServiceIcon from '@components/icons/OceanServiceIcon.svelte';
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
-	import FeatureCard from '@components/cards/FeatureCard.svelte';
 	import ServiceCard from '@components/cards/ServiceCard.svelte';
 	import GoalCard from '@components/cards/GoalCard.svelte';
 	import AboutCard from '@components/cards/AboutCard.svelte';
 	import renderContent from '@helpers/renderContent';
 	import ABOUT from '@data/about';
 	import SERVICES from '@data/services';
-	import Icon from '@iconify/svelte';
-	import MissionIcon from '@iconify-icons/mdi/smart-card';
-	import VisionIcon from '@iconify-icons/mdi/drug-off';
 	import GOAL from '@data/goal';
 	import Testimonials from '@components/testimonials/Testimonials.svelte';
 
@@ -74,7 +59,6 @@
 			</div>
 			<div class="w-full h-full col-span-2 lg:col-span-3 xl:col-span-2 md:p-5 hidden lg:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<!-- <img class="w-auto h-full" src={ABOUT.image.url} alt={ABOUT.image.url} /> -->
 					<ResponsiveImage class="w-auto h-full" src={testImage} alt="about" />
 				</div>
 			</div>
@@ -107,7 +91,6 @@
 		<div class="w-full h-full flex">
 			<div class="flex-1 hidden lg:block w-full h-full">
 				<ResponsiveImage class="w-full h-full object-cover" src={goalsImage} alt="goals" />
-				<!-- <img class="w-full h-full object-cover" src={s1} alt="bg" /> -->
 			</div>
 			<div class="flex-1 w-full h-full bg-gradient-to-r from-orange-600 to-orange-700" />
 		</div>
@@ -201,56 +184,10 @@
 		</div>
 	</div>
 	<div class="absolute inset-0">
-		<!-- <img class="w-full h-full object-cover" src={bgImage} alt="bg" /> -->
 		<ResponsiveImage class="w-full h-full object-cover" src={statsImage} alt="stats" />
 	</div>
 	<div class="absolute inset-0 bg-black opacity-70" />
 </section>
-<!-- 
-<section class="section">
-	<div class="container mx-auto">
-		<div class="text-center text-orange-600 font-medium text-sm">Your Package, Your Rules</div>
-		<div
-			class="mt-3 md:mt-5 text-4xl md:text-4xl font-bold text-center flex items-center justify-center"
-		>
-			<div class="max-w-[700px] capitalize">The vision to work every day to earn our customers</div>
-		</div>
-		<div class="mt-20 md:mt-40 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-20 items-center">
-			<FeatureCard title="Transparent Pricing" icon={f1}>
-				The world of international supply chains involves a myriad of unknown risks and challenging
-				regulations.
-			</FeatureCard>
-			<FeatureCard title="Real-Time Tracking" icon={f2}>
-				We ensure our customer's supply chains are fully compliant by our comprehensive practices
-				and programs.
-			</FeatureCard>
-			<FeatureCard title="Warehouse Storage" icon={f3}>
-				Depending on your product, needs and requirements, we provide professional warehouse
-				activities.
-			</FeatureCard>
-			<FeatureCard title="Security For Cargo" icon={f4}>
-				Our facilities meet high security requirements and are certified to the highest local
-				standards.
-			</FeatureCard>
-			<FeatureCard title="Easy Payment Methods" icon={f5}>
-				You can make use the easy convenient payment options, listed below, that are available in
-				your country.
-			</FeatureCard>
-			<FeatureCard title="24/7 Hours Support" icon={f6}>
-				We enhance our logistics operations by relieving you of the worries associated with freight
-				forwarding.
-			</FeatureCard>
-			<FeatureCard title="Fast & Efficient Delivery" icon={f7}>
-				We enhance our logistics operations by relieving you of the worries associated with freight
-				forwarding.
-			</FeatureCard>
-			<FeatureCard title="Transparent Pricing" icon={f1}>
-				The world of international supply chains involves a myriad of unknown risks and challenging
-				regulations.
-			</FeatureCard>
-		</div>
-	</div>
-</section> -->
 
 <Testimonials />
 
