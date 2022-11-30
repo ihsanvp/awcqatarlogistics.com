@@ -4,6 +4,7 @@
 	import MenuIcon from '@iconify-icons/mdi/menu';
 	import Menu from './Menu.svelte';
 	import HEADER from '@data/header';
+	import { page } from '$app/stores';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
@@ -20,12 +21,22 @@
 		open = false;
 	}
 
-	function onScroll(e: OnScrollEvent) {
-		if (e.currentTarget.scrollY > 10) {
-			active = true;
-		} else {
-			active = false;
+	function check() {
+		if (typeof window != 'undefined') {
+			if ($page.url.pathname == '/') {
+				if (window.scrollY > 10) {
+					active = true;
+				} else {
+					active = false;
+				}
+			} else {
+				active = true;
+			}
 		}
+	}
+
+	function onScroll(e: OnScrollEvent) {
+		check();
 	}
 
 	$: {
@@ -35,6 +46,14 @@
 			} else {
 				document.body.style.overflowY = 'scroll';
 			}
+		}
+	}
+
+	$: {
+		if ($page.url.pathname == '/') {
+			check();
+		} else {
+			active = true;
 		}
 	}
 </script>
@@ -48,7 +67,7 @@
 		<div class="">Logo</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
 			{#each links as link}
-				<HeaderButton label={link.label} />
+				<HeaderButton label={link.label} href={link.href} />
 			{/each}
 		</div>
 		<div class="sm:hidden">

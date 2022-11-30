@@ -1,7 +1,13 @@
 <script lang="ts">
 	export let label: string;
+	export let href: string | undefined = undefined;
 </script>
 
-<button class="hover:text-orange-600">
+<svelte:element
+	this={href ? 'a' : 'button'}
+	class="hover:text-orange-600"
+	{href}
+	data-sveltekit-noscroll
+>
 	{label}
-</button>
+</svelte:element>

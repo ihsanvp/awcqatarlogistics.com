@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { createEventDispatcher } from 'svelte';
 	import { fly } from 'svelte/transition';
 
@@ -6,12 +7,17 @@
 	export let onClick: VoidFunction | undefined = undefined;
 	export let delay: number = 0;
 	export let active: boolean = false;
+	export let href: string | undefined = undefined;
 
 	const dispatch = createEventDispatcher();
 
 	function handleClick() {
 		dispatch('close:menu');
-		onClick && onClick();
+		if (href) {
+			goto(href, { noScroll: true });
+		} else {
+			onClick && onClick();
+		}
 	}
 </script>
 

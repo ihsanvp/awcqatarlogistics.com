@@ -36,7 +36,13 @@
 			</div>
 			<div class="flex flex-col gap-5 items-start justify-center flex-1">
 				{#each links as link, i}
-					<MenuButton on:close:menu label={link.label} delay={(i + 1) * 100} active={i == 0} />
+					<MenuButton
+						on:close:menu
+						delay={(i + 1) * 100}
+						active={i == 0}
+						label={link.label}
+						href={link.href}
+					/>
 				{/each}
 			</div>
 			<div class="py-10">
