@@ -1,4 +1,4 @@
-import img from '@assets/images/landing-1.jpg';
+import img from '@assets/images/img-1.jpg';
 
 interface ClientData {
 	name: string;

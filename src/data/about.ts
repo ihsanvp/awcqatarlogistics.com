@@ -1,5 +1,3 @@
-import aboutImage from '@assets/images/about.jpg';
-
 interface AboutData {
 	image: {
 		url: string;
@@ -14,7 +12,7 @@ interface AboutData {
 
 const ABOUT: AboutData = {
 	image: {
-		url: aboutImage,
+		url: "",
 		alt: 'about-image'
 	},
 	content: {
