@@ -10,10 +10,10 @@
 	import st2 from '@assets/icons/stats-2.png';
 	import st3 from '@assets/icons/stats-3.png';
 
-	import s1 from '@assets/images/landing-1.jpg';
-	import s2 from '@assets/images/landing-2.jpg';
-	import s3 from '@assets/images/landing-3.jpg';
-	import s4 from '@assets/images/landing-4.jpg';
+	import s1 from '@assets/images/img-3.jpg?responsive';
+	import s2 from '@assets/images/img-4.jpg?responsive';
+	import s3 from '@assets/images/img-5.jpg?responsive';
+	import s4 from '@assets/images/img-6.jpg?responsive';
 
 	import f1 from '@assets/icons/feature-1.png';
 	import f2 from '@assets/icons/feature-2.png';
@@ -41,9 +41,9 @@
 	import Testimonials from '@components/testimonials/Testimonials.svelte';
 
 	import testImage from '@assets/images/img-2.jpg?responsive';
-	//@ts-ignore
-	import testImage2 from '@assets/images/img-1.jpg?w=300;600;900;1200&srcset';
-	import getImageSource from '@helpers/getImageSource';
+	import goalsImage from '@assets/images/img-1.jpg?responsive';
+	import statsImage from '@assets/images/img-6.jpg?responsive';
+
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 </script>
 
@@ -103,15 +103,16 @@
 </section>
 
 <section class="section relative">
-	<div class="absolute inset-0 z-[-1]">
+	<div class="absolute inset-0">
 		<div class="w-full h-full flex">
 			<div class="flex-1 hidden lg:block w-full h-full">
-				<img class="w-full h-full object-cover" src={s1} alt="bg" />
+				<ResponsiveImage class="w-full h-full object-cover" src={goalsImage} alt="goals" />
+				<!-- <img class="w-full h-full object-cover" src={s1} alt="bg" /> -->
 			</div>
 			<div class="flex-1 w-full h-full bg-gradient-to-r from-orange-600 to-orange-700" />
 		</div>
 	</div>
-	<div class="container mx-auto py-32 md:py-40">
+	<div class="relative container mx-auto py-32 md:py-40">
 		<div class="flex gap-20 xl:gap-40">
 			<div class="flex-1 hidden lg:block" />
 			<div class="flex-1 text-white">
@@ -155,19 +156,19 @@
 				</svelte:fragment>
 			</ServiceBgCard>
 
-			<ServiceBgCard title="Ocean Freight" bg={s1}>
+			<ServiceBgCard title="Ocean Freight" bg={s2}>
 				<svelte:fragment slot="icon">
 					<OceanServiceIcon class="w-full" />
 				</svelte:fragment>
 			</ServiceBgCard>
 
-			<ServiceBgCard title="Road Freight" bg={s1}>
+			<ServiceBgCard title="Road Freight" bg={s3}>
 				<svelte:fragment slot="icon">
 					<RoadServiceIcon class="w-full" />
 				</svelte:fragment>
 			</ServiceBgCard>
 
-			<ServiceBgCard title="Consolidated Logistics" bg={s1}>
+			<ServiceBgCard title="Consolidated Logistics" bg={s4}>
 				<svelte:fragment slot="icon">
 					<WarehouseServiceIcon class="w-full" />
 				</svelte:fragment>
@@ -177,7 +178,7 @@
 </section>
 
 <section class="section relative mb-0">
-	<div class="container mx-auto text-white py-32 lg:py-60">
+	<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
 		<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
 			<div class="flex-1 flex flex-col gap-3 lg:gap-5">
 				<div class="font-medium text-sm lg:text-xl text-center lg:text-left">
@@ -199,9 +200,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="absolute inset-0 z-[-1]">
-		<img class="w-full h-full object-cover" src={bgImage} alt="bg" />
+	<div class="absolute inset-0">
+		<!-- <img class="w-full h-full object-cover" src={bgImage} alt="bg" /> -->
+		<ResponsiveImage class="w-full h-full object-cover" src={statsImage} alt="stats" />
 	</div>
+	<div class="absolute inset-0 bg-black opacity-70" />
 </section>
 <!-- 
 <section class="section">
