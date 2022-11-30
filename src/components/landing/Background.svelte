@@ -11,25 +11,3 @@
 		<img src={curve} alt="curve" />
 	</div>
 </div>
-
-<style>
-	.slideactive {
-		@apply opacity-100 z-[1] duration-[2s];
-	}
-
-	.slide-zoom {
-		animation: zoom 20s ease-in-out;
-		animation-iteration-count: infinite;
-	}
-	@keyframes zoom {
-		0% {
-			transform: scale(1);
-		}
-		50% {
-			transform: scale(1.1);
-		}
-		100% {
-			transform: scale(1);
-		}
-	}
-</style>
