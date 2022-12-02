@@ -1,6 +1,6 @@
 <script lang="ts">
 	import bg from '@assets/images/img-9.jpg?responsive';
-	import curve from '@assets/svgs/curve-2.svg';
+	import curve from '@assets/svgs/curve-3.svg';
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 </script>
 

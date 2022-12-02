@@ -5,6 +5,7 @@
 	import Menu from './Menu.svelte';
 	import HEADER from '@data/header';
 	import { page } from '$app/stores';
+	import logo from '@assets/svgs/logo.svg';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
@@ -64,7 +65,9 @@
 	class:active
 >
 	<div class="container mx-auto flex items-center h-full justify-between">
-		<div class="">Logo</div>
+		<div class="py-5 h-full">
+			<img class="h-full" src={logo} alt="logo" />
+		</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
 			{#each links as link}
 				<HeaderButton label={link.label} href={link.href} />
