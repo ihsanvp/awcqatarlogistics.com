@@ -2,6 +2,8 @@
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 	import bg from '@assets/images/img-10.jpg?responsive';
 	import Input from '@components/common/Input.svelte';
+	import { navigating, page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	let form: HTMLFormElement;
 
@@ -29,6 +31,12 @@
 		console.log(getData());
 		clearForm();
 	}
+
+	onMount(() => {
+		if ($navigating && $navigating.to?.url.pathname == $page.url.pathname) {
+			setTimeout(() => window.scrollTo(0, 0), 500);
+		}
+	});
 </script>
 
 <div class="mt-[60px] md:mt-[70px]">

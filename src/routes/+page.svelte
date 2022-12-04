@@ -30,6 +30,15 @@
 	import statsImage from '@assets/images/img-6.jpg?responsive';
 
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
+
+	import { navigating, page } from '$app/stores';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if ($navigating && $navigating.to?.url.pathname == $page.url.pathname) {
+			setTimeout(() => window.scrollTo(0, 0), 500);
+		}
+	});
 </script>
 
 <Landing />
