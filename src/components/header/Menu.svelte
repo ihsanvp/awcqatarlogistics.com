@@ -8,6 +8,7 @@
 	import CONTACT from '@data/contact';
 	import MenuSocial from './MenuSocial.svelte';
 	import { fly } from 'svelte/transition';
+	import logo from '@assets/images/logo-black.png';
 
 	export let isOpen: boolean;
 
@@ -26,8 +27,10 @@
 		transition:menu={{ duration: 700 }}
 	>
 		<div class="w-full h-full flex flex-col justify-between container mx-auto">
-			<div class="h-[70px] md:h-[80px] flex items-center justify-between">
-				<div>Logo</div>
+			<div class="flex items-center justify-between gap-10 py-5">
+				<div class="flex-1">
+					<img class="w-full" src={logo} alt="logo" />
+				</div>
 				<div>
 					<button class="text-black" on:click={close}>
 						<Icon width={30} icon={CloseIcon} />

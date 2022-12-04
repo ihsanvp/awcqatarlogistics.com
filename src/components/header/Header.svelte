@@ -5,7 +5,7 @@
 	import Menu from './Menu.svelte';
 	import HEADER from '@data/header';
 	import { page } from '$app/stores';
-	import logo from '@assets/svgs/logo.svg';
+	import logoBlack from '@assets/images/logo-black.png';
 	import logoWhite from '@assets/images/logo-white.png';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
@@ -67,7 +67,11 @@
 >
 	<div class="container mx-auto flex items-center h-full justify-between">
 		<div class="py-5 h-full">
-			<img class="h-full" src={logoWhite} alt="logo" />
+			{#if !active}
+				<img class="h-full" src={logoWhite} alt="logo" />
+			{:else}
+				<img class="h-full" src={logoBlack} alt="logo" />
+			{/if}
 		</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
 			{#each links as link}
