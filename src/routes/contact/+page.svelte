@@ -61,7 +61,6 @@
 					name="contact"
 					bind:this={form}
 					class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
-					on:submit={submitForm}
 					data-netlify="true"
 				>
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
