@@ -8,9 +8,9 @@
 
 <div class="w-full h-[60vw] sm:h-[55vw] lg:h-[35vw] xl:h-[400px] relative text-white group">
 	<div
-		class="absolute inset-0 bg-secondary opacity-0 duration-500 transition-opacity md:group-hover:opacity-100"
+		class="absolute inset-0 z-[1] bg-secondary opacity-0 duration-500 transition-opacity md:group-hover:opacity-100"
 	/>
-	<div class="absolute inset-0 z-[1]">
+	<div class="absolute inset-0 z-[3]">
 		<div
 			class="w-full h-full flex flex-col p-5 items-center justify-center md:justify-end gap-2 xl:gap-3 overflow-hidden"
 		>
@@ -32,6 +32,9 @@
 			</div>
 		</div>
 	</div>
+	<div
+		class="absolute inset-0 z-[2] bg-black opacity-50 group-hover:opacity-0 duration-500 transition-opacity"
+	/>
 	<div class="w-full h-full overflow-hidden">
 		<ResponsiveImage class="w-full h-full object-cover" src={bg} alt={title} />
 	</div>

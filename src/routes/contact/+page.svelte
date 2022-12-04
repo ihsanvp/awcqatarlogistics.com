@@ -58,9 +58,11 @@
 				<div class="text-4xl text-black font-bold text-center">Contact Us</div>
 				<div class="h-1 w-10 bg-secondary" />
 				<form
+					name="contact"
 					bind:this={form}
 					class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
 					on:submit={submitForm}
+					data-netlify="true"
 				>
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
 					<Input
