@@ -64,6 +64,8 @@
 					class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
 					data-netlify="true"
 				>
+					<input type="hidden" name="form-name" value="contact" />
+					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
 					<Input
 						class="col-span-2 md:col-span-1"
