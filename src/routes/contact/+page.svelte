@@ -13,10 +13,20 @@
 		});
 	}
 
-	function getData() {}
+	function getData() {
+		const fields: NodeListOf<HTMLInputElement> = form.querySelectorAll('input, textarea');
+		const data: { [key: string]: any } = {};
+
+		fields.forEach((f) => {
+			data[f.name] = f.value;
+		});
+
+		return data;
+	}
 
 	function submitForm(e: any) {
 		e.preventDefault();
+		console.log(getData());
 		clearForm();
 	}
 </script>
@@ -38,11 +48,11 @@
 				<div class="text-4xl text-black font-bold text-center">Contact Us</div>
 				<div class="h-1 w-10 bg-orange-500" />
 				<form bind:this={form} class="w-full grid grid-cols-2 gap-10 mt-10" on:submit={submitForm}>
-					<Input required type="text" label="Name" />
-					<Input required type="text" label="Email" />
-					<Input required type="text" label="Mobile" />
-					<Input required type="text" label="Company" />
-					<Input class="col-span-2" type="textarea" label="Request Details" />
+					<Input required name="name" type="text" label="Name" />
+					<Input required name="email" type="email" label="Email" />
+					<Input required name="mobile" type="text" label="Mobile" />
+					<Input required name="company" type="text" label="Company" />
+					<Input class="col-span-2" name="details" type="textarea" label="Request Details" />
 					<div class="col-span-2 flex items-center justify-center">
 						<button
 							class="w-full max-w-[600px] py-3 text-center bg-gray-800 text-white md:hover:bg-orange-600 cursor-pointer transition-all duration-300 md:hover:scale-95"

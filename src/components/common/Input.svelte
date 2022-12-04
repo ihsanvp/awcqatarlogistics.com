@@ -1,9 +1,10 @@
 <script lang="ts">
-	type InputType = 'text' | 'number' | 'textarea';
+	type InputType = 'text' | 'number' | 'textarea' | 'email';
 	type InputEvent = Event & { currentTarget: EventTarget & HTMLTextAreaElement };
 
 	export let type: InputType;
 	export let label: string;
+	export let name: string;
 	export let minHeight: number = 300;
 	export let required: boolean = false;
 
@@ -12,7 +13,6 @@
 
 	function handleInput(e: InputEvent) {
 		const h = e.currentTarget.scrollHeight;
-		console.log(window.innerHeight / 2.5);
 
 		if (h > height) {
 			e.currentTarget.style.height = 'auto';
@@ -34,4 +34,5 @@
 	placeholder={label}
 	{required}
 	{type}
+	{name}
 />
