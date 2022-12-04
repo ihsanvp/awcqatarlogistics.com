@@ -60,6 +60,7 @@
 				<form
 					name="contact"
 					bind:this={form}
+					method="POST"
 					class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
 					data-netlify="true"
 				>
