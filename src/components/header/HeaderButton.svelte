@@ -5,7 +5,7 @@
 
 <svelte:element
 	this={href ? 'a' : 'button'}
-	class="hover:text-orange-600"
+	class="hover:text-secondary"
 	{href}
 	data-sveltekit-noscroll
 >

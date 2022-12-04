@@ -101,7 +101,7 @@
 			<div class="flex-1 hidden lg:block w-full h-full">
 				<ResponsiveImage class="w-full h-full object-cover" src={goalsImage} alt="goals" />
 			</div>
-			<div class="flex-1 w-full h-full bg-gradient-to-r from-orange-600 to-orange-700" />
+			<div class="flex-1 w-full h-full bg-gradient-to-r from-secondary to-blue-600" />
 		</div>
 	</div>
 	<div class="relative container mx-auto py-32 md:py-40">
@@ -122,7 +122,7 @@
 <section class="section">
 	<div class="container mx-auto">
 		<div>
-			<div class="text-orange-600 font-medium text-sm text-center md:text-left">
+			<div class="text-secondary font-medium text-sm text-center md:text-left">
 				Services We Offer
 			</div>
 			<div class="flex flex-col xl:flex-row mt-5 gap-5 items-center">

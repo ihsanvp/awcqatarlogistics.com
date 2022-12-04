@@ -4,7 +4,7 @@
 </script>
 
 <button
-	class="relative px-12 py-3 bg-white font-medium hover:bg-orange-600 transition-all duration-500 hover:text-white hover:scale-95"
+	class="relative px-12 py-3 bg-white font-medium hover:bg-secondary transition-all duration-500 hover:text-white hover:scale-95"
 	on:click={onClick}
 >
 	<span>{label}</span>

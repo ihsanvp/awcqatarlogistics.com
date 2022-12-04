@@ -10,12 +10,12 @@
 	const socials = CONTACT.socials;
 </script>
 
-<footer class="bg-orange-600 text-white">
+<footer class="bg-primary text-white">
 	<div class="container mx-auto py-32">
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20">
 			<div class="flex flex-col gap-5">
 				<div class="text-xl font-semibold">Company</div>
-				<div class="h-1 w-10 bg-orange-400" />
+				<div class="h-1 w-10 bg-white opacity-50" />
 				<div class="text-sm opacity-80 hover:opacity-100 cursor-pointer">About Company</div>
 				<div class="text-sm opacity-80 hover:opacity-100 cursor-pointer">Our History</div>
 				<div class="text-sm opacity-80 hover:opacity-100 cursor-pointer">Company Achievement</div>
@@ -24,7 +24,7 @@
 			</div>
 			<div class="flex flex-col gap-5">
 				<div class="text-xl font-semibold">Quick Links</div>
-				<div class="h-1 w-10 bg-orange-400" />
+				<div class="h-1 w-10 bg-white opacity-50" />
 				<div class="text-sm opacity-80 hover:opacity-100 cursor-pointer">Popular Services</div>
 				<div class="text-sm opacity-80 hover:opacity-100 cursor-pointer">Make An Appointment</div>
 				<div class="text-sm opacity-80 hover:opacity-100 cursor-pointer">Newsletters Subscribe</div>
@@ -33,7 +33,7 @@
 			</div>
 			<div class="flex flex-col gap-5">
 				<div class="text-xl font-semibold">Contact</div>
-				<div class="h-1 w-10 bg-orange-400" />
+				<div class="h-1 w-10 bg-white opacity-50" />
 				<ContactBlock icon={MobileIcon} url={CONTACT.mobile.url}>
 					{CONTACT.mobile.text}
 				</ContactBlock>
@@ -46,7 +46,7 @@
 			</div>
 			<div class="flex flex-col gap-5">
 				<div class="text-xl font-semibold">About Us</div>
-				<div class="h-1 w-10 bg-orange-400" />
+				<div class="h-1 w-10 bg-white opacity-50" />
 				<div class="text-sm opacity-90">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum temporibus minima itaque
 					dolores ipsa, dolor iure beatae rem culpa nobis.

@@ -8,7 +8,7 @@
 
 <div class="w-full h-[60vw] sm:h-[55vw] lg:h-[35vw] xl:h-[400px] relative text-white group">
 	<div
-		class="absolute inset-0 bg-orange-600 opacity-0 duration-500 transition-opacity md:group-hover:opacity-100"
+		class="absolute inset-0 bg-secondary opacity-0 duration-500 transition-opacity md:group-hover:opacity-100"
 	/>
 	<div class="absolute inset-0 z-[1]">
 		<div

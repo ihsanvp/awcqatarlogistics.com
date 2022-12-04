@@ -5,6 +5,10 @@ module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      colors: {
+        primary: "#B5002F",
+        secondary: "#0081e4"
+      },
       fontFamily: {
         serif: ["Inter", ...defaultTheme.fontFamily.serif]
       },

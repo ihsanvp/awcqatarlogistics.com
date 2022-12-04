@@ -32,6 +32,7 @@
 
 <style>
 	.active {
-		@apply text-orange-600 underline;
+		@apply underline;
+		color: #0081e4;
 	}
 </style>
