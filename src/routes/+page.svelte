@@ -36,14 +36,23 @@
 
 	onMount(() => {
 		if ($navigating && $navigating.to?.url.pathname == $page.url.pathname) {
-			setTimeout(() => window.scrollTo(0, 0), 500);
+			const hash = $navigating.to.url.hash.replace('#', '');
+			document.documentElement.style.scrollBehavior = 'auto';
+			setTimeout(() => {
+				const t = document.getElementById(hash)?.getBoundingClientRect();
+				window.scrollTo({
+					top: t?.top || 0
+				});
+
+				document.documentElement.style.scrollBehavior = 'smooth';
+			}, 500);
 		}
 	});
 </script>
 
 <Landing />
 
-<section class="section">
+<section class="section" id="about">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6 place-items-center gap-5">
 			<div class="col-span-6 lg:col-span-3 xl:col-span-4 xl:pr-20">
@@ -75,7 +84,7 @@
 	</div>
 </section>
 
-<section class="section">
+<section class="section" id="services">
 	<div class="container mx-auto">
 		<div
 			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 sm:gap-10 md:gap-32 lg:gap-4 mt-20 md:mt-40"
@@ -169,7 +178,7 @@
 	</div>
 </section>
 
-<section class="mt-32 mb-0 md:mb-60 md:mt-60 relative">
+<section class="mt-32 mb-0 md:mb-60 md:mt-60 relative" id="support">
 	<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
 		<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
 			<div class="flex-1 flex flex-col gap-3 lg:gap-5">
@@ -202,6 +211,6 @@
 
 <style global>
 	.section {
-		@apply my-32 md:my-60;
+		@apply py-20 my-20 md:my-40;
 	}
 </style>

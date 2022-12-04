@@ -10,10 +10,10 @@ interface HeaderData {
 
 const HEADER: HeaderData = {
 	links: [
-		{ label: 'Home', href: "/" },
-		{ label: 'About' },
-		{ label: 'Services' },
-		{ label: 'Support' },
+		{ label: 'Home', href: "/#" },
+		{ label: 'About', href: "/#about" },
+		{ label: 'Services', href: "/#services" },
+		{ label: 'Support', href: "/#support" },
 		{ label: 'Contact', href: "/contact" }
 	]
 };

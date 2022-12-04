@@ -3,9 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply overflow-x-hidden overflow-y-scroll font-serif ;
-}
-
-.dev {
-    @apply bg-white sm:bg-yellow-200 md:bg-red-200 lg:bg-blue-200 xl:bg-green-200 2xl:bg-purple-300;
+    @apply overflow-x-hidden overflow-y-scroll font-serif;
 }

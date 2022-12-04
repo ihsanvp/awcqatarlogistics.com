@@ -3,11 +3,7 @@
 	export let href: string | undefined = undefined;
 </script>
 
-<svelte:element
-	this={href ? 'a' : 'button'}
-	class="hover:text-secondary"
-	{href}
-	data-sveltekit-noscroll
->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<a class="hover:text-secondary" data-sveltekit-noscroll {href}>
 	{label}
-</svelte:element>
+</a>

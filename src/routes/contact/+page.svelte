@@ -5,36 +5,17 @@
 	import { navigating, page } from '$app/stores';
 	import { onMount } from 'svelte';
 
-	let form: HTMLFormElement;
-
-	function clearForm() {
-		const fields: NodeListOf<HTMLInputElement> = form.querySelectorAll('input, textarea');
-
-		fields.forEach((f) => {
-			f.value = '';
-		});
-	}
-
-	function getData() {
-		const fields: NodeListOf<HTMLInputElement> = form.querySelectorAll('input, textarea');
-		const data: { [key: string]: any } = {};
-
-		fields.forEach((f) => {
-			data[f.name] = f.value;
-		});
-
-		return data;
-	}
-
-	function submitForm(e: any) {
-		e.preventDefault();
-		console.log(getData());
-		clearForm();
-	}
-
 	onMount(() => {
 		if ($navigating && $navigating.to?.url.pathname == $page.url.pathname) {
-			setTimeout(() => window.scrollTo(0, 0), 500);
+			const t = document.getElementById($navigating.to.url.hash)?.getBoundingClientRect();
+			document.documentElement.style.scrollBehavior = 'auto';
+			setTimeout(() => {
+				window.scrollTo({
+					top: t?.top || 0
+				});
+
+				document.documentElement.style.scrollBehavior = 'smooth';
+			}, 500);
 		}
 	});
 </script>
@@ -59,7 +40,6 @@
 				<div class="h-1 w-10 bg-secondary" />
 				<form
 					name="contact"
-					bind:this={form}
 					method="POST"
 					class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
 					data-netlify="true"
