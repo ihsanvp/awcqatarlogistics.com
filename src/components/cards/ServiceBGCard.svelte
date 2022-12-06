@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div
-		class="absolute inset-0 z-[2] bg-black opacity-50 group-hover:opacity-0 duration-500 transition-opacity"
+		class="absolute inset-0 z-[2] bg-black opacity-50 md:group-hover:opacity-0 duration-500 transition-opacity"
 	/>
 	<div class="w-full h-full overflow-hidden">
 		<ResponsiveImage class="w-full h-full object-cover" src={bg} alt={title} />

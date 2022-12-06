@@ -52,7 +52,7 @@
 
 <Landing />
 
-<section class="section" id="about">
+<section class="py-20 my-20 md:mb-10 md:mt-40" id="about">
 	<div class="container mx-auto">
 		<div class="grid grid-cols-6 place-items-center gap-5">
 			<div class="col-span-6 lg:col-span-3 xl:col-span-4 xl:pr-20">
@@ -84,7 +84,7 @@
 	</div>
 </section>
 
-<section class="section" id="services">
+<section class="py-20 my-20 md:mb-40 md:mt-10" id="services">
 	<div class="container mx-auto">
 		<div
 			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 sm:gap-10 md:gap-32 lg:gap-4 mt-20 md:mt-40"
@@ -104,7 +104,7 @@
 	</div>
 </section>
 
-<section class="section relative">
+<section class="py-20 my-20 md:my-40 relative">
 	<div class="absolute inset-0">
 		<div class="w-full h-full flex">
 			<div class="flex-1 hidden lg:block w-full h-full">
@@ -113,7 +113,7 @@
 			<div class="flex-1 w-full h-full bg-gradient-to-r from-secondary to-blue-600" />
 		</div>
 	</div>
-	<div class="relative container mx-auto py-32 md:py-40">
+	<div class="relative container mx-auto py-10 md:py-20">
 		<div class="flex gap-20 xl:gap-40">
 			<div class="flex-1 hidden lg:block" />
 			<div class="flex-1 text-white">
@@ -128,7 +128,7 @@
 	</div>
 </section>
 
-<section class="section">
+<section class="py-20 my-20 md:my-40">
 	<div class="container mx-auto">
 		<div>
 			<div class="text-secondary font-medium text-sm text-center md:text-left">
@@ -178,7 +178,7 @@
 	</div>
 </section>
 
-<section class="mt-32 mb-0 md:mb-60 md:mt-60 relative" id="support">
+<section class="mt-32 mb-0 md:mb-32 md:mt-60 relative" id="support">
 	<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
 		<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
 			<div class="flex-1 flex flex-col gap-3 lg:gap-5">
@@ -208,9 +208,3 @@
 </section>
 
 <Testimonials />
-
-<style global>
-	.section {
-		@apply py-20 my-20 md:my-40;
-	}
-</style>
