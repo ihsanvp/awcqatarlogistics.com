@@ -66,12 +66,14 @@
 	class:active
 >
 	<div class="container mx-auto flex items-center h-full justify-between">
-		<div class="py-5 h-full">
-			{#if !active}
-				<img class="h-full" src={logoWhite} alt="logo" />
-			{:else}
-				<img class="h-full" src={logoBlack} alt="logo" />
-			{/if}
+		<div class="py-3 h-full">
+			<a href="/" class="h-full">
+				{#if !active}
+					<img class="h-full" src={logoWhite} alt="logo" />
+				{:else}
+					<img class="h-full" src={logoBlack} alt="logo" />
+				{/if}
+			</a>
 		</div>
 		<div class="items-center justify-center gap-10 hidden sm:flex">
 			{#each links as link}
