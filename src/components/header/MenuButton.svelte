@@ -13,14 +13,6 @@
 	}
 </script>
 
-<!-- <button
-	in:fly={{ y: 20, duration: 500, delay: delay }}
-	on:click={handleClick}
-	class="text-5xl font-medium"
->
-	{label}
-</button> -->
-
 <a
 	in:fly={{ y: 20, duration: 500, delay: delay }}
 	on:click={handleClick}

@@ -51,7 +51,7 @@
 
 <Landing />
 
-<section class="pt-[100px]" id="about">
+<section class="pt-[100px] mt-5" id="about">
 	<div class="container mx-auto">
 		<div
 			class="grid grid-cols-6 place-items-center gap-5 bg-white relative px-5 py-10 lg:px-10 lg:py-10 xl:px-20 xl:py-20"
@@ -87,100 +87,102 @@
 	</div>
 </section>
 
-<section class="pt-[100px] pb-40" id="services">
-	<div class="container mx-auto">
-		<div
-			class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 sm:gap-10 md:gap-32 lg:gap-4 mt-20 md:mt-40"
-		>
-			{#each SERVICES.cards as card}
-				<ServiceCard>
-					<svelte:component this={card.icon} slot="icon" class="w-full" />
-					<svelte:fragment slot="title">
-						{@html renderContent(card.title)}
-					</svelte:fragment>
-					<svelte:fragment>
-						{@html renderContent(card.detail)}
-					</svelte:fragment>
-				</ServiceCard>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<section class="py-10 my-20 md:my-40 relative">
-	<div class="absolute inset-0">
-		<div class="w-full h-full flex">
-			<div class="flex-1 hidden lg:block w-full h-full">
-				<ResponsiveImage class="w-full h-full object-cover" src={goalsImage} alt="goals" />
-			</div>
-			<div class="flex-1 w-full h-full bg-gradient-to-r from-secondary to-blue-600" />
-		</div>
-	</div>
-	<div class="relative container mx-auto py-10 md:py-20">
-		<div class="flex gap-20 xl:gap-40">
-			<div class="flex-1 hidden lg:block" />
-			<div class="flex-1 text-white">
-				<div class="text-4xl md:text-5xl font-bold text-center lg:text-left">
-					{@html renderContent(GOAL.title)}
-				</div>
-				{#each GOAL.cards as card}
-					<GoalCard title={card.title} icon={card.icon}>
-						{@html renderContent(card.description)}
-					</GoalCard>
+<section id="services">
+	<section class="pt-[100px] pb-40">
+		<div class="container mx-auto">
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 sm:gap-10 md:gap-32 lg:gap-4 mt-20 md:mt-40"
+			>
+				{#each SERVICES.cards as card}
+					<ServiceCard>
+						<svelte:component this={card.icon} slot="icon" class="w-full" />
+						<svelte:fragment slot="title">
+							{@html renderContent(card.title)}
+						</svelte:fragment>
+						<svelte:fragment>
+							{@html renderContent(card.detail)}
+						</svelte:fragment>
+					</ServiceCard>
 				{/each}
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="py-20 my-20 md:my-60">
-	<div class="container mx-auto">
-		<div>
-			<div class="text-secondary font-medium text-sm text-center md:text-left">
-				Services We Offer
-			</div>
-			<div class="flex flex-col xl:flex-row mt-5 gap-10 items-center">
-				<div
-					class="text-3xl md:text-4xl font-bold leading-[1.2] lg:pr-40 xl:pr-0 2xl:pr-20 text-center md:text-left"
-				>
-					We Manage Lead Logistics For World's Multinational Companies.
+	<section class="py-10 my-20 md:my-40 relative">
+		<div class="absolute inset-0">
+			<div class="w-full h-full flex">
+				<div class="flex-1 hidden lg:block w-full h-full">
+					<ResponsiveImage class="w-full h-full object-cover" src={goalsImage} alt="goals" />
 				</div>
-				<div class="text-gray-600 leading-[1.6] text-center md:text-left">
-					Our global logistics expertise, advanced supply chain technology & customized logistics
-					solutions will help you analyze, develop and implement successful supply chain management
-					strategies from end-to-end.
+				<div class="flex-1 w-full h-full bg-gradient-to-r from-secondary to-blue-600" />
+			</div>
+		</div>
+		<div class="relative container mx-auto py-10 md:py-20">
+			<div class="flex gap-20 xl:gap-40">
+				<div class="flex-1 hidden lg:block" />
+				<div class="flex-1 text-white">
+					<div class="text-4xl md:text-5xl font-bold text-center lg:text-left">
+						{@html renderContent(GOAL.title)}
+					</div>
+					{#each GOAL.cards as card}
+						<GoalCard title={card.title} icon={card.icon}>
+							{@html renderContent(card.description)}
+						</GoalCard>
+					{/each}
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<div
-			class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-10 lg:gap-4 xl:gap-4 mt-10 md:mt-20"
-		>
-			<ServiceBgCard title="Air Freight" bg={s1}>
-				<svelte:fragment slot="icon">
-					<AirServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
+	<section class="py-20 my-20 md:my-60">
+		<div class="container mx-auto">
+			<div>
+				<div class="text-secondary font-medium text-sm text-center md:text-left">
+					Services We Offer
+				</div>
+				<div class="flex flex-col xl:flex-row mt-5 gap-10 items-center">
+					<div
+						class="text-3xl md:text-4xl font-bold leading-[1.2] lg:pr-40 xl:pr-0 2xl:pr-20 text-center md:text-left"
+					>
+						We Manage Lead Logistics For World's Multinational Companies.
+					</div>
+					<div class="text-gray-600 leading-[1.6] text-center md:text-left">
+						Our global logistics expertise, advanced supply chain technology & customized logistics
+						solutions will help you analyze, develop and implement successful supply chain
+						management strategies from end-to-end.
+					</div>
+				</div>
+			</div>
 
-			<ServiceBgCard title="Ocean Freight" bg={s2}>
-				<svelte:fragment slot="icon">
-					<OceanServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
+			<div
+				class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-10 lg:gap-4 xl:gap-4 mt-10 md:mt-20"
+			>
+				<ServiceBgCard title="Air Freight" bg={s1}>
+					<svelte:fragment slot="icon">
+						<AirServiceIcon class="w-full" />
+					</svelte:fragment>
+				</ServiceBgCard>
 
-			<ServiceBgCard title="Road Freight" bg={s3}>
-				<svelte:fragment slot="icon">
-					<RoadServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
+				<ServiceBgCard title="Ocean Freight" bg={s2}>
+					<svelte:fragment slot="icon">
+						<OceanServiceIcon class="w-full" />
+					</svelte:fragment>
+				</ServiceBgCard>
 
-			<ServiceBgCard title="Consolidated Logistics" bg={s4}>
-				<svelte:fragment slot="icon">
-					<WarehouseServiceIcon class="w-full" />
-				</svelte:fragment>
-			</ServiceBgCard>
+				<ServiceBgCard title="Road Freight" bg={s3}>
+					<svelte:fragment slot="icon">
+						<RoadServiceIcon class="w-full" />
+					</svelte:fragment>
+				</ServiceBgCard>
+
+				<ServiceBgCard title="Consolidated Logistics" bg={s4}>
+					<svelte:fragment slot="icon">
+						<WarehouseServiceIcon class="w-full" />
+					</svelte:fragment>
+				</ServiceBgCard>
+			</div>
 		</div>
-	</div>
+	</section>
 </section>
 
 <section class="pt-[100px]" id="support">

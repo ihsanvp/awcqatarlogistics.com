@@ -7,6 +7,7 @@
 	import { page } from '$app/stores';
 	import logoBlack from '@assets/images/logo-black.png';
 	import MobileIcon from '@iconify-icons/mdi/phone';
+	import HeaderLinks from './HeaderLinks.svelte';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
@@ -72,11 +73,7 @@
 			</a>
 		</div>
 		<div class="hidden sm:flex items-center justify-center gap-10 h-full py-3">
-			<div class="items-center justify-center gap-10 hidden sm:flex">
-				{#each links as link}
-					<HeaderButton label={link.label} href={link.href} />
-				{/each}
-			</div>
+			<HeaderLinks />
 			<div class="w-[1px] bg-secondary h-full relative">
 				<div
 					class="absolute w-2 h-2 rounded-full bg-secondary top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"

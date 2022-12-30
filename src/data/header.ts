@@ -1,7 +1,7 @@
 interface HeaderLink {
 	label: string;
-	href?: string
-	target?: string
+	href: string;
+	target?: string;
 }
 
 interface HeaderData {
@@ -10,11 +10,11 @@ interface HeaderData {
 
 const HEADER: HeaderData = {
 	links: [
-		{ label: 'Home', href: "/#" },
-		{ label: 'About', href: "/#about" },
-		{ label: 'Services', href: "/#services" },
-		{ label: 'Support', href: "/#support" },
-		{ label: 'Contact', href: "/contact" }
+		{ label: 'Home', href: '/#home' },
+		{ label: 'About', href: '/#about' },
+		{ label: 'Services', href: '/#services' },
+		{ label: 'Support', href: '/#support' },
+		{ label: 'Contact', href: '/#contact' }
 	]
 };
 
