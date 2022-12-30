@@ -70,7 +70,7 @@
 			>
 		{/each}
 	</div>
-	<div class="bg-secondary h-[2px] absolute transition-all duration-100 ease-in-out" {style} />
+	<div class="bg-secondary h-[2px] absolute transition-all duration-300 ease-in-out" {style} />
 </div>
 
 <style>
