@@ -95,6 +95,6 @@
 
 <style>
 	.active {
-		@apply bg-white text-black bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-70 shadow-md h-[60px] md:h-[70px];
+		@apply bg-white text-black shadow-md h-[60px] md:h-[70px];
 	}
 </style>
