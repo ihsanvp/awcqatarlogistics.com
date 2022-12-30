@@ -7,7 +7,4 @@
 <div class="absolute inset-0 overflow-hidden">
 	<ResponsiveImage class="w-full h-full object-cover" src={bg} alt="landing" />
 	<div class="absolute inset-0 bg-black opacity-50" />
-	<div class="absolute inset-0 flex flex-col items-center justify-end">
-		<img src={curve} alt="curve" />
-	</div>
 </div>
