@@ -28,8 +28,10 @@
 	>
 		<div class="w-full h-full flex flex-col justify-between container mx-auto">
 			<div class="flex items-center justify-between gap-10 py-5">
-				<div class="flex-1">
-					<img class="w-full" src={logo} alt="logo" />
+				<div class=" h-full max-h-[35px] sm:h-[40px]">
+					<a href="/" class="h-full">
+						<img class="h-full object-contain" src={logo} alt="logo" />
+					</a>
 				</div>
 				<div>
 					<button class="text-black" on:click={close}>

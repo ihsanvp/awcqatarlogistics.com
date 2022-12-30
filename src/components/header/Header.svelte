@@ -6,7 +6,7 @@
 	import HEADER from '@data/header';
 	import { page } from '$app/stores';
 	import logoBlack from '@assets/images/logo-black.png';
-	import logoWhite from '@assets/images/logo-white.png';
+	import MobileIcon from '@iconify-icons/mdi/phone';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
@@ -62,23 +62,30 @@
 
 <svelte:window on:scroll={onScroll} />
 <header
-	class="fixed top-0 left-0 right-0 h-[80px] z-[999] text-white transition-all duration-500"
+	class="fixed top-0 left-0 right-0 h-[80px] sm:h-[120px] z-[999] text-black transition-all duration-500 bg-white"
 	class:active
 >
-	<div class="container mx-auto flex items-center h-full justify-between">
-		<div class="py-3 h-full">
+	<div class="container mx-auto flex items-center h-full justify-between gap-5">
+		<div class=" h-full max-h-[35px] sm:h-[40px]">
 			<a href="/" class="h-full">
-				{#if !active}
-					<img class="h-full" src={logoWhite} alt="logo" />
-				{:else}
-					<img class="h-full" src={logoBlack} alt="logo" />
-				{/if}
+				<img class="h-full object-contain" src={logoBlack} alt="logo" />
 			</a>
 		</div>
-		<div class="items-center justify-center gap-10 hidden sm:flex">
-			{#each links as link}
-				<HeaderButton label={link.label} href={link.href} />
-			{/each}
+		<div class="hidden sm:flex items-center justify-center gap-10 h-full py-3">
+			<div class="items-center justify-center gap-10 hidden sm:flex">
+				{#each links as link}
+					<HeaderButton label={link.label} href={link.href} />
+				{/each}
+			</div>
+			<div class="w-[1px] bg-secondary h-full relative">
+				<div
+					class="absolute w-2 h-2 rounded-full bg-secondary top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+				/>
+			</div>
+			<a href="tel:7994152171" class="flex items-center justify-center gap-3">
+				<Icon width={25} icon={MobileIcon} class="text-primary" />
+				<span>923892812</span>
+			</a>
 		</div>
 		<div class="sm:hidden">
 			<button on:click={openMenu}>

@@ -6,7 +6,7 @@
 </script>
 
 <div class="relative block w-full h-full z-[1]">
-	<div class="h-full container mx-auto flex items-center relative">
+	<div class="h-full container mx-auto flex items-center relative pt-[120px]">
 		<div class="w-full h-full relative">
 			<div class="absolute inset-0 flex items-center justify-center md:items-start flex-col">
 				<div class="max-w-[800px] flex flex-col gap-5 lg:gap-[2vw]">
