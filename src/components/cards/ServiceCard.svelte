@@ -9,7 +9,7 @@
 			<slot name="icon" />
 		</div>
 	</div>
-	<div class="text-2xl font-black title text-center sm:text-left">
+	<div class="text-xl font-black title text-center sm:text-left">
 		<slot name="title" />
 	</div>
 	<div class="text-gray-600 text-center sm:text-left">

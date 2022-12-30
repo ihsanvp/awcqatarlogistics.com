@@ -18,7 +18,6 @@
 				width={value.width}
 				height={value.height}
 				type={`image/${key}`}
-				{alt}
 			/>
 		{/if}
 	{/each}
