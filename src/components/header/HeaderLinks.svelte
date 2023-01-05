@@ -1,10 +1,10 @@
 <script lang="ts">
 	import HEADER from '@data/header';
-	import { onMount } from 'svelte';
 
 	const links = HEADER.links;
 
-	let active = 0;
+	export let active: number;
+
 	let left = 0;
 	let width = 0;
 	let container: HTMLDivElement;
@@ -23,41 +23,6 @@
 	}
 
 	$: style = `left: ${-left}px; width: ${width}px;`;
-
-	onMount(() => {
-		if (typeof IntersectionObserver != 'undefined') {
-			const observing: HTMLElement[] = [];
-			const observer = new IntersectionObserver(
-				(entries) => {
-					const [{ isIntersecting }] = entries;
-
-					if (isIntersecting) {
-						const targetID = entries[0].target.id;
-
-						active = links.findIndex((l) => l.href.includes(`#${targetID}`)) || 0;
-					}
-				},
-				{
-					rootMargin: '0px 0px -80% 0px',
-					threshold: [0, 0.25, 0.5, 0.75, 1]
-				}
-			);
-
-			links.forEach((l) => {
-				const id = l.href.split('#')[1];
-				const el = document.getElementById(id);
-
-				if (el) {
-					observer.observe(el);
-					observing.push(el);
-				}
-			});
-
-			return () => {
-				observing.forEach((el) => observer.unobserve(el));
-			};
-		}
-	});
 </script>
 
 <div class=" hidden sm:block relative">

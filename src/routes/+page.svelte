@@ -95,7 +95,7 @@
 </section>
 
 <section id="services">
-	<section class="pt-[100px] pb-40">
+	<section class="pb-20">
 		<div class="container mx-auto">
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 sm:gap-10 md:gap-32 lg:gap-10 mt-20 md:mt-40"
@@ -171,7 +171,7 @@
 		</div>
 	</section>
 
-	<section class="py-20 my-20 md:my-60">
+	<section class="py-10 my-20 md:my-40">
 		<div class="container mx-auto">
 			<div>
 				<div class="text-secondary font-medium text-sm text-center md:text-left">
@@ -232,7 +232,7 @@
 </section>
 
 <section id="support">
-	<section class="pt-[100px]">
+	<section class="pt-20">
 		<div class="relative">
 			<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
 				<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">

@@ -9,8 +9,10 @@
 	import MenuSocial from './MenuSocial.svelte';
 	import { fly } from 'svelte/transition';
 	import logo from '@assets/images/logo-black.png';
+	import MobileIcon from '@iconify-icons/mdi/phone';
 
 	export let isOpen: boolean;
+	export let activeLink: number;
 
 	const links = HEADER.links;
 	const socials = CONTACT.socials;
@@ -22,10 +24,7 @@
 </script>
 
 {#if isOpen}
-	<div
-		class="fixed inset-0 z-[9999] bg-white bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-60 overflow-hidden"
-		transition:menu={{ duration: 700 }}
-	>
+	<div class="fixed inset-0 z-[9999] bg-white overflow-hidden" transition:menu={{ duration: 700 }}>
 		<div class="w-full h-full flex flex-col justify-between container mx-auto">
 			<div class="flex items-center justify-between gap-10 py-5">
 				<div class=" h-full max-h-[35px] sm:h-[40px]">
@@ -41,7 +40,13 @@
 			</div>
 			<div class="flex flex-col gap-5 items-start justify-center flex-1">
 				{#each links as link, i}
-					<MenuButton on:close:menu delay={(i + 1) * 100} label={link.label} href={link.href} />
+					<MenuButton
+						on:close:menu
+						active={i == activeLink}
+						delay={(i + 1) * 100}
+						label={link.label}
+						href={link.href}
+					/>
 				{/each}
 			</div>
 			<div class="py-10">
@@ -49,12 +54,14 @@
 					class="text-xl font-medium"
 					in:fly={{ y: -10, duration: 500, delay: links.length * 150 }}
 				>
-					Connect With Us
+					Contact Us
 				</div>
-				<div class="flex items-center justify-start gap-10 mt-4">
-					{#each socials as social, i}
-						<MenuSocial icon={social.icon} url={social.url} delay={(i + links.length) * 150} />
-					{/each}
+
+				<div class="mt-4 flex">
+					<a href="tel:+97431393114" class="flex items-center justify-center gap-3">
+						<Icon width={25} icon={MobileIcon} class="text-primary" />
+						<span>+974 31393114</span>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -3,7 +3,6 @@
 	import homeContent from '@data/slides';
 	import Content from './Content.svelte';
 	import Background from './Background.svelte';
-	import Controls from './Controls.svelte';
 
 	const slides = homeContent.slides;
 

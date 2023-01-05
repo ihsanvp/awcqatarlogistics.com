@@ -26,5 +26,13 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
+    function({addBase, theme}) {
+      addBase({
+        ':root': {
+          '--color-primary': theme('colors').primary,
+          '--color-secondary': theme('colors').secondary,
+        }
+      })
+    }
   ],
 }

@@ -19,6 +19,6 @@
 
 <style>
 	.title :global(span) {
-		color: #0081e4;
+		color: var(--color-secondary);
 	}
 </style>

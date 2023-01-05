@@ -75,7 +75,7 @@
 								}}
 								out:fade
 							>
-								<Button label="Our Services" />
+								<Button label="Get a Free Call Back" />
 							</div>
 						</div>
 					</div>
