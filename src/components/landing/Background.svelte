@@ -1,9 +1,44 @@
 <script lang="ts">
-	import bg from '@assets/images/img-9.jpg?responsive';
-	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
+	import homeContent from '@data/slides';
+
+	export let active: number;
+
+	const slides = homeContent.slides;
 </script>
 
-<div class="absolute inset-0 -bottom-60 overflow-hidden">
-	<ResponsiveImage class="w-full h-full object-cover" src={bg} alt="landing" />
-	<div class="absolute inset-0 bg-black opacity-50" />
+<div class="absolute inset-0 overflow-hidden">
+	{#each slides as slide, i}
+		<div
+			class="absolute inset-0 overflow-hidden duration-[15s] transition-transform ease-linear slide-zoom"
+		>
+			<img
+				class="w-full h-full object-cover opacity-0 transition-opacity duration-[3s] z-0"
+				src={slide.image}
+				alt="landing"
+				class:slideactive={active == i}
+			/>
+		</div>
+	{/each}
 </div>
+
+<style>
+	.slideactive {
+		@apply opacity-100 z-[1] duration-[2s];
+	}
+
+	.slide-zoom {
+		animation: zoom 10s ease-in-out;
+		animation-iteration-count: infinite;
+	}
+	@keyframes zoom {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+</style>

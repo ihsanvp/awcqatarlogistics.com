@@ -63,7 +63,7 @@
 
 <svelte:window on:scroll={onScroll} />
 <header
-	class="fixed top-0 left-0 right-0 h-[80px] sm:h-[120px] z-[999] text-black transition-all duration-500 bg-white"
+	class="fixed top-0 left-0 right-0 h-[80px] sm:h-[100px] z-[999] text-black transition-all duration-500 bg-white"
 	class:active
 >
 	<div class="container mx-auto flex items-center h-full justify-between gap-5">

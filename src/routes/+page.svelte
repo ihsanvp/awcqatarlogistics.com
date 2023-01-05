@@ -22,16 +22,13 @@
 	import ServiceCard from '@components/cards/ServiceCard.svelte';
 	import GoalCard from '@components/cards/GoalCard.svelte';
 	import AboutCard from '@components/cards/AboutCard.svelte';
-	import renderContent from '@helpers/renderContent';
-	import ABOUT from '@data/about';
-	import SERVICES from '@data/services';
-	import GOAL from '@data/goal';
 
 	import testImage from '@assets/images/img-2.jpg?responsive';
 	import goalsImage from '@assets/images/img-1.jpg?responsive';
 	import statsImage from '@assets/images/img-6.jpg?responsive';
 
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
+	import Input from '@components/common/Input.svelte';
 
 	import { navigating, page } from '$app/stores';
 	import { onMount } from 'svelte';
@@ -52,16 +49,18 @@
 	});
 </script>
 
-<Landing />
+<section id="home">
+	<Landing />
+</section>
 
-<section class="pt-[100px] mt-5" id="about">
+<section class="-mt-60 pt-20" id="about">
 	<div class="container mx-auto">
 		<div
-			class="grid grid-cols-6 place-items-center gap-5 bg-white relative px-5 py-10 lg:px-10 lg:py-10 xl:px-20 xl:py-20"
+			class="grid grid-cols-12 place-items-center gap-5 bg-white relative px-5 py-10 lg:px-10 lg:py-10 xl:px-20 xl:py-20"
 		>
-			<div class="col-span-6 lg:col-span-3 xl:col-span-4 xl:pr-20">
+			<div class="col-span-12 lg:col-span-6 xl:col-span-7 xl:pr-5">
 				<div
-					class="text-3xl md:text-4xl font-bold leading-[1.3] md:leading-[1.4] 2xl:pr-20 text-center lg:text-left"
+					class="text-3xl md:text-4xl font-bold leading-[1.3] md:leading-[1.4] text-center lg:text-left"
 				>
 					Our Logistics & Transport Solutions are Reliable, Secure, and Swift to meet every Client's
 					Requirements
@@ -86,7 +85,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-full h-full col-span-2 lg:col-span-3 xl:col-span-2 md:p-5 hidden lg:block">
+			<div class="w-full h-full col-span-2 lg:col-span-6 xl:col-span-5 md:p-5 hidden lg:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
 					<ResponsiveImage class="w-auto h-full" src={testImage} alt="about" />
 				</div>
@@ -232,43 +231,144 @@
 	</section>
 </section>
 
-<section class="pt-[100px]" id="support">
-	<div class="relative">
-		<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
-			<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
-				<div class="flex-1 flex flex-col gap-3 lg:gap-5">
-					<div class="font-medium text-sm lg:text-xl text-center lg:text-left">
-						Your Package, Your Call
+<section id="support">
+	<section class="pt-[100px]">
+		<div class="relative">
+			<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
+				<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
+					<div class="flex-1 flex flex-col gap-3 lg:gap-5">
+						<div class="font-medium text-sm lg:text-xl text-center lg:text-left">
+							Your Package, Your Call
+						</div>
+						<div class="font-bold text-4xl lg:text-5xl text-center lg:text-left">
+							Professional Services, <br /> Save Your Time!
+						</div>
+						<div class="max-w-[600px] text-center lg:text-left">
+							Need someone to take care of your logistics needs or not sure which logistics solution
+							would be right for you? Please contact us. Our team of professionals will be happy to
+							help.
+						</div>
+						<div class="mt-5">
+							<a
+								href="https://wa.me/917994152171"
+								class="relative text-secondary px-12 py-3 bg-white font-medium hover:bg-secondary transition-all duration-500 hover:text-white hover:scale-95"
+							>
+								Get In Touch
+							</a>
+						</div>
 					</div>
-					<div class="font-bold text-4xl lg:text-5xl text-center lg:text-left">
-						Professional Services, <br /> Save Your Time!
-					</div>
-					<div class="max-w-[600px] text-center lg:text-left">
-						Need someone to take care of your logistics needs or not sure which logistics solution
-						would be right for you? Please contact us. Our team of professionals will be happy to
-						help.
-					</div>
-					<div class="mt-5">
-						<a
-							href="https://wa.me/917994152171"
-							class="relative text-secondary px-12 py-3 bg-white font-medium hover:bg-secondary transition-all duration-500 hover:text-white hover:scale-95"
-						>
-							Get In Touch
-						</a>
+					<div
+						class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20"
+					>
+						<StatsCard icon={st1} amount={3614} label="Satisfied Clients" />
+						<StatsCard icon={st2} amount={7254} label="Delivered Goods" />
+						<StatsCard icon={st3} amount={45} label="Destinations Covered" />
 					</div>
 				</div>
+			</div>
+			<div class="absolute inset-0">
+				<ResponsiveImage class="w-full h-full object-cover" src={statsImage} alt="stats" />
+			</div>
+			<div class="absolute inset-0 bg-black opacity-70" />
+		</div>
+	</section>
+
+	<section class="my-60">
+		<div class="container mx-auto grid grid-cols-12 place-items-center lg:gap-20">
+			<div class="w-full h-full col-span-2 lg:col-span-6 xl:col-span-5 hidden lg:block">
+				<div class="w-full h-full flex items-center justify-center overflow-hidden">
+					<ResponsiveImage class="w-auto h-full" src={testImage} alt="about" />
+				</div>
+			</div>
+			<div class="col-span-12 lg:col-span-6 xl:col-span-7 xl:pr-5">
 				<div
-					class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20"
+					class="text-3xl md:text-4xl font-bold leading-[1.3] md:leading-[1.4] text-center lg:text-left"
 				>
-					<StatsCard icon={st1} amount={3614} label="Satisfied Clients" />
-					<StatsCard icon={st2} amount={7254} label="Delivered Goods" />
-					<StatsCard icon={st3} amount={45} label="Destinations Covered" />
+					Clearing and Forwarding
+				</div>
+				<div class="flex flex-col items-center justify-center">
+					<div class="mt-10">
+						<p class="leading-[1.6] text-gray-600 text-center lg:text-left">
+							We provide comprehensive and efficient customs clearance services for all modes of
+							shipment, including air, sea, and land. We prepare and handle everything from document
+							preparation and handing in to monitoring and solving problems, which is in accordance
+							with the law of the land.
+						</p>
+						<p class="leading-[1.6] text-gray-600 mt-3 text-center lg:text-left">
+							We are committed to operational excellence through innovation and continual
+							improvement in achieving the objectives of providing impeccable quality solutions to
+							our customers and trusted partners.
+						</p>
+					</div>
+					<div class="mt-10 flex flex-col gap-5">
+						<AboutCard>Customs Clearances</AboutCard>
+						<AboutCard>Import / Export Documentation</AboutCard>
+						<AboutCard>Carting / Receiving Goods</AboutCard>
+						<AboutCard>Examination of Shipments</AboutCard>
+						<AboutCard>Handling of stuffing de-stuffing at Ports</AboutCard>
+						<AboutCard>24x7 Support at Air and Sea entry ports</AboutCard>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="absolute inset-0">
-			<ResponsiveImage class="w-full h-full object-cover" src={statsImage} alt="stats" />
+	</section>
+</section>
+
+<section class="pt-20" id="contact">
+	<div class="bg-secondary py-40">
+		<div class="container mx-auto">
+			<div class="grid grid-cols-12 lg:gap-10">
+				<div class="col-span-12 lg:col-span-6">
+					<div class="text-5xl text-white opacity-80 font-extrabold">Get a Call Back</div>
+					<p class="mt-10 text-white opacity-70 max-w-[500px]">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum libero odit est? Quia saepe
+						reprehenderit voluptatem expedita illum quo, molestias nemo, ea, at in odit maxime alias
+						ad. Magni, culpa?
+					</p>
+				</div>
+				<div class="col-span-12 lg:col-span-6">
+					<div class="text-white opacity-70 text-sm">Lorem ipsum dolor sit amet?</div>
+					<form
+						name="contact"
+						method="POST"
+						class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
+						data-netlify="true"
+					>
+						<input type="hidden" name="form-name" value="contact" />
+						<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
+						<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
+						<Input
+							class="col-span-2 md:col-span-1"
+							required
+							name="email"
+							type="email"
+							label="Email"
+						/>
+						<Input
+							class="col-span-2 md:col-span-1"
+							required
+							name="mobile"
+							type="text"
+							label="Mobile"
+						/>
+						<Input
+							class="col-span-2 md:col-span-1"
+							required
+							name="company"
+							type="text"
+							label="Company"
+						/>
+						<div class="col-span-2 mt-10 flex items-center justify-center">
+							<button
+								class="px-20 py-4 text-center bg-white text-secondary md:hover:bg-secondary cursor-pointer transition-all duration-300 md:hover:scale-95"
+								type="submit"
+							>
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-		<div class="absolute inset-0 bg-black opacity-70" />
 	</div>
 </section>
