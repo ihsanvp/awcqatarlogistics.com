@@ -1,6 +1,6 @@
-import img1 from '@assets/images/landing-1.jpg';
-import img2 from '@assets/images/landing-2.jpg';
-import img3 from '@assets/images/landing-3.jpg';
+import img1 from '@assets/images/Banner_1a.jpg';
+import img2 from '@assets/images/Banner_2.jpg';
+import img3 from '@assets/images/Banner_3.jpg';
 import type { HomeContent } from 'src/models/content';
 
 const homeContent: HomeContent = {

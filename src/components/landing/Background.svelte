@@ -20,6 +20,7 @@
 		</div>
 	{/each}
 </div>
+<div class="absolute inset-0 bg-black opacity-30" />
 
 <style>
 	.slideactive {

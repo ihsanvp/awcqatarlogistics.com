@@ -53,7 +53,7 @@
 								}
 							}}
 							out:fade
-							class="text-white max-w-[700px] text-center md:text-left"
+							class="text-white text-xl max-w-[700px] text-center md:text-left"
 						>
 							{slides[active].description}
 						</div>
