@@ -12,14 +12,14 @@
 <svelte:element
 	this={el}
 	href={url}
-	class={'flex items-center gap-3' + linkStyles}
+	class={'flex items-start gap-3' + linkStyles}
 	target="_blank"
 	rel="noreferrer"
 >
 	<div>
-		<Icon {icon} width={25} />
+		<Icon {icon} width={20} />
 	</div>
-	<div class="flex-1">
+	<div class="flex-1 text-sm">
 		<slot />
 	</div>
 </svelte:element>

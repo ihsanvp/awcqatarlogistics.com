@@ -19,22 +19,30 @@ interface ContactData {
 	mobile: ContactBlock;
 	email: ContactBlock;
 	address: ContactBlock;
+	whatsapp: ContactBlock;
 	socials: SocialData[];
 }
 
 const CONTACT: ContactData = {
 	mobile: {
-		text: '+012 (345) 556 99',
-		url: 'tel:917994152171'
+		text: '+974 31393114',
+		url: 'tel:+97431393114'
 	},
 	email: {
-		text: 'support@gmail.com',
-		url: 'mailto:ihsanvp2738@gmail.com'
+		text: `operations@awcqatarlogistics.com
+		sales@awcqatarlogistics.com`,
+		url: 'mailto:operations@awcqatarlogistics.com'
+	},
+	whatsapp: {
+		text: '+974 3139 3114',
+		url: 'https://wa.me/97431393114'
 	},
 	address: {
-		text: `North Avenue,
-		Chicago, IL, 55030`,
-		url: 'https://goo.gl/maps/eQ9qXAfdLyxo7wzJ6'
+		text: `Sheikha Abdullah Bin Thani Building
+		C Ring Road, Doha, Qatar,
+		Office #04, Building #04,
+		55247`,
+		url: 'https://goo.gl/maps/7ZbqBhwkxamwaMmc8'
 	},
 	socials: [
 		{ icon: FacebookIcon },
