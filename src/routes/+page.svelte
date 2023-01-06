@@ -248,9 +248,9 @@
 							would be right for you? Please contact us. Our team of professionals will be happy to
 							help.
 						</div>
-						<div class="mt-5">
+						<div class="mt-5 flex items-center justify-center lg:justify-start">
 							<a
-								href="https://wa.me/917994152171"
+								href="/#contact"
 								class="relative text-secondary px-12 py-3 bg-white font-medium hover:bg-secondary transition-all duration-500 hover:text-white hover:scale-95"
 							>
 								Get In Touch
@@ -260,9 +260,9 @@
 					<div
 						class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20"
 					>
-						<StatsCard icon={st1} amount={3614} label="Satisfied Clients" />
-						<StatsCard icon={st2} amount={7254} label="Delivered Goods" />
-						<StatsCard icon={st3} amount={45} label="Destinations Covered" />
+						<StatsCard icon={st1} count="3,614" label="Satisfied Clients" />
+						<StatsCard icon={st2} count="7,254" label="Delivered Goods" />
+						<StatsCard icon={st3} count="45" label="Destinations Covered" />
 					</div>
 				</div>
 			</div>
@@ -331,7 +331,7 @@
 					<form
 						name="contact"
 						method="POST"
-						class="w-full grid grid-cols-2 gap-5 md:gap-10 mt-10"
+						class="w-full grid grid-cols-2 gap-5 mt-10"
 						data-netlify="true"
 					>
 						<input type="hidden" name="form-name" value="contact" />
@@ -360,7 +360,7 @@
 						/>
 						<div class="col-span-2 mt-10 flex items-center justify-center">
 							<button
-								class="px-20 py-4 text-center bg-white text-secondary md:hover:bg-secondary cursor-pointer transition-all duration-300 md:hover:scale-95"
+								class="px-20 py-3 text-center bg-white text-secondary md:hover:opacity-70 cursor-pointer transition-all duration-300 md:hover:scale-95"
 								type="submit"
 							>
 								Submit

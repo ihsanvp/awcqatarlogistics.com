@@ -112,7 +112,7 @@
 				<img class="h-full object-contain" src={logoBlack} alt="logo" />
 			</a>
 		</div>
-		<div class="hidden sm:flex items-center justify-center gap-10 h-full py-3">
+		<div class="hidden lg:flex items-center justify-center gap-10 h-full py-3">
 			<HeaderLinks active={activeLink} />
 			<div class="w-[1px] bg-secondary h-full relative">
 				<div
@@ -124,7 +124,7 @@
 				<span>+974 31393114</span>
 			</a>
 		</div>
-		<div class="sm:hidden">
+		<div class="lg:hidden">
 			<button on:click={openMenu}>
 				<Icon width={30} icon={MenuIcon} />
 			</button>
