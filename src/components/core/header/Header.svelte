@@ -1,14 +1,14 @@
 <script lang="ts">
-	import HeaderButton from './HeaderButton.svelte';
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 	import Icon from '@iconify/svelte';
 	import MenuIcon from '@iconify-icons/mdi/menu';
 	import Menu from './Menu.svelte';
 	import HEADER from '@data/header';
-	import { page } from '$app/stores';
-	import logoBlack from '@assets/images/logo-black.png';
+	import logoBlack from '@assets/images/logo-black.png?responsive';
 	import MobileIcon from '@iconify-icons/mdi/phone';
 	import HeaderLinks from './HeaderLinks.svelte';
-	import { onMount } from 'svelte';
+	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 
 	type OnScrollEvent = UIEvent & { currentTarget: EventTarget & Window };
 
@@ -105,11 +105,11 @@
 >
 	<div class="container mx-auto flex items-center h-full justify-between gap-5">
 		<div
-			class=" h-full max-h-[35px] lg:max-h-[45px] sm:h-[40px] transition-all duration-500"
+			class="h-full max-h-[35px] lg:max-h-[45px] sm:h-[40px] transition-all duration-500"
 			class:activeImg={active}
 		>
-			<a href="/" class="h-full">
-				<img class="h-full object-contain" src={logoBlack} alt="logo" />
+			<a href="/" class="block h-full max-w-[200px] sm:max-w-[300px]">
+				<ResponsiveImage class="w-full h-full object-contain" src={logoBlack} alt="logo" />
 			</a>
 		</div>
 		<div class="hidden lg:flex items-center justify-center gap-10 h-full py-3">

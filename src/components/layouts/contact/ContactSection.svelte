@@ -17,7 +17,7 @@
 
 <div class="bg-secondary py-40">
 	<div class="container mx-auto">
-		<div class="grid grid-cols-12 gap-10">
+		<div class="grid grid-cols-12 gap-x-0 gap-y-10 sm:gap-x-10">
 			<div class="col-span-12 xl:col-span-4">
 				<div class="text-5xl text-white font-extrabold">{@html renderContent(title)}</div>
 				<p class="mt-10 text-white opacity-80 max-w-[500px]">
