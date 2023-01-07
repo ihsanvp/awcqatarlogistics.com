@@ -6,18 +6,24 @@ import type { HomeContent } from 'src/models/content';
 const homeContent: HomeContent = {
 	slides: [
 		{
-			title: 'One-stop Solution for all Your Logistics Requirements',
-			description: `We offer a comprehensive range of cargo services in optimum time both within Qatar and GCC countries.`,
+			title: `One-stop Solution 
+			for all Your Logistics 
+			Requirements`,
+			description: `We offer a comprehensive range of cargo services 
+			in optimum time both within Qatar and GCC countries.`,
 			image: img1
 		},
 		{
-			title: 'Flexible, Trustable & Speedy Cargo Services',
-			description: `We offer a comprehensive range of cargo services in optimum time both within Qatar and GCC countries.`,
+			title: `Flexible, Trustable & 
+			Speedy Cargo Services`,
+			description: `We offer a comprehensive range of cargo services 
+			in optimum time both within Qatar and GCC countries.`,
 			image: img2
 		},
 		{
-			title: 'Hassle-free Freight Forwarding and Clearances',
-			description: `We offer a comprehensive range of cargo services in optimum time both within Qatar and GCC countries.`,
+			title: `Hassle-free Freight Forwarding and Clearances`,
+			description: `We offer a comprehensive range of cargo services 
+			in optimum time both within Qatar and GCC countries.`,
 			image: img3
 		}
 	]
