@@ -1,14 +1,14 @@
 <script lang="ts">
-	import homeContent from '@data/slides';
+	import type { Slide } from 'src/models/slide';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
+
 	import Button from '@components/common/Button.svelte';
 	import renderContent from '@helpers/renderContent';
 	import landing from '@animations/landing';
 
 	export let active: number;
-
-	const slides = homeContent.slides;
+	export let slides: Slide[];
 </script>
 
 <div class="relative block w-full h-full z-[1]">

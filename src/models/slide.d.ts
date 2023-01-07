@@ -1,7 +1,7 @@
-import type { SvelteComponent } from 'svelte';
+import type IMAGE from '*.jpg?responsive';
 
 export interface Slide {
 	title: string;
 	description: string;
-	image: string;
+	image: IMAGE;
 }

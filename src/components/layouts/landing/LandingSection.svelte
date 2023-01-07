@@ -1,24 +1,18 @@
 <script lang="ts">
+	import type { Slide } from 'src/models/slide';
 	import { onMount } from 'svelte';
-	import homeContent from '@data/slides';
-	import Content from './Content.svelte';
-	import Background from './Background.svelte';
 
-	const slides = homeContent.slides;
+	import LandingContent from './LandingContent.svelte';
+	import LandingBackground from './LandingBackground.svelte';
+
+	export let slides: Slide[];
+	export let duration: number;
 
 	let activeIndex = 0;
 	let timer: NodeJS.Timer | undefined;
 
 	function next() {
 		return (activeIndex + 1) % slides.length;
-	}
-
-	function previous() {
-		if (activeIndex <= 0) {
-			return slides.length - 1;
-		}
-
-		return activeIndex - 1;
 	}
 
 	function set(index: number) {
@@ -40,19 +34,13 @@
 		}
 	}
 
-	function onControlClick(index: number) {
-		stop();
-		set(index);
-		start(8);
-	}
-
 	onMount(() => {
-		start(5);
+		start(duration);
 	});
 </script>
 
 <svelte:window on:focus={() => start(8)} on:blur={stop} />
 <section class="w-full h-screen relative">
-	<Content active={activeIndex} />
-	<Background active={activeIndex} />
+	<LandingContent active={activeIndex} {slides} />
+	<LandingBackground active={activeIndex} {slides} />
 </section>

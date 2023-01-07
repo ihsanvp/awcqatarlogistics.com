@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { IMAGE } from '*.jpg?responsive';
-	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 	import type { SvelteComponent } from 'svelte';
+	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 
 	export let title: string;
 	export let bg: typeof IMAGE[];
-	export let points: string[] = [];
+	export let points: string[];
 	export let icon: typeof SvelteComponent;
 </script>
 
