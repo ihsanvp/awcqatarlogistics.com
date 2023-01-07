@@ -248,9 +248,8 @@
 		title={'Get a Free \n Call Back'}
 		info="How can we help you?"
 		description="
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum libero odit est? Quia saepe 
-			reprehenderit voluptatem expedita illum quo, molestias nemo, ea, 
-			at in odit maxime alias ad. Magni, culpa?
+			If you wish to speak to us about a general query 
+			fill in the form here and we are happy to call you back within the same working day.
 		"
 	/>
 </section>
