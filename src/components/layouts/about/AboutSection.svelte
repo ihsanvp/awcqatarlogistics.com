@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type IImage from '*.jpg?responsive';
-	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
+	import type IMAGE from '*.jpg?responsive';
+	import AnimatedImage from '@components/common/AnimatedImage.svelte';
 	import TickPoint from '@components/common/TickPoint.svelte';
 
 	export let title: string;
 	export let description: string;
 	export let points: string[];
-	export let image: typeof IImage;
+	export let image: typeof IMAGE;
 </script>
 
 <div class="container mx-auto">
@@ -36,9 +36,7 @@
 			</div>
 		</div>
 		<div class="w-full h-full col-span-2 lg:col-span-6 xl:col-span-5 md:p-5 hidden lg:block">
-			<div class="w-full h-full flex items-center justify-center overflow-hidden">
-				<ResponsiveImage class="w-auto h-full" src={image} alt="about" />
-			</div>
+			<AnimatedImage duration={1000} src={image} color="primary" position="right" alt="about" />
 		</div>
 	</div>
 </div>

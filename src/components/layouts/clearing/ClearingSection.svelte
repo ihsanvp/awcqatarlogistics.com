@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type IMAGE from '*.jpg?responsive';
+	import AnimatedImage from '@components/common/AnimatedImage.svelte';
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 	import TickPoint from '@components/common/TickPoint.svelte';
 
@@ -11,8 +12,14 @@
 <div class="my-60">
 	<div class="container mx-auto grid grid-cols-12 place-items-center lg:gap-20">
 		<div class="w-full h-full col-span-2 lg:col-span-6 xl:col-span-5 hidden lg:block">
-			<div class="w-full h-full flex items-center justify-center overflow-hidden">
-				<ResponsiveImage class="w-auto h-full" src={image} alt="about" />
+			<div class="w-full h-full flex items-center justify-center">
+				<AnimatedImage
+					duration={1000}
+					src={image}
+					color="secondary"
+					position="left"
+					alt="clearing"
+				/>
 			</div>
 		</div>
 		<div class="col-span-12 lg:col-span-6 xl:col-span-7 xl:pr-5">
