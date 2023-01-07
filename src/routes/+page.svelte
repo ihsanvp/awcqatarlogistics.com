@@ -364,41 +364,43 @@
 						/>
 						<div class="col-span-2">
 							<div class="text-lg text-white opacity-90 mb-3">Select Service</div>
-							<ul class="grid w-full gap-6 grid-cols-2 md:grid-cols-4">
-								<li>
-									<ContactRadioButton
-										label="Air Freight"
-										icon={AirServiceIcon}
-										name="service"
-										value="air"
-										required
-									/>
-								</li>
-								<li>
-									<ContactRadioButton
-										label="Ocean Freight"
-										icon={OceanServiceIcon}
-										name="service"
-										value="ocean"
-									/>
-								</li>
-								<li>
-									<ContactRadioButton
-										label="Road Freight"
-										icon={RoadServiceIcon}
-										name="service"
-										value="road"
-									/>
-								</li>
-								<li>
-									<ContactRadioButton
-										label="Warehousing"
-										icon={WarehouseServiceIcon}
-										name="service"
-										value="storage"
-									/>
-								</li>
-							</ul>
+							<fieldset>
+								<ul class="grid w-full gap-6 grid-cols-2 md:grid-cols-4">
+									<li>
+										<ContactRadioButton
+											label="Air Freight"
+											icon={AirServiceIcon}
+											name="service"
+											value="air"
+											required
+										/>
+									</li>
+									<li>
+										<ContactRadioButton
+											label="Ocean Freight"
+											icon={OceanServiceIcon}
+											name="service"
+											value="ocean"
+										/>
+									</li>
+									<li>
+										<ContactRadioButton
+											label="Road Freight"
+											icon={RoadServiceIcon}
+											name="service"
+											value="road"
+										/>
+									</li>
+									<li>
+										<ContactRadioButton
+											label="Warehousing"
+											icon={WarehouseServiceIcon}
+											name="service"
+											value="storage"
+										/>
+									</li>
+								</ul>
+							</fieldset>
 						</div>
 						<div class="col-span-2 mt-10 flex items-center justify-center">
 							<button
