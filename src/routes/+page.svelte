@@ -35,6 +35,7 @@
 
 	import { navigating, page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import ContactRadioButton from '@components/common/ContactRadioButton.svelte';
 
 	onMount(() => {
 		if ($navigating && $navigating.to?.url.pathname == $page.url.pathname) {
@@ -320,8 +321,8 @@
 <section class="pt-20" id="contact">
 	<div class="bg-secondary py-40">
 		<div class="container mx-auto">
-			<div class="grid grid-cols-12 lg:gap-10">
-				<div class="col-span-12 lg:col-span-6">
+			<div class="grid grid-cols-12 gap-10">
+				<div class="col-span-12 xl:col-span-4">
 					<div class="text-5xl text-white font-extrabold">Get a Free Call Back</div>
 					<p class="mt-10 text-white opacity-80 max-w-[500px]">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum libero odit est? Quia saepe
@@ -329,7 +330,7 @@
 						ad. Magni, culpa?
 					</p>
 				</div>
-				<div class="col-span-12 lg:col-span-6">
+				<div class="col-span-12 xl:col-span-8">
 					<div class="text-white opacity-80 text-sm">How can we help you?</div>
 					<form
 						name="contact"
@@ -361,6 +362,44 @@
 							type="text"
 							label="Company"
 						/>
+						<div class="col-span-2">
+							<div class="text-lg text-white opacity-90 mb-3">Select Service</div>
+							<ul class="grid w-full gap-6 grid-cols-2 md:grid-cols-4">
+								<li>
+									<ContactRadioButton
+										label="Air Freight"
+										icon={AirServiceIcon}
+										name="service"
+										value="air"
+										required
+									/>
+								</li>
+								<li>
+									<ContactRadioButton
+										label="Ocean Freight"
+										icon={OceanServiceIcon}
+										name="service"
+										value="ocean"
+									/>
+								</li>
+								<li>
+									<ContactRadioButton
+										label="Road Freight"
+										icon={RoadServiceIcon}
+										name="service"
+										value="road"
+									/>
+								</li>
+								<li>
+									<ContactRadioButton
+										label="Warehousing"
+										icon={WarehouseServiceIcon}
+										name="service"
+										value="storage"
+									/>
+								</li>
+							</ul>
+						</div>
 						<div class="col-span-2 mt-10 flex items-center justify-center">
 							<button
 								class="px-20 py-3 text-center bg-white text-primary md:hover:bg-primary md:hover:text-white cursor-pointer transition-all duration-300 md:hover:scale-95"

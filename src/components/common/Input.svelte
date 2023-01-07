@@ -26,14 +26,16 @@
 	}
 </script>
 
-<svelte:element
-	this={type == 'textarea' ? 'textarea' : 'input'}
-	style={type == 'textarea' ? style : ''}
-	on:input={type == 'textarea' ? handleInput : undefined}
-	class={'w-full p-3 block overflow-hidden resize-none bg-white bg-opacity-10 placeholder:text-white placeholder:text-opacity-70 text-white active:outline-none focus:outline-none focus:outline-white ' +
-		$$props.class}
-	placeholder={label}
-	{required}
-	{type}
-	{name}
-/>
+<div class={'flex flex-col gap-2 ' + $$props.class}>
+	<label class="text-white opacity-90" for={`${label}-contact`}>{label}</label>
+	<svelte:element
+		this={type == 'textarea' ? 'textarea' : 'input'}
+		id={`${label}-contact`}
+		style={type == 'textarea' ? style : ''}
+		on:input={type == 'textarea' ? handleInput : undefined}
+		class={'w-full p-3 block overflow-hidden resize-none bg-white bg-opacity-10 placeholder:text-white placeholder:text-opacity-70 text-white active:outline-none focus:outline-none focus:outline-white '}
+		{required}
+		{type}
+		{name}
+	/>
+</div>
