@@ -20,7 +20,7 @@
 />
 <label
 	for={`${name}-${value}`}
-	class="inline-flex items-center justify-between w-full h-full p-5 text-white fill-white bg-secondary border border-gray-200 cursor-pointer peer-checked:bg-white peer-checked:text-secondary peer-checked:fill-secondary peer-checked:border-secondary md:hover:text-white md:hover:fill-white md:hover:bg-gray-100 md:hover:border-white md:hover:bg-opacity-20"
+	class="inline-flex items-center justify-between w-full h-full p-5 text-white fill-white bg-transparent border border-gray-200 cursor-pointer peer-checked:bg-white peer-checked:text-secondary peer-checked:fill-secondary peer-checked:border-secondary md:hover:text-white md:hover:fill-white md:hover:bg-gray-100 md:hover:border-white md:hover:bg-opacity-20"
 >
 	<div class="block">
 		<div class="w-[60px]">

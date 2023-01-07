@@ -33,7 +33,7 @@
 		id={`${label}-contact`}
 		style={type == 'textarea' ? style : ''}
 		on:input={type == 'textarea' ? handleInput : undefined}
-		class={'w-full p-3 block overflow-hidden resize-none bg-white bg-opacity-10 placeholder:text-white placeholder:text-opacity-70 text-white active:outline-none focus:outline-none focus:outline-white '}
+		class={'w-full p-3 block overflow-hidden resize-none border border-white bg-white bg-opacity-20 placeholder:text-white placeholder:text-opacity-70 text-white active:outline-none focus:outline-none focus:outline-white '}
 		{required}
 		{type}
 		{name}

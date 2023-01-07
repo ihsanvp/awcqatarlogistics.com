@@ -14,6 +14,7 @@
 	import coreValueImg from '@assets/images/core-values.jpg?responsive';
 	import statsImg from '@assets/images/service-4.jpg?responsive';
 	import clearingImg from '@assets/images/clearing.jpg?responsive';
+	import contactImg from '@assets/images/sea-bg.jpg?responsive';
 
 	import slide1 from '@assets/images/slide-1.jpg?responsive';
 	import slide2 from '@assets/images/slide-2.jpg?responsive';
@@ -247,6 +248,7 @@
 	<ContactSection
 		title={'Get a Free \n Call Back'}
 		info="How can we help you?"
+		bg={contactImg}
 		description="
 			If you wish to speak to us about a general query 
 			fill in the form here and we are happy to call you back within the same working day.

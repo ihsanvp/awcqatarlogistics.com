@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type IMAGE from '*.jpg?responsive';
 	import Input from '@components/common/Input.svelte';
 	import ContactRadioButton from './ContactRadioButton.svelte';
 
@@ -7,16 +8,22 @@
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
 	import renderContent from '@helpers/renderContent';
+	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 
 	export let title: string;
 	export let description: string;
 	export let info: string;
+	export let bg: typeof IMAGE;
 
 	let service: string = '';
 </script>
 
-<div class="bg-secondary py-40">
-	<div class="container mx-auto">
+<div class="py-40 relative">
+	<div class="absolute inset-0">
+		<ResponsiveImage class="w-full h-full object-cover" src={bg} alt="contact-bg" />
+	</div>
+	<div class="absolute inset-0 bg-black opacity-50" />
+	<div class="container mx-auto relative">
 		<div class="grid grid-cols-12 gap-x-0 gap-y-10 sm:gap-x-10">
 			<div class="col-span-12 xl:col-span-4">
 				<div class="text-5xl text-white font-extrabold">{@html renderContent(title)}</div>
