@@ -9,7 +9,7 @@
 
 	import s1 from '@assets/images/img-3.jpg?responsive';
 	import s2 from '@assets/images/img-4.jpg?responsive';
-	import s3 from '@assets/images/img-5.jpg?responsive';
+	import s3 from '@assets/images/ocean-freight.jpg?responsive';
 	import s4 from '@assets/images/img-6.jpg?responsive';
 
 	import MissionIcon from '@iconify-icons/mdi/smart-card';
@@ -24,11 +24,14 @@
 	import AboutCard from '@components/cards/AboutCard.svelte';
 
 	import testImage from '@assets/images/img-2.jpg?responsive';
-	import goalsImage from '@assets/images/img-1.jpg?responsive';
+	import goalsImage from '@assets/images/Explore.jpg?responsive';
 	import statsImage from '@assets/images/img-6.jpg?responsive';
 
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 	import Input from '@components/common/Input.svelte';
+
+	import aboutImg from '@assets/images/about.jpg?responsive';
+	import clearingImg from '@assets/images/clearing-2.jpg?responsive';
 
 	import { navigating, page } from '$app/stores';
 	import { onMount } from 'svelte';
@@ -53,7 +56,7 @@
 	<Landing />
 </section>
 
-<section class="-mt-60 pt-20" id="about">
+<section class="-mt-[25vh] pt-20" id="about">
 	<div class="container mx-auto">
 		<div
 			class="grid grid-cols-12 place-items-center gap-5 bg-white relative px-5 py-10 lg:px-10 lg:py-10 xl:px-20 xl:py-20"
@@ -77,17 +80,17 @@
 							</div>
 						</div>
 						<div class="mt-10 flex flex-col gap-5">
-							<AboutCard>Quality & Commitment</AboutCard>
-							<AboutCard>Fast & Efficient Delivery</AboutCard>
-							<AboutCard>Experienced Logistic Team</AboutCard>
-							<AboutCard>24/7 Customer Support</AboutCard>
+							<AboutCard color="secondary">Quality & Commitment</AboutCard>
+							<AboutCard color="secondary">Fast & Efficient Delivery</AboutCard>
+							<AboutCard color="secondary">Experienced Logistic Team</AboutCard>
+							<AboutCard color="secondary">24/7 Customer Support</AboutCard>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="w-full h-full col-span-2 lg:col-span-6 xl:col-span-5 md:p-5 hidden lg:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<ResponsiveImage class="w-auto h-full" src={testImage} alt="about" />
+					<ResponsiveImage class="w-auto h-full" src={aboutImg} alt="about" />
 				</div>
 			</div>
 		</div>
@@ -113,9 +116,9 @@
 					<svelte:component this={AirServiceIcon} slot="icon" class="w-full" />
 					<svelte:fragment slot="title"><span>Air</span> Cargo <br /> Services</svelte:fragment>
 					<svelte:fragment>
-						When it comes to air freight, we deliver whatever you need - whenever you want it. We
-						partner with the best airlines and partners to bring your cargo to you on time with
-						cost-effective, competitive, and speedy service.
+						We deliver whatever you need - whenever you want it. We partner with the best airlines
+						and partners to bring your cargo to you on time with cost-effective, competitive, and
+						speedy service.
 					</svelte:fragment>
 				</ServiceCard>
 				<ServiceCard>
@@ -128,9 +131,9 @@
 					</svelte:fragment>
 				</ServiceCard>
 				<ServiceCard>
-					<svelte:component this={OceanServiceIcon} slot="icon" class="w-full" />
+					<svelte:component this={WarehouseServiceIcon} slot="icon" class="w-full" />
 					<svelte:fragment slot="title"
-						><span>Warehousing</span> & Storage <br /> Services</svelte:fragment
+						><span>Warehousing</span> & <br /> Storage Services</svelte:fragment
 					>
 					<svelte:fragment>
 						We provide dedicated storage & shared user workspaces for cargo, ensuring its safety
@@ -148,7 +151,7 @@
 				<div class="flex-1 hidden lg:block w-full h-full">
 					<ResponsiveImage class="w-full h-full object-cover" src={goalsImage} alt="goals" />
 				</div>
-				<div class="flex-1 w-full h-full bg-gradient-to-r from-secondary to-blue-600" />
+				<div class="flex-1 w-full h-full bg-primary" />
 			</div>
 		</div>
 		<div class="relative container mx-auto py-10 md:py-20">
@@ -156,7 +159,7 @@
 				<div class="flex-1 hidden lg:block" />
 				<div class="flex-1 text-white">
 					<div class="text-4xl md:text-5xl font-bold text-center lg:text-left">
-						Explore Our Core Values in the Logistics Industry
+						Our Core Values in the Logistics Industry
 					</div>
 					<GoalCard title="Our Mission" icon={MissionIcon}>
 						To provide reliable, innovative and hassle-free logistic services to achieve customer
@@ -203,20 +206,20 @@
 
 				<ServiceBgCard
 					title="Ocean Freight"
-					bg={s2}
+					bg={s3}
 					icon={OceanServiceIcon}
 					points={['Dry Container', 'Platform Container', 'Reefer Container', 'Customised Options']}
 				/>
 
 				<ServiceBgCard
 					title="Road Freight"
-					bg={s3}
+					bg={s2}
 					icon={RoadServiceIcon}
 					points={['Truck Delivery', 'Door to Door', 'Cargo Consolidation', 'Full Truck Load']}
 				/>
 
 				<ServiceBgCard
-					title="Consolidated Logistics"
+					title="Warehousing & Storage"
 					bg={s4}
 					icon={WarehouseServiceIcon}
 					points={[
@@ -234,11 +237,11 @@
 <section id="support">
 	<section class="pt-20">
 		<div class="relative">
-			<div class="relative z-[1] container mx-auto text-white py-32 lg:py-60">
+			<div class="relative z-[1] container mx-auto text-white py-32 lg:py-40">
 				<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10 justify-between">
 					<div class="flex-1 flex flex-col gap-3 lg:gap-5">
 						<div class="font-medium text-sm lg:text-xl text-center lg:text-left">
-							Your Package, Your Call
+							Your Package, Our Call
 						</div>
 						<div class="font-bold text-4xl lg:text-5xl text-center lg:text-left">
 							Professional Services, <br /> Save Your Time!
@@ -251,7 +254,7 @@
 						<div class="mt-5 flex items-center justify-center lg:justify-start">
 							<a
 								href="/#contact"
-								class="relative text-secondary px-12 py-3 bg-white font-medium hover:bg-secondary transition-all duration-500 hover:text-white hover:scale-95"
+								class="relative text-white px-12 py-3 bg-primary font-medium hover:bg-secondary transition-all duration-500 hover:text-white hover:scale-95"
 							>
 								Get In Touch
 							</a>
@@ -260,9 +263,9 @@
 					<div
 						class="w-full md:w-auto flex items-center justify-around md:justify-end gap-2 md:gap-20"
 					>
-						<StatsCard icon={st1} count="3,614" label="Satisfied Clients" />
-						<StatsCard icon={st2} count="7,254" label="Delivered Goods" />
-						<StatsCard icon={st3} count="45" label="Destinations Covered" />
+						<StatsCard icon={st1} count="3,614" label={'Satisfied \n Clients'} />
+						<StatsCard icon={st2} count="7,254" label={'Delivered \n Goods'} />
+						<StatsCard icon={st3} count="45" label={'Destinations \n Covered'} />
 					</div>
 				</div>
 			</div>
@@ -277,7 +280,7 @@
 		<div class="container mx-auto grid grid-cols-12 place-items-center lg:gap-20">
 			<div class="w-full h-full col-span-2 lg:col-span-6 xl:col-span-5 hidden lg:block">
 				<div class="w-full h-full flex items-center justify-center overflow-hidden">
-					<ResponsiveImage class="w-auto h-full" src={testImage} alt="about" />
+					<ResponsiveImage class="w-auto h-full" src={clearingImg} alt="about" />
 				</div>
 			</div>
 			<div class="col-span-12 lg:col-span-6 xl:col-span-7 xl:pr-5">
@@ -301,12 +304,12 @@
 						</p>
 					</div>
 					<div class="mt-10 flex flex-col gap-5">
-						<AboutCard>Customs Clearances</AboutCard>
-						<AboutCard>Import / Export Documentation</AboutCard>
-						<AboutCard>Carting / Receiving Goods</AboutCard>
-						<AboutCard>Examination of Shipments</AboutCard>
-						<AboutCard>Handling of stuffing de-stuffing at Ports</AboutCard>
-						<AboutCard>24x7 Support at Air and Sea entry ports</AboutCard>
+						<AboutCard color="primary">Customs Clearances</AboutCard>
+						<AboutCard color="primary">Import / Export Documentation</AboutCard>
+						<AboutCard color="primary">Carting / Receiving Goods</AboutCard>
+						<AboutCard color="primary">Examination of Shipments</AboutCard>
+						<AboutCard color="primary">Handling of stuffing de-stuffing at Ports</AboutCard>
+						<AboutCard color="primary">24x7 Support at Air and Sea entry ports</AboutCard>
 					</div>
 				</div>
 			</div>
@@ -319,15 +322,15 @@
 		<div class="container mx-auto">
 			<div class="grid grid-cols-12 lg:gap-10">
 				<div class="col-span-12 lg:col-span-6">
-					<div class="text-5xl text-white opacity-80 font-extrabold">Get a Call Back</div>
-					<p class="mt-10 text-white opacity-70 max-w-[500px]">
+					<div class="text-5xl text-white font-extrabold">Get a Free Call Back</div>
+					<p class="mt-10 text-white opacity-80 max-w-[500px]">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum libero odit est? Quia saepe
 						reprehenderit voluptatem expedita illum quo, molestias nemo, ea, at in odit maxime alias
 						ad. Magni, culpa?
 					</p>
 				</div>
 				<div class="col-span-12 lg:col-span-6">
-					<div class="text-white opacity-70 text-sm">Lorem ipsum dolor sit amet?</div>
+					<div class="text-white opacity-80 text-sm">How can we help you?</div>
 					<form
 						name="contact"
 						method="POST"
@@ -360,7 +363,7 @@
 						/>
 						<div class="col-span-2 mt-10 flex items-center justify-center">
 							<button
-								class="px-20 py-3 text-center bg-white text-secondary md:hover:opacity-70 cursor-pointer transition-all duration-300 md:hover:scale-95"
+								class="px-20 py-3 text-center bg-white text-primary md:hover:bg-primary md:hover:text-white cursor-pointer transition-all duration-300 md:hover:scale-95"
 								type="submit"
 							>
 								Submit

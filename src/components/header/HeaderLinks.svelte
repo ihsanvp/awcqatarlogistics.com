@@ -26,7 +26,7 @@
 </script>
 
 <div class=" hidden sm:block relative">
-	<div class="flex items-center justify-center gap-10" bind:this={container}>
+	<div class="flex items-center justify-center gap-5 xl:gap-10" bind:this={container}>
 		{#each links as link, i}
 			<a
 				class="hover:text-secondary"
@@ -36,7 +36,7 @@
 			>
 		{/each}
 	</div>
-	<div class="bg-secondary h-[2px] absolute transition-all duration-300 ease-in-out" {style} />
+	<div class="bg-primary h-[2px] absolute transition-all duration-300 ease-in-out" {style} />
 </div>
 
 <style>

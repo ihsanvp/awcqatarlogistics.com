@@ -7,22 +7,42 @@
 	import renderContent from '@helpers/renderContent';
 	import ContactBlock from './ContactBlock.svelte';
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
-	import logo from '@assets/images/logo-white.png?responsive';
+	import logo from '@assets/images/logo-white-full.png?responsive';
 	import WhatsappIcon from '@iconify-icons/mdi/whatsapp';
 
 	const socials = CONTACT.socials;
 </script>
 
-<footer class="bg-sky-800 text-white">
+<footer class="bg-primary text-white">
 	<div class="container mx-auto py-32">
 		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-20 gap-x-20">
 			<div class="flex flex-col gap-5 col-span-1 sm:col-span-2 xl:col-span-1">
 				<div class="max-w-[400px]">
 					<ResponsiveImage class="w-full h-auto" src={logo} alt="footer-logo" />
 				</div>
-				<div class="text-sm opacity-80 mt-10 max-w-[600px]">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum temporibus minima itaque
-					dolores ipsa, dolor iure beatae rem culpa nobis.
+				<div class="text-sm opacity-80 mt-5 max-w-[600px]">
+					We offer a comprehensive range of cargo services in optimum time both within Qatar and GCC
+					countries.
+				</div>
+				<div class="flex items-center gap-5">
+					{#each socials as social}
+						<div
+							class="w-10 h-10 border border-white rounded-full flex items-center justify-center overflow-hidden"
+						>
+							{#if social.url}
+								<a
+									class="w-full h-full flex items-center justify-center hover:bg-white hover:text-orange-600 transition-colors duration-500"
+									href={social.url}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<svelte:component this={Icon} icon={social.icon} width={20} />
+								</a>
+							{:else}
+								<svelte:component this={Icon} icon={social.icon} width={20} />
+							{/if}
+						</div>
+					{/each}
 				</div>
 			</div>
 			<div class="flex flex-col gap-3">

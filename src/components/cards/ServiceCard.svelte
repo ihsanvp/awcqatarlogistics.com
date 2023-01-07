@@ -16,9 +16,3 @@
 		<slot />
 	</div>
 </div>
-
-<style>
-	.title :global(span) {
-		color: var(--color-secondary);
-	}
-</style>
