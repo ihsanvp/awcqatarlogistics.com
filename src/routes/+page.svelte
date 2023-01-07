@@ -11,9 +11,9 @@
 
 	// Images
 	import aboutImg from '@assets/images/about.jpg?responsive';
-	import coreValueImg from '@assets/images/explore.jpg?responsive';
+	import coreValueImg from '@assets/images/core-values.jpg?responsive';
 	import statsImg from '@assets/images/service-4.jpg?responsive';
-	import clearingImg from '@assets/images/clearing-2.jpg?responsive';
+	import clearingImg from '@assets/images/clearing.jpg?responsive';
 
 	import slide1 from '@assets/images/slide-1.jpg?responsive';
 	import slide2 from '@assets/images/slide-2.jpg?responsive';
