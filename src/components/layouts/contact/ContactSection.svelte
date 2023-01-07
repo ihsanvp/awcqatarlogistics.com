@@ -34,7 +34,7 @@
 				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
-					<input type="hidden" name="service" value={service} />
+					<input type="hidden" name="service" bind:value={service} />
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
 					<Input
 						class="col-span-2 md:col-span-1"
