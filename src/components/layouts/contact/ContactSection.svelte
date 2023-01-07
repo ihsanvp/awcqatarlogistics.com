@@ -36,12 +36,12 @@
 		<div class="grid grid-cols-12 gap-x-0 gap-y-10 sm:gap-x-10">
 			<div class="col-span-12 xl:col-span-4">
 				<div class="text-5xl text-white font-extrabold">{@html renderContent(title)}</div>
-				<p class="mt-10 text-white opacity-80 max-w-[500px]">
+				<p class="mt-10 text-white opacity-80 text-lg max-w-[500px]">
 					{description}
 				</p>
 			</div>
 			<div class="col-span-12 xl:col-span-8">
-				<div class="text-white opacity-80 text-sm">{info}</div>
+				<div class="text-white opacity-80 text-lg">{info}</div>
 				<form
 					name="contact"
 					method="POST"

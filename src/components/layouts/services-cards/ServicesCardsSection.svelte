@@ -20,7 +20,7 @@
 				>
 					{title}
 				</div>
-				<div class="text-gray-600 leading-[1.6] text-center md:text-left">
+				<div class="text-gray-600 leading-[1.6] text-center md:text-left text-lg">
 					{description}
 				</div>
 			</div>

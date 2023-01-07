@@ -24,7 +24,7 @@
 					<div class="font-bold text-4xl lg:text-5xl text-center lg:text-left">
 						{@html renderContent(title)}
 					</div>
-					<div class="max-w-[600px] text-center lg:text-left">
+					<div class="max-w-[600px] text-center lg:text-left text-lg">
 						{description}
 					</div>
 					<div class="mt-5 flex items-center justify-center lg:justify-start">

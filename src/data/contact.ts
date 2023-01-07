@@ -29,9 +29,8 @@ const CONTACT: ContactData = {
 		url: 'tel:+97431393114'
 	},
 	email: {
-		text: `operations@awcqatarlogistics.com
-		sales@awcqatarlogistics.com`,
-		url: 'mailto:operations@awcqatarlogistics.com'
+		text: `sales@awcqatarlogistics.com`,
+		url: 'mailto:sales@awcqatarlogistics.com'
 	},
 	whatsapp: {
 		text: '+974 3139 3114',
@@ -41,7 +40,7 @@ const CONTACT: ContactData = {
 		text: `Sheikha Abdullah Bin Thani Building
 		C Ring Road, Doha, Qatar,
 		Office #04, Building #04,
-		55247`,
+		PO Box: 55247`,
 		url: 'https://goo.gl/maps/7ZbqBhwkxamwaMmc8'
 	},
 	socials: [
