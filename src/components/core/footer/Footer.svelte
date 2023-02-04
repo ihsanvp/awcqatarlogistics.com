@@ -91,6 +91,6 @@
 </footer>
 <div class="bg-primary py-5 text-white opacity-90">
 	<div class="container mx-auto flex items-center justify-center">
-		<div class="text-sm opacity-70">©2023 Logistics, with Love by Farost</div>
+		<div class="text-sm opacity-70">©2023 Studiotwofour, Arabian Wings Logistics & Trading WLL</div>
 	</div>
 </div>

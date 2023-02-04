@@ -70,7 +70,7 @@
 	<AboutSection
 		title="Our Logistics & Transport Solutions are Reliable, Secure, and Swift to meet every Client's Requirements"
 		description="
-			As one of the leading logistics solution providers in the region, we strive to
+			As one of the leading logistics solution provider in the region, we strive to
 			provide customers with high-quality, cost effective, integrated solutions tailored
 			to meet their needs. We offer flexible logistics solutions for both domestic and
 			regional customers. No need to wait, we're happy to deliver to your destination.
@@ -92,7 +92,7 @@
 				title: 'Sea Cargo \n Services',
 				icon: OceanServiceIcon,
 				description: `
-					The use of sea freight is always an efficient and cost-effective way of moving goods. By
+					Sea freight is always an efficient and cost-effective way of moving goods. By
           leveraging our long-term carrier relationships, we provide you with flexible, reliable
           and secure ocean freight services.
 				`
@@ -152,7 +152,7 @@
 		description="
 			Using our regional logistics expertise and advanced cargo handling systems & custom
 			logistics solutions, we help you analyze, develop, and implement successful businesses
-			in the modern world.
+			in the modern fast world.
 		"
 		cards={[
 			{
@@ -191,7 +191,7 @@
 <section id="support">
 	<StatsSection
 		subtitle="Your Package, Our Call"
-		title={'Professional Services, \n Save Your Time!'}
+		title={'Our Quality Services, \n Save Your Time!'}
 		description="
 			Need someone to take care of your logistics needs or not sure which logistics solution
 			would be right for you? Please contact us. Our team of professionals will be happy to

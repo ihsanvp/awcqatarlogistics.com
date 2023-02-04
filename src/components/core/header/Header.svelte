@@ -121,7 +121,7 @@
 			</div>
 			<a href="tel:+97431393114" class="flex items-center justify-center gap-3">
 				<Icon width={25} icon={MobileIcon} class="text-primary" />
-				<span>+974 31393114</span>
+				<span class="font-bold">+974 31393114</span>
 			</a>
 		</div>
 		<div class="lg:hidden">

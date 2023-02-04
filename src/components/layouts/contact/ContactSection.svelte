@@ -10,7 +10,7 @@
 	import renderContent from '@helpers/renderContent';
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 
-	import shipImg from '@assets/images/ship.png?responsive';
+	import shipImg from '@assets/images/ship-new.png?responsive';
 
 	export let title: string;
 	export let description: string;
@@ -25,10 +25,10 @@
 		<ResponsiveImage class="w-full h-full object-cover" src={bg} alt="contact-bg" />
 	</div>
 	<div class="absolute inset-0 bg-black opacity-50" />
-	<div class="absolute top-0 left-0 right-0 -translate-y-1/2 max-w-screen overflow-hidden">
-		<div class="w-full h-20 relative">
-			<div class="absolute right-[-500px] top-0 animate-ship">
-				<ResponsiveImage class="w-[500px] h-auto" src={shipImg} alt="ship" />
+	<div class="absolute top-[-50px] left-0 right-0 -translate-y-1/2 max-w-screen overflow-hidden">
+		<div class="w-full h-32 relative">
+			<div class="absolute right-[-500px] top-0 animate-ship w-[500px] h-full">
+				<ResponsiveImage class="w-full h-full object-contain" src={shipImg} alt="ship" />
 			</div>
 		</div>
 	</div>
@@ -36,12 +36,12 @@
 		<div class="grid grid-cols-12 gap-x-0 gap-y-10 sm:gap-x-10">
 			<div class="col-span-12 xl:col-span-4">
 				<div class="text-5xl text-white font-extrabold">{@html renderContent(title)}</div>
-				<p class="mt-10 text-white opacity-80 text-lg max-w-[500px]">
+				<p class="mt-10 text-white opacity-80 text-xl max-w-[500px]">
 					{description}
 				</p>
 			</div>
 			<div class="col-span-12 xl:col-span-8">
-				<div class="text-white opacity-80 text-lg">{info}</div>
+				<div class="text-white opacity-80 text-2xl font-bold">{info}</div>
 				<form
 					name="contact"
 					method="POST"
