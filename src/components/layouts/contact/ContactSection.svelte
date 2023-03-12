@@ -93,6 +93,7 @@
 						<fieldset>
 							<ul class="grid w-full gap-6 grid-cols-2 md:grid-cols-4">
 								<li>
+									<label for="s-Air Freight">Test Field</label>
 									<ContactRadioButton
 										label="Air Freight"
 										icon={AirServiceIcon}
