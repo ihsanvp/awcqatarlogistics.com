@@ -22,6 +22,7 @@
 
 	$: {
 		if (serviceInput && service) {
+			console.log(String(service));
 			serviceInput.setAttribute('value', service);
 		}
 	}
@@ -81,7 +82,7 @@
 					/>
 					<input
 						class="w-0 h-0 invisible opacity-0 absolute"
-						type="text"
+						type="hidden"
 						name="service"
 						bind:this={serviceInput}
 					/>
