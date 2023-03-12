@@ -70,13 +70,7 @@
 			</div>
 			<div class="col-span-12 xl:col-span-8">
 				<div class="text-white opacity-80 text-2xl font-bold">{info}</div>
-				<form
-					name="contact"
-					method="POST"
-					class="relative w-full grid grid-cols-2 gap-5 mt-10"
-					data-netlify="true"
-					on:submit={submit}
-				>
+				<form class="relative w-full grid grid-cols-2 gap-5 mt-10" on:submit={submit}>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
