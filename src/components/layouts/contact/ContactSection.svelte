@@ -34,7 +34,15 @@
 
 		if (form) {
 			const data = new FormData(form);
-			new Response(data).text().then(console.log);
+
+			fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				//@ts-ignore
+				body: new URLSearchParams(data).toString()
+			})
+				.then(() => console.log('form: success'))
+				.catch(() => console.log('form: error'));
 		}
 	}
 </script>
@@ -66,6 +74,7 @@
 					method="POST"
 					class="relative w-full grid grid-cols-2 gap-5 mt-10"
 					data-netlify="true"
+					on:submit={submit}
 				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
