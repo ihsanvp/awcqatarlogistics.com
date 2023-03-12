@@ -66,7 +66,6 @@
 					method="POST"
 					class="relative w-full grid grid-cols-2 gap-5 mt-10"
 					data-netlify="true"
-					on:submit={submit}
 				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
