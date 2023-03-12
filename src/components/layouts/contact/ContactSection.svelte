@@ -2,30 +2,18 @@
 	import type IMAGE from '*.jpg?responsive';
 	import Input from '@components/common/Input.svelte';
 	import ContactRadioButton from './ContactRadioButton.svelte';
-
 	import AirServiceIcon from '@components/icons/AirServiceIcon.svelte';
 	import OceanServiceIcon from '@components/icons/OceanServiceIcon.svelte';
 	import RoadServiceIcon from '@components/icons/RoadServiceIcon.svelte';
 	import WarehouseServiceIcon from '@components/icons/WarehouseServiceIcon.svelte';
 	import renderContent from '@helpers/renderContent';
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
-
 	import shipImg from '@assets/images/ship-new.png?responsive';
 
 	export let title: string;
 	export let description: string;
 	export let info: string;
 	export let bg: typeof IMAGE;
-
-	let service: string = '';
-	let serviceInput: HTMLInputElement;
-
-	$: {
-		if (serviceInput && service) {
-			console.log(String(service));
-			serviceInput.setAttribute('value', service);
-		}
-	}
 
 	function submit(e: Event) {
 		e.preventDefault();
@@ -95,12 +83,6 @@
 						type="text"
 						label="Company"
 					/>
-					<!-- <input
-						class="w-0 h-0 invisible opacity-0 absolute"
-						type="hidden"
-						name="service"
-						bind:this={serviceInput}
-					/> -->
 					<div class="col-span-2">
 						<div class="text-lg text-white opacity-90 mb-3">Select Service</div>
 						<fieldset>
@@ -111,7 +93,6 @@
 										icon={AirServiceIcon}
 										name="service"
 										value="air"
-										required
 									/>
 								</li>
 								<li>
