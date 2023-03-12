@@ -26,6 +26,17 @@
 			serviceInput.setAttribute('value', service);
 		}
 	}
+
+	function submit(e: Event) {
+		e.preventDefault();
+
+		const form = e.target as HTMLFormElement;
+
+		if (form) {
+			const data = new FormData(form);
+			new Response(data).text().then(console.log);
+		}
+	}
 </script>
 
 <div class="py-40 relative">
@@ -55,6 +66,7 @@
 					method="POST"
 					class="relative w-full grid grid-cols-2 gap-5 mt-10"
 					data-netlify="true"
+					on:submit={submit}
 				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
@@ -80,12 +92,12 @@
 						type="text"
 						label="Company"
 					/>
-					<input
+					<!-- <input
 						class="w-0 h-0 invisible opacity-0 absolute"
 						type="hidden"
 						name="service"
 						bind:this={serviceInput}
-					/>
+					/> -->
 					<div class="col-span-2">
 						<div class="text-lg text-white opacity-90 mb-3">Select Service</div>
 						<fieldset>
