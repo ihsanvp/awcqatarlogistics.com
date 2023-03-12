@@ -15,6 +15,8 @@
 	export let info: string;
 	export let bg: typeof IMAGE;
 
+	let service = '';
+
 	function submit(e: Event) {
 		e.preventDefault();
 
@@ -22,6 +24,9 @@
 
 		if (form) {
 			const data = new FormData(form);
+
+			data.delete('s');
+			data.append('service', service);
 
 			fetch('/', {
 				method: 'POST',
@@ -91,32 +96,36 @@
 									<ContactRadioButton
 										label="Air Freight"
 										icon={AirServiceIcon}
-										name="service"
-										value="air"
+										name="s"
+										value="Air Freight"
+										bind:current={service}
 									/>
 								</li>
 								<li>
 									<ContactRadioButton
 										label="Ocean Freight"
 										icon={OceanServiceIcon}
-										name="service"
-										value="ocean"
+										name="s"
+										value="Ocean Freight"
+										bind:current={service}
 									/>
 								</li>
 								<li>
 									<ContactRadioButton
 										label="Road Freight"
 										icon={RoadServiceIcon}
-										name="service"
-										value="road"
+										name="s"
+										value="Road Freight"
+										bind:current={service}
 									/>
 								</li>
 								<li>
 									<ContactRadioButton
 										label="Warehousing"
 										icon={WarehouseServiceIcon}
-										name="service"
-										value="storage"
+										name="s"
+										value="Warehousing"
+										bind:current={service}
 									/>
 								</li>
 							</ul>
