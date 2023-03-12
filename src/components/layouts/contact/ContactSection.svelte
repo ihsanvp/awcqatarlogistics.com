@@ -69,6 +69,7 @@
 				<div class="text-white opacity-80 text-2xl font-bold">{info}</div>
 				<form
 					class="relative w-full grid grid-cols-2 gap-5 mt-10"
+					name="contact"
 					data-netlify="true"
 					method="post"
 				>
