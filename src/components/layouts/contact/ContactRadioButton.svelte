@@ -5,7 +5,7 @@
 	export let value: string;
 	export let required: boolean = false;
 	export let label: string;
-	export let current: string;
+	export let current: string = '';
 	export let icon: typeof SvelteComponent;
 </script>
 

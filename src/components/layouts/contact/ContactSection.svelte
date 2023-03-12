@@ -117,7 +117,6 @@
 										name="service"
 										value="air"
 										required
-										bind:current={service}
 									/>
 								</li>
 								<li>
@@ -126,7 +125,6 @@
 										icon={OceanServiceIcon}
 										name="service"
 										value="ocean"
-										bind:current={service}
 									/>
 								</li>
 								<li>
@@ -135,7 +133,6 @@
 										icon={RoadServiceIcon}
 										name="service"
 										value="road"
-										bind:current={service}
 									/>
 								</li>
 								<li>
@@ -144,7 +141,6 @@
 										icon={WarehouseServiceIcon}
 										name="service"
 										value="storage"
-										bind:current={service}
 									/>
 								</li>
 							</ul>
