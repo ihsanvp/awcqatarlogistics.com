@@ -4,7 +4,6 @@
 	import MobileIcon from '@iconify-icons/mdi/phone';
 	import MailIcon from '@iconify-icons/mdi/email';
 	import LocationIcon from '@iconify-icons/mdi/location';
-	import renderContent from '@helpers/renderContent';
 	import ContactBlock from './ContactBlock.svelte';
 	import ResponsiveImage from '@components/common/ResponsiveImage.svelte';
 	import logo from '@assets/images/logo-white-full.png?responsive';
@@ -48,29 +47,39 @@
 			<div class="flex flex-col gap-3">
 				<div class="text-xl font-bold">CONTACT US</div>
 				<div class="h-[2px] w-10 bg-white" />
-				<div class="mt-5 font-semibold text-md">Our Address</div>
+				<div class="mt-5 font-semibold text-md">Main Branch</div>
 				<div class="text-sm opacity-80">
-					PO Box: 55247 <br />
 					Office #04, Building #04 <br />
 					Sheikha Abdullah Bin Thani Building <br />
 					C Ring Road, Doha, Qatar <br />
+					PO Box: 55247 <br />
+				</div>
+				<div class="mt-5 font-semibold text-md">Dubai Branch</div>
+				<div class="text-sm opacity-80">
+					FAST CFS CARGO SERVICES LLC<br />
+					5th Street Near Juma Al Majid,<br />
+					Steel Mill Road, Um Ramool,<br />
+					Dubai, UAE<br />
+					Mobile: +971 506456503
 				</div>
 			</div>
 			<div class="flex flex-col gap-3">
 				<div class="text-xl font-bold">GET IN TOUCH</div>
 				<div class="h-[2px] w-10 bg-white" />
 				<div class="flex flex-col gap-5 mt-5">
-					<ContactBlock icon={MobileIcon} url={CONTACT.mobile.url}>
-						{CONTACT.mobile.text}
+					<ContactBlock icon={MobileIcon} url="tel:+97440010916">+974 40010916</ContactBlock>
+					<ContactBlock icon={WhatsappIcon} url="https://wa.me/97431393114"
+						>+974 31393114</ContactBlock
+					>
+					<ContactBlock icon={MailIcon} url="mailto:operation@awcqatarlogistics.com">
+						operation@awcqatarlogistics.com
 					</ContactBlock>
-					<ContactBlock icon={WhatsappIcon} url={CONTACT.whatsapp.url}>
-						{CONTACT.whatsapp.text}
-					</ContactBlock>
-					<ContactBlock icon={MailIcon} url={CONTACT.email.url}>
-						{@html renderContent(CONTACT.email.text)}
-					</ContactBlock>
-					<ContactBlock icon={LocationIcon} url={CONTACT.address.url}>
-						{@html renderContent(CONTACT.address.text)}
+					<ContactBlock icon={LocationIcon} url="https://goo.gl/maps/7ZbqBhwkxamwaMmc8">
+						Office #4, Building #04, <br />
+						Sheikh Abdullha Bin Thani Building, <br />
+						Zone 27, Street 230, <br />
+						Umm Ghuwailina, C Ring Road, <br />
+						Doha, Qatar
 					</ContactBlock>
 				</div>
 			</div>
