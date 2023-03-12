@@ -45,12 +45,17 @@
 				<form
 					name="contact"
 					method="POST"
-					class="w-full grid grid-cols-2 gap-5 mt-10"
+					class="relative w-full grid grid-cols-2 gap-5 mt-10"
 					data-netlify="true"
 				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
-					<input type="hidden" name="service" bind:value={service} />
+					<input
+						class="w-0 h-0 invisible opacity-0 absolute"
+						type="text"
+						name="service"
+						value={service}
+					/>
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
 					<Input
 						class="col-span-2 md:col-span-1"
