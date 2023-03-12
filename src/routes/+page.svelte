@@ -40,6 +40,13 @@
 	import VisionIcon from '@iconify-icons/mdi/drug-off';
 </script>
 
+<svelte:head>
+	<title>AWC Qatar Logistics</title>
+	<meta
+		name="description"
+		content="We offer a comprehensive range of cargo services in optimum time both within Qatar and GCC countries."
+	/>
+</svelte:head>
 <section id="home">
 	<LandingSection
 		duration={5}

@@ -12,3 +12,5 @@ node_modules
 
 # Error Logs
 yarn-error.log
+
+pnpm-lock.*
