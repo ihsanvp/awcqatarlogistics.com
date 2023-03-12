@@ -18,6 +18,13 @@
 	export let bg: typeof IMAGE;
 
 	let service: string = '';
+	let serviceInput: HTMLInputElement;
+
+	$: {
+		if (serviceInput && service) {
+			serviceInput.setAttribute('value', service);
+		}
+	}
 </script>
 
 <div class="py-40 relative">
@@ -50,12 +57,6 @@
 				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
-					<input
-						class="w-0 h-0 invisible opacity-0 absolute"
-						type="text"
-						name="service"
-						value={service}
-					/>
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
 					<Input
 						class="col-span-2 md:col-span-1"
@@ -77,6 +78,12 @@
 						name="company"
 						type="text"
 						label="Company"
+					/>
+					<input
+						class="w-0 h-0 invisible opacity-0 absolute"
+						type="text"
+						name="service"
+						bind:this={serviceInput}
 					/>
 					<div class="col-span-2">
 						<div class="text-lg text-white opacity-90 mb-3">Select Service</div>
