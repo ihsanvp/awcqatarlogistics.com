@@ -16,6 +16,13 @@
 	export let bg: typeof IMAGE;
 
 	let service = '';
+	let serviceForm: HTMLInputElement;
+
+	$: {
+		if (service && serviceForm) {
+			serviceForm.setAttribute('value', service);
+		}
+	}
 
 	function submit(e: Event) {
 		e.preventDefault();
@@ -24,9 +31,6 @@
 
 		if (form) {
 			const data = new FormData(form);
-
-			data.delete('s');
-			data.append('service', service);
 
 			fetch('/', {
 				method: 'POST',
@@ -63,7 +67,11 @@
 			</div>
 			<div class="col-span-12 xl:col-span-8">
 				<div class="text-white opacity-80 text-2xl font-bold">{info}</div>
-				<form class="relative w-full grid grid-cols-2 gap-5 mt-10" on:submit={submit}>
+				<form
+					class="relative w-full grid grid-cols-2 gap-5 mt-10"
+					data-netlify="true"
+					method="post"
+				>
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="hidden" name="subject" value="Sales inquiry from awcqatarlogistics.com" />
 					<Input class="col-span-2 md:col-span-1" required name="name" type="text" label="Name" />
@@ -88,12 +96,12 @@
 						type="text"
 						label="Company"
 					/>
+					<input type="hidden" name="service" bind:this={serviceForm} />
 					<div class="col-span-2">
 						<div class="text-lg text-white opacity-90 mb-3">Select Service</div>
 						<fieldset>
 							<ul class="grid w-full gap-6 grid-cols-2 md:grid-cols-4">
 								<li>
-									<label for="s-Air Freight">Test Field</label>
 									<ContactRadioButton
 										label="Air Freight"
 										icon={AirServiceIcon}
