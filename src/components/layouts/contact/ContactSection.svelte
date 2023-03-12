@@ -41,7 +41,8 @@
 				//@ts-ignore
 				body: new URLSearchParams(data).toString()
 			})
-				.then(() => console.log('form: success', data))
+				//@ts-ignore
+				.then(() => console.log('form: success', new URLSearchParams(data).toString()))
 				.catch(() => console.log('form: error'));
 		}
 	}
