@@ -47,14 +47,14 @@
 			<div class="flex flex-col gap-3">
 				<div class="text-xl font-bold">CONTACT US</div>
 				<div class="h-[2px] w-10 bg-white" />
-				<div class="mt-5 font-semibold text-md">Main Branch</div>
+				<div class="mt-5 font-semibold text-md">Our Office</div>
 				<div class="text-sm opacity-80">
 					Office #04, Building #04 <br />
 					Sheikha Abdullah Bin Thani Building <br />
 					C Ring Road, Doha, Qatar <br />
 					PO Box: 55247 <br />
 				</div>
-				<div class="mt-5 font-semibold text-md">Dubai Branch</div>
+				<div class="mt-5 font-semibold text-md">Dubai Contact</div>
 				<div class="text-sm opacity-80">
 					FAST CFS CARGO SERVICES LLC<br />
 					5th Street Near Juma Al Majid,<br />
